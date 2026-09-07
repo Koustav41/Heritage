@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+:root {
+  --background: #faf7f2;
+  --foreground: #1c1917;
+  --card: #ffffff;
+  --card-foreground: #1c1917;
+  --primary: #c2410c;
+  --primary-hover: #9a3412;
+  --primary-foreground: #ffffff;
+  --secondary: #d97706;
+  --secondary-foreground: #ffffff;
+  --accent: #f59e0b;
+  --accent-foreground: #78350f;
+  --muted: #f3ede4;
+  --muted-foreground: #78716c;
+  --border: #e7ded4;
+  --ring: #c2410c;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: #0c0d12;
+  --foreground: #f5f5f4;
+  --card: #141721;
+  --card-foreground: #f5f5f4;
+  --primary: #ea580c;
+  --primary-hover: #f97316;
+  --primary-foreground: #ffffff;
+  --secondary: #f59e0b;
+  --secondary-foreground: #1c1917;
+  --accent: #fbbf24;
+  --accent-foreground: #1c1917;
+  --muted: #1e2230;
+  --muted-foreground: #a8a29e;
+  --border: #272d3f;
+  --ring: #ea580c;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Heritage Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c2410c40;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c2410c80;
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(231, 222, 212, 0.7);
+}
+
+.dark .glass-panel {
+  background: rgba(20, 23, 33, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(39, 45, 63, 0.8);
+}
+
+/* Terracotta gradients */
+.gradient-terracotta {
+  background: linear-gradient(135deg, #c2410c 0%, #b45309 50%, #9a3412 100%);
+}
+
+.gradient-gold {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.gradient-dark-heritage {
+  background: linear-gradient(180deg, #141721 0%, #0c0d12 100%);
+}
