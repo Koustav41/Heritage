@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { 
   Compass, 
   Search, 
@@ -16,15 +16,16 @@ import {
   MapPin, 
   HelpCircle, 
   Calendar, 
-  Users, 
   ChevronDown,
   ShieldCheck,
   Award,
   LogIn,
-  LogOut
+  LogOut,
+  Lock
 } from 'lucide-react';
 import { usePorjotok } from '@/lib/store/porjotok-context';
 import { UserRole } from '@/types';
+import { canAccessProfileControls } from '@/lib/auth/rbac';
 
 interface NavbarProps {
   onOpenSearch: () => void;
@@ -45,6 +46,7 @@ const ROLE_LABELS: Record<UserRole, { label: string; badgeColor: string }> = {
 
 export function Navbar({ onOpenSearch, onOpenCart }: NavbarProps) {
   const pathname = usePathname();
+  const router = useRouter();
   const { isLoggedIn, currentRole, setCurrentRole, currentUser, cart, userPoints, logout } = usePorjotok();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [roleDropdownOpen, setRoleDropdownOpen] = useState(false);
@@ -237,26 +239,51 @@ export function Navbar({ onOpenSearch, onOpenCart }: NavbarProps) {
                       Switch Role (SIH Demo)
                     </div>
 
-                    <div className="space-y-0.5 max-h-48 overflow-y-auto pr-1">
-                      {(Object.keys(ROLE_LABELS) as UserRole[]).map((role) => (
-                        <button
-                          key={role}
-                          onClick={() => {
-                            setCurrentRole(role);
-                            setRoleDropdownOpen(false);
-                          }}
-                          className={`w-full flex items-center justify-between px-3 py-1.5 rounded-lg text-left transition-colors ${
-                            currentRole === role
-                              ? 'bg-amber-100 dark:bg-amber-950/60 text-amber-900 dark:text-amber-200 font-bold'
-                              : 'hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-700 dark:text-stone-300'
-                          }`}
-                        >
-                          <span>{ROLE_LABELS[role].label}</span>
-                          {currentRole === role && (
-                            <span className="w-1.5 h-1.5 rounded-full bg-amber-600"></span>
-                          )}
-                        </button>
-                      ))}
+                    <div className="space-y-0.5 max-h-52 overflow-y-auto pr-1">
+                      {(Object.keys(ROLE_LABELS) as UserRole[]).map((role) => {
+                        const hasAccess = canAccessProfileControls(currentUser.role, role);
+                        return (
+                          <button
+                            key={role}
+                            onClick={() => {
+                              if (role === 'ADMIN' && currentRole !== 'ADMIN') {
+                                router.push('/admin');
+                                setRoleDropdownOpen(false);
+                                return;
+                              }
+                              setCurrentRole(role);
+                              router.push('/dashboard');
+                              setRoleDropdownOpen(false);
+                            }}
+                            className={`w-full flex items-center justify-between px-3 py-1.5 rounded-lg text-left transition-colors cursor-pointer ${
+                              currentRole === role
+                                ? 'bg-amber-100 dark:bg-amber-950/60 text-amber-900 dark:text-amber-200 font-bold'
+                                : 'hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-700 dark:text-stone-300'
+                            }`}
+                          >
+                            <span className="flex items-center gap-1.5">
+                              {role === 'ADMIN' ? (
+                                <ShieldCheck className="w-3 h-3 text-red-500 shrink-0" />
+                              ) : !hasAccess ? (
+                                <Lock className="w-3 h-3 text-stone-400 shrink-0" />
+                              ) : null}
+                              <span>{ROLE_LABELS[role].label}</span>
+                            </span>
+                            {role === 'ADMIN' && currentRole !== 'ADMIN' ? (
+                              <span className="text-[9px] px-1.5 py-0.5 rounded-md bg-stone-100 dark:bg-stone-800 text-stone-400 font-mono">
+                                Passkey
+                              </span>
+                            ) : !hasAccess ? (
+                              <span className="text-[9px] px-1.5 py-0.5 rounded-md bg-stone-100 dark:bg-stone-800 text-stone-400 font-mono">
+                                Verified
+                              </span>
+                            ) : null}
+                            {currentRole === role && (
+                              <span className="w-1.5 h-1.5 rounded-full bg-amber-600 shrink-0"></span>
+                            )}
+                          </button>
+                        );
+                      })}
                     </div>
 
                     <div className="mt-2 pt-2 border-t border-stone-100 dark:border-stone-800">

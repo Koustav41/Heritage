@@ -16,12 +16,18 @@ import {
   Calendar, 
   RotateCcw,
   Sparkles,
-  ArrowRight
+  ArrowRight,
+  LogOut
 } from 'lucide-react';
 import { usePorjotok } from '@/lib/store/porjotok-context';
+import { AdminAccessDenied } from '@/components/AdminAccessDenied';
 
 export default function AdminConsolePage() {
   const { 
+    isLoggedIn,
+    currentRole,
+    currentUser,
+    revokeAdminRole,
     verifications, 
     approveVerification, 
     rejectVerification, 
@@ -34,6 +40,11 @@ export default function AdminConsolePage() {
   } = usePorjotok();
 
   const [activeTab, setActiveTab] = useState<'OVERVIEW' | 'VERIFICATIONS' | 'FUNDRAISERS' | 'COMPLAINTS' | 'AUDIT_LOGS'>('OVERVIEW');
+
+  // RBAC Guard: If the user is not authenticated or not an ADMIN, deny access
+  if (!isLoggedIn || currentRole !== 'ADMIN') {
+    return <AdminAccessDenied />;
+  }
 
   const pendingVerifs = verifications.filter(v => v.status === 'PENDING_VERIFICATION');
   const pendingFunds = fundraisers.filter(f => f.status === 'PENDING_APPROVAL');
@@ -54,12 +65,25 @@ export default function AdminConsolePage() {
           </h1>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2.5">
+          <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 text-xs font-semibold">
+            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+            <span>Active Admin: {currentUser.name.split(' ')[0]}</span>
+          </div>
+
+          <button
+            onClick={() => revokeAdminRole()}
+            className="px-3.5 py-2 rounded-xl bg-rose-100 hover:bg-rose-200 dark:bg-rose-950/60 dark:hover:bg-rose-900/60 text-rose-800 dark:text-rose-300 text-xs font-bold transition-colors flex items-center gap-1.5 cursor-pointer"
+          >
+            <LogOut className="w-3.5 h-3.5" />
+            <span>Exit Admin Mode</span>
+          </button>
+
           <Link
             href="/dashboard"
             className="px-3.5 py-2 rounded-xl bg-stone-100 dark:bg-stone-800 hover:bg-stone-200 text-stone-800 dark:text-stone-200 text-xs font-bold transition-colors"
           >
-            Switch to Public Profile
+            Visitor Dashboard
           </Link>
         </div>
       </div>

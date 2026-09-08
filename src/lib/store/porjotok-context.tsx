@@ -13,6 +13,7 @@ import {
 } from '@/types';
 import { DEMO_USERS, DemoUser } from '@/lib/data/members';
 import { CANONICAL_FUNDRAISERS } from '@/lib/data/fundraisers';
+import { validateAdminPasskey } from '@/lib/auth/rbac';
 
 interface CartItem {
   id: string;
@@ -33,6 +34,8 @@ interface PorjotokContextType {
   login: (email: string, password?: string, role?: UserRole, customName?: string) => boolean;
   logout: () => void;
   registerUser: (data: { name: string; email: string; phone?: string; role: UserRole; district?: string }) => void;
+  elevateToAdmin: (passkey: string) => { success: boolean; message: string };
+  revokeAdminRole: () => void;
   
   // Cart
   cart: CartItem[];
@@ -240,15 +243,10 @@ export function PorjotokProvider({ children }: { children: React.ReactNode }) {
 
   const setCurrentRole = (role: UserRole) => {
     setCurrentRoleState(role);
-    const roleDefaultUser = DEMO_USERS[role];
-    setCurrentUser(roleDefaultUser);
     try {
       localStorage.setItem('porjotok_role', role);
-      localStorage.setItem('porjotok_user', JSON.stringify(roleDefaultUser));
-      localStorage.setItem('porjotok_is_logged_in', 'true');
-      setIsLoggedIn(true);
     } catch {}
-    logAction('ROLE_SWITCH', 'UserSession', `Switched active view to ${role}`);
+    logAction('PORTAL_SWITCH', 'UserSession', `Active portal view switched to ${role}`);
   };
 
   const login = (email: string, _password?: string, role?: UserRole, customName?: string): boolean => {
@@ -447,28 +445,78 @@ export function PorjotokProvider({ children }: { children: React.ReactNode }) {
   };
 
   const updateOrderStatus = (orderId: string, newStatus: Order['status']) => {
+    // RBAC: Only verified merchants or administrators can transition order statuses
+    const isAuthorized = currentUser.role === 'LOCAL_FOOD_MERCHANT' || currentUser.role === 'LOCAL_ITEM_SELLER' || currentUser.role === 'ADMIN';
+    if (!isAuthorized) {
+      logAction('SECURITY_VIOLATION', 'RBAC', `Unauthorized attempt to update order ${orderId} by ${currentUser.name} (${currentUser.role})`, 'ALERT');
+      return;
+    }
     setOrders(prev => prev.map(o => o.id === orderId ? { ...o, status: newStatus } : o));
     logAction('ORDER_STATUS_UPDATE', 'Order', `${orderId} -> ${newStatus}`);
   };
 
-  // Verifications (Admin)
+  const elevateToAdmin = (passkey: string): { success: boolean; message: string } => {
+    if (validateAdminPasskey(passkey)) {
+      setCurrentRoleState('ADMIN');
+      setCurrentUser(DEMO_USERS.ADMIN);
+      try {
+        localStorage.setItem('porjotok_role', 'ADMIN');
+        localStorage.setItem('porjotok_user', JSON.stringify(DEMO_USERS.ADMIN));
+        localStorage.setItem('porjotok_is_logged_in', 'true');
+        setIsLoggedIn(true);
+      } catch {}
+      logAction('ADMIN_ELEVATION', 'RBAC', `${currentUser.name} elevated to ADMIN via verified security key`);
+      return { success: true, message: 'Administrative access granted successfully.' };
+    } else {
+      logAction('SECURITY_ALERT', 'RBAC', `Unauthorized admin elevation attempt with invalid passkey`, 'ALERT');
+      return { success: false, message: 'Invalid Admin Security Key. Access denied.' };
+    }
+  };
+
+  const revokeAdminRole = () => {
+    setCurrentRoleState('VISITOR');
+    setCurrentUser(DEMO_USERS.VISITOR);
+    try {
+      localStorage.setItem('porjotok_role', 'VISITOR');
+      localStorage.setItem('porjotok_user', JSON.stringify(DEMO_USERS.VISITOR));
+    } catch {}
+    logAction('ROLE_DOWNGRADE', 'RBAC', 'Administrator session revoked. Returned to Visitor mode.');
+  };
+
+  // Verifications (Admin Secured)
   const approveVerification = (id: string) => {
+    if (currentRole !== 'ADMIN') {
+      logAction('SECURITY_VIOLATION', 'RBAC', `Unauthorized attempt to approve verification ${id} by ${currentUser.name} (${currentRole})`, 'ALERT');
+      return;
+    }
     setVerifications(prev => prev.map(v => v.id === id ? { ...v, status: 'VERIFIED' } : v));
     logAction('APPROVE_MEMBER', 'Verification', id);
   };
 
   const rejectVerification = (id: string) => {
+    if (currentRole !== 'ADMIN') {
+      logAction('SECURITY_VIOLATION', 'RBAC', `Unauthorized attempt to reject verification ${id} by ${currentUser.name} (${currentRole})`, 'ALERT');
+      return;
+    }
     setVerifications(prev => prev.map(v => v.id === id ? { ...v, status: 'REJECTED' } : v));
     logAction('REJECT_MEMBER', 'Verification', id, 'WARNING');
   };
 
-  // Fundraisers
+  // Fundraisers (Admin Secured)
   const approveFundraiser = (id: string) => {
+    if (currentRole !== 'ADMIN') {
+      logAction('SECURITY_VIOLATION', 'RBAC', `Unauthorized attempt to approve fundraiser ${id} by ${currentUser.name} (${currentRole})`, 'ALERT');
+      return;
+    }
     setFundraisers(prev => prev.map(f => f.id === id ? { ...f, status: 'ACTIVE' } : f));
     logAction('APPROVE_FUNDRAISER', 'Fundraiser', id);
   };
 
   const rejectFundraiser = (id: string) => {
+    if (currentRole !== 'ADMIN') {
+      logAction('SECURITY_VIOLATION', 'RBAC', `Unauthorized attempt to reject fundraiser ${id} by ${currentUser.name} (${currentRole})`, 'ALERT');
+      return;
+    }
     setFundraisers(prev => prev.map(f => f.id === id ? { ...f, status: 'REJECTED' } : f));
     logAction('REJECT_FUNDRAISER', 'Fundraiser', id, 'WARNING');
   };
@@ -508,7 +556,7 @@ export function PorjotokProvider({ children }: { children: React.ReactNode }) {
     });
   };
 
-  // Complaints
+  // Complaints (Admin Secured)
   const fileComplaint = (compData: Omit<Complaint, 'id' | 'filedDate' | 'status'>) => {
     const id = `CMP-${Math.floor(100 + Math.random() * 900)}`;
     const newComplaint: Complaint = {
@@ -522,6 +570,10 @@ export function PorjotokProvider({ children }: { children: React.ReactNode }) {
   };
 
   const resolveComplaint = (id: string) => {
+    if (currentRole !== 'ADMIN') {
+      logAction('SECURITY_VIOLATION', 'RBAC', `Unauthorized attempt to resolve complaint ${id} by ${currentUser.name} (${currentRole})`, 'ALERT');
+      return;
+    }
     setComplaints(prev => prev.map(c => c.id === id ? { ...c, status: 'RESOLVED' } : c));
     logAction('COMPLAINT_RESOLVED', 'Complaint', id);
   };
@@ -536,6 +588,8 @@ export function PorjotokProvider({ children }: { children: React.ReactNode }) {
         login,
         logout,
         registerUser,
+        elevateToAdmin,
+        revokeAdminRole,
         cart,
         addToCart,
         removeFromCart,

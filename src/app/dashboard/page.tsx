@@ -20,9 +20,15 @@ import {
   BookOpen,
   QrCode,
   Compass,
-  FileText
+  FileText,
+  Package,
+  Music,
+  Lock
 } from 'lucide-react';
 import { usePorjotok } from '@/lib/store/porjotok-context';
+import { UserRole } from '@/types';
+import { canAccessProfileControls } from '@/lib/auth/rbac';
+import { ProviderAccessDenied } from '@/components/ProviderAccessDenied';
 import { CANONICAL_HERITAGE_SITES } from '@/lib/data/heritage-sites';
 import { CANONICAL_WORKSHOPS } from '@/lib/data/workshops';
 import { CANONICAL_FOOD_ITEMS } from '@/lib/data/food-items';
@@ -32,6 +38,7 @@ export default function UnifiedDashboardPage() {
   const { 
     isLoggedIn,
     currentRole, 
+    setCurrentRole,
     currentUser, 
     bookings, 
     cancelBooking,
@@ -48,6 +55,19 @@ export default function UnifiedDashboardPage() {
 
   // Saved sites
   const savedSites = CANONICAL_HERITAGE_SITES.filter(s => savedSiteSlugs.includes(s.slug));
+
+  const isAuthorizedForCurrentPortal = canAccessProfileControls(currentUser.role, currentRole);
+
+  const PORTAL_TABS: { role: UserRole; label: string; isProtected: boolean }[] = [
+    { role: 'VISITOR', label: 'Traveler Profile', isProtected: false },
+    { role: 'LOCAL_FOOD_MERCHANT', label: 'Food Merchant', isProtected: true },
+    { role: 'GUIDE', label: 'ASI Guide', isProtected: true },
+    { role: 'WORKSHOP_CONDUCTOR', label: 'Workshop Master', isProtected: true },
+    { role: 'LOCAL_ITEM_SELLER', label: 'Crafts & Handloom', isProtected: true },
+    { role: 'CLEANLINESS_CREW', label: 'Cleanliness Crew', isProtected: true },
+    { role: 'ARTIST', label: 'Folk Artiste', isProtected: true },
+    { role: 'RESEARCHER', label: 'Researcher', isProtected: true }
+  ];
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
@@ -105,6 +125,51 @@ export default function UnifiedDashboardPage() {
           </div>
         </div>
       </div>
+
+      {/* Portal Selection & RBAC Boundary Bar */}
+      <div className="space-y-3">
+        <div className="flex items-center justify-between">
+          <span className="text-xs font-bold text-stone-500 uppercase tracking-wider">
+            Portal Profile View
+          </span>
+          <span className="text-[11px] text-stone-400 font-mono">
+            Authenticated As: <strong className="text-stone-700 dark:text-stone-300 uppercase">{currentUser.role.replace('_', ' ')}</strong>
+          </span>
+        </div>
+
+        <div className="flex flex-wrap gap-2 pb-2 border-b border-stone-200 dark:border-stone-800">
+          {PORTAL_TABS.map((tab) => {
+            const hasAccess = canAccessProfileControls(currentUser.role, tab.role);
+            return (
+              <button
+                key={tab.role}
+                onClick={() => setCurrentRole(tab.role)}
+                className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
+                  currentRole === tab.role
+                    ? 'bg-amber-600 text-white shadow-xs'
+                    : 'bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-700 dark:text-stone-300 hover:bg-stone-50 dark:hover:bg-stone-800'
+                }`}
+              >
+                {!hasAccess && <Lock className="w-3 h-3 text-stone-400" />}
+                <span>{tab.label}</span>
+                {tab.isProtected && !hasAccess && (
+                  <span className="text-[9px] px-1.5 py-0.2 rounded bg-stone-100 dark:bg-stone-800 text-stone-500 font-mono">
+                    Protected
+                  </span>
+                )}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* RBAC Provider Gate: If active session is not authorized for this profile console */}
+      {!isAuthorizedForCurrentPortal && (
+        <ProviderAccessDenied 
+          targetRole={currentRole} 
+          onSwitchToVisitor={() => setCurrentRole('VISITOR')} 
+        />
+      )}
 
       {/* ========================================================= */}
       {/* 1. VISITOR ROLE VIEW */}
@@ -260,7 +325,7 @@ export default function UnifiedDashboardPage() {
       {/* ========================================================= */}
       {/* 2. LOCAL FOOD MERCHANT ROLE VIEW (WITH LIVE ACCEPT/REJECT) */}
       {/* ========================================================= */}
-      {currentRole === 'LOCAL_FOOD_MERCHANT' && (
+      {isAuthorizedForCurrentPortal && currentRole === 'LOCAL_FOOD_MERCHANT' && (
         <div className="space-y-8">
           <div className="flex items-center justify-between">
             <h2 className="text-xl font-extrabold text-stone-900 dark:text-stone-100">
@@ -312,25 +377,25 @@ export default function UnifiedDashboardPage() {
                 <div className="flex flex-wrap gap-2 pt-2 border-t border-stone-100 dark:border-stone-800">
                   <button
                     onClick={() => updateOrderStatus(ord.id, 'ACCEPTED')}
-                    className="px-3 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold"
+                    className="px-3 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold cursor-pointer"
                   >
                     Accept Order
                   </button>
                   <button
                     onClick={() => updateOrderStatus(ord.id, 'PREPARING')}
-                    className="px-3 py-1.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold"
+                    className="px-3 py-1.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold cursor-pointer"
                   >
                     Mark Preparing
                   </button>
                   <button
                     onClick={() => updateOrderStatus(ord.id, 'READY')}
-                    className="px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold"
+                    className="px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold cursor-pointer"
                   >
                     Mark Ready for Pickup
                   </button>
                   <button
                     onClick={() => updateOrderStatus(ord.id, 'CANCELLED')}
-                    className="px-3 py-1.5 rounded-xl bg-rose-100 text-rose-800 hover:bg-rose-200 text-xs font-bold"
+                    className="px-3 py-1.5 rounded-xl bg-rose-100 text-rose-800 hover:bg-rose-200 text-xs font-bold cursor-pointer"
                   >
                     Deny / Reject
                   </button>
@@ -344,7 +409,7 @@ export default function UnifiedDashboardPage() {
       {/* ========================================================= */}
       {/* 3. VERIFIED GUIDE ROLE VIEW */}
       {/* ========================================================= */}
-      {currentRole === 'GUIDE' && (
+      {isAuthorizedForCurrentPortal && currentRole === 'GUIDE' && (
         <div className="space-y-6">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div className="p-5 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800">
@@ -375,7 +440,7 @@ export default function UnifiedDashboardPage() {
       {/* ========================================================= */}
       {/* 4. WORKSHOP CONDUCTOR ROLE VIEW */}
       {/* ========================================================= */}
-      {currentRole === 'WORKSHOP_CONDUCTOR' && (
+      {isAuthorizedForCurrentPortal && currentRole === 'WORKSHOP_CONDUCTOR' && (
         <div className="space-y-6">
           <h2 className="text-xl font-extrabold text-stone-900 dark:text-stone-100">Scheduled Masterclasses</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -397,15 +462,63 @@ export default function UnifiedDashboardPage() {
       )}
 
       {/* ========================================================= */}
-      {/* 5. CLEANLINESS CREW ROLE VIEW */}
+      {/* 5. LOCAL ITEM SELLER (HANDLOOM & CRAFTS) VIEW */}
       {/* ========================================================= */}
-      {currentRole === 'CLEANLINESS_CREW' && (
+      {isAuthorizedForCurrentPortal && currentRole === 'LOCAL_ITEM_SELLER' && (
+        <div className="space-y-6">
+          <div className="flex items-center justify-between">
+            <h2 className="text-xl font-extrabold text-stone-900 dark:text-stone-100">
+              Handloom & Dokra Seller Console (Live Inventory)
+            </h2>
+            <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-100 text-blue-800">
+              Guild Storefront Active
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="p-5 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800">
+              <span className="text-xs text-stone-400 font-bold block">Active Craft Catalog</span>
+              <span className="text-2xl font-black text-stone-900 dark:text-stone-100">{CANONICAL_PRODUCTS.length} GI Items</span>
+            </div>
+            <div className="p-5 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800">
+              <span className="text-xs text-stone-400 font-bold block">Total Units In Stock</span>
+              <span className="text-2xl font-black text-amber-600">84 Pieces</span>
+            </div>
+            <div className="p-5 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800">
+              <span className="text-xs text-stone-400 font-bold block">Fulfilled Guild Orders</span>
+              <span className="text-2xl font-black text-emerald-600">₹82,400</span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {CANONICAL_PRODUCTS.slice(0, 4).map(prod => (
+              <div key={prod.id} className="p-5 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 flex items-center justify-between gap-4 text-xs">
+                <div className="space-y-1">
+                  <span className="px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-950 text-blue-900 dark:text-blue-200 text-[10px] font-bold">
+                    {prod.category}
+                  </span>
+                  <h4 className="font-bold text-sm text-stone-900 dark:text-stone-100">{prod.name}</h4>
+                  <p className="text-stone-500">Stock Available: {prod.stock} units • Price: ₹{prod.price}</p>
+                </div>
+                <button className="px-3 py-1.5 rounded-xl bg-stone-100 dark:bg-stone-800 hover:bg-stone-200 text-stone-800 dark:text-stone-200 font-bold shrink-0">
+                  Update Stock
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* ========================================================= */}
+      {/* 6. CLEANLINESS CREW ROLE VIEW */}
+      {/* ========================================================= */}
+      {isAuthorizedForCurrentPortal && currentRole === 'CLEANLINESS_CREW' && (
         <div className="space-y-6">
           <div className="flex items-center justify-between">
             <h2 className="text-xl font-extrabold text-stone-900 dark:text-stone-100">Crew Cleanliness Dashboard</h2>
             <button 
               onClick={() => setNewFundraiserModal(true)}
-              className="px-4 py-2 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs flex items-center gap-1.5"
+              className="px-4 py-2 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs flex items-center gap-1.5 cursor-pointer"
             >
               <Plus className="w-3.5 h-3.5" />
               <span>Create New Cleanliness Fundraiser</span>
@@ -455,9 +568,53 @@ export default function UnifiedDashboardPage() {
       )}
 
       {/* ========================================================= */}
-      {/* 6. RESEARCHER ROLE VIEW */}
+      {/* 7. FOLK ARTIST ROLE VIEW */}
       {/* ========================================================= */}
-      {currentRole === 'RESEARCHER' && (
+      {isAuthorizedForCurrentPortal && currentRole === 'ARTIST' && (
+        <div className="space-y-6">
+          <div className="flex items-center justify-between">
+            <h2 className="text-xl font-extrabold text-stone-900 dark:text-stone-100">
+              Folk Artiste & Troupe Operations Hub
+            </h2>
+            <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-100 text-purple-800">
+              Available for Booking
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="p-5 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800">
+              <span className="text-xs text-stone-400 font-bold block">Heritage Recitals</span>
+              <span className="text-2xl font-black text-stone-900 dark:text-stone-100">64 Performances</span>
+            </div>
+            <div className="p-5 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800">
+              <span className="text-xs text-stone-400 font-bold block">Standard Performance Fee</span>
+              <span className="text-2xl font-black text-purple-600">₹8,500</span>
+            </div>
+            <div className="p-5 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800">
+              <span className="text-xs text-stone-400 font-bold block">Art Form Heritage</span>
+              <span className="text-2xl font-black text-amber-600">Baul / Fakiri</span>
+            </div>
+          </div>
+
+          <div className="p-6 rounded-3xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 space-y-3 text-xs">
+            <h4 className="font-bold text-sm text-stone-900 dark:text-stone-100">Upcoming Cultural Bookings</h4>
+            <div className="p-4 rounded-2xl bg-stone-50 dark:bg-stone-800/60 flex items-center justify-between">
+              <div>
+                <p className="font-bold text-stone-900 dark:text-stone-100">Poush Mela Acoustic Evening Performance</p>
+                <p className="text-stone-500">Santiniketan Ashram Grounds • Dec 24, 2026 • 06:30 PM</p>
+              </div>
+              <span className="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs">
+                Contract Confirmed
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ========================================================= */}
+      {/* 8. RESEARCHER ROLE VIEW */}
+      {/* ========================================================= */}
+      {isAuthorizedForCurrentPortal && currentRole === 'RESEARCHER' && (
         <div className="space-y-6">
           <h2 className="text-xl font-extrabold text-stone-900 dark:text-stone-100">
             Cultural Research Contributions (Rule 4: Not Bookable)

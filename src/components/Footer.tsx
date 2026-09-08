@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Compass, Heart, ShieldCheck, PhoneCall, Sparkles, MapPin } from 'lucide-react';
+import { Compass, Heart, ShieldCheck, PhoneCall, Sparkles, MapPin, Lock } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -85,7 +85,13 @@ export function Footer() {
               <li><Link href="/quiz" className="hover:text-amber-300 transition-colors">Bengal Heritage Quiz & Points</Link></li>
               <li><Link href="/crosswords" className="hover:text-amber-300 transition-colors">Cultural Crossword Puzzle</Link></li>
               <li><Link href="/certificates/WS-7821" className="hover:text-amber-300 transition-colors">Public Certificate Verification</Link></li>
-              <li><Link href="/admin" className="hover:text-amber-300 transition-colors">Administrator Portal</Link></li>
+              <li>
+                <Link href="/admin" className="hover:text-amber-300 transition-colors inline-flex items-center gap-1.5">
+                  <Lock className="w-3 h-3 text-red-400 shrink-0" />
+                  <span>Administrator Portal</span>
+                  <span className="text-[9px] px-1.5 py-0.2 rounded bg-stone-800 text-stone-400 font-mono">Restricted</span>
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -97,7 +103,10 @@ export function Footer() {
             <Link href="/auth/sign-in" className="hover:text-stone-300">Sign In</Link>
             <Link href="/auth/sign-up" className="hover:text-stone-300">Join as Member</Link>
             <Link href="/dashboard" className="hover:text-stone-300">Visitor Dashboard</Link>
-            <Link href="/admin" className="hover:text-stone-300">Admin Console</Link>
+            <Link href="/admin" className="hover:text-stone-300 inline-flex items-center gap-1">
+              <Lock className="w-2.5 h-2.5 text-stone-500" />
+              <span>Admin Console</span>
+            </Link>
           </div>
         </div>
       </div>

@@ -18,6 +18,7 @@ import {
 import { usePorjotok } from '@/lib/store/porjotok-context';
 import { UserRole } from '@/types';
 import { DEMO_USERS } from '@/lib/data/members';
+import { validateAdminPasskey, ADMIN_SECURITY_KEY } from '@/lib/auth/rbac';
 
 export default function SignInPage() {
   const router = useRouter();
@@ -38,7 +39,7 @@ export default function SignInPage() {
     setPassword('demo1234');
     if (role === 'ADMIN') {
       setSelectedPortal('ADMIN');
-      setAdminKey('SIH-26197-ADMIN');
+      setAdminKey(ADMIN_SECURITY_KEY);
     } else if (role === 'VISITOR') {
       setSelectedPortal('VISITOR');
     } else {
@@ -71,6 +72,11 @@ export default function SignInPage() {
 
     let targetRole: UserRole = 'VISITOR';
     if (selectedPortal === 'ADMIN') {
+      if (!adminKey || !validateAdminPasskey(adminKey)) {
+        setErrorMsg('Access Denied: Invalid Administrator Security Key. Enter the authorized passkey (e.g. SIH-26197-ADMIN).');
+        setLoading(false);
+        return;
+      }
       targetRole = 'ADMIN';
     } else if (selectedPortal === 'MEMBER') {
       targetRole = memberRole;
