@@ -63,7 +63,7 @@ export default function HomePage() {
             <div className="lg:col-span-7 space-y-6 text-left">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100 dark:bg-amber-950/60 border border-amber-300/60 dark:border-amber-800/40 text-amber-900 dark:text-amber-300 text-xs font-semibold">
                 <Sparkles className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
-                <span>SIH Problem Statement 26197 • West Bengal Heritage</span>
+                <span>West Bengal Heritage</span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-stone-900 dark:text-stone-100 tracking-tight leading-[1.12]">
