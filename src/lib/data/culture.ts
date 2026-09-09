@@ -16,9 +16,9 @@ export const CANONICAL_CULTURE_ENTRIES: CultureEntry[] = [
     historicalPeriod: '16th Century to Present',
     connectedEvents: ['Mahalaya', 'Sandhi Puja', 'Dhunuchi Naach', 'Sindoor Khela', 'Bisarjan Carnival'],
     relatedSites: ['Kumartuli', 'Howrah Bridge', 'Dakshineswar Kali Temple', 'Victoria Memorial'],
-    featuredImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Making_of_Durga_idol_in_Kumartuli_04.jpg/1280px-Making_of_Durga_idol_in_Kumartuli_04.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Making_of_Durga_idol_in_Kumartuli_07.jpg/1280px-Making_of_Durga_idol_in_Kumartuli_07.jpg'
     ],
     verified: true,
     featured: true
@@ -38,7 +38,7 @@ export const CANONICAL_CULTURE_ENTRIES: CultureEntry[] = [
     historicalPeriod: 'Medieval to Present',
     connectedEvents: ['Joydev Kenduli Mela', 'Poush Mela', 'Basanta Utsav'],
     relatedSites: ['Santiniketan', 'Gangasagar Temple'],
-    featuredImage: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80',
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Vandari_Abdul_Jabbar%2C_folk_singer_singing_with_musical_instrument_%27Ektara%27%2C_Bangladesh.jpg/1280px-Vandari_Abdul_Jabbar%2C_folk_singer_singing_with_musical_instrument_%27Ektara%27%2C_Bangladesh.jpg',
     gallery: [],
     verified: true,
     featured: true
@@ -58,7 +58,7 @@ export const CANONICAL_CULTURE_ENTRIES: CultureEntry[] = [
     historicalPeriod: 'Ancient/Folk roots to Present',
     connectedEvents: ['Chhau Mela Charida', 'Shiva Gajan', 'Spring Festivals'],
     relatedSites: ['Gopegarh', 'Rasmancha'],
-    featuredImage: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80',
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Chhau_Nritya_face_mask_001.jpg/1280px-Chhau_Nritya_face_mask_001.jpg',
     gallery: [],
     verified: true,
     featured: true
@@ -78,7 +78,7 @@ export const CANONICAL_CULTURE_ENTRIES: CultureEntry[] = [
     historicalPeriod: 'Bronze Age to Present',
     connectedEvents: ['Dokra Mela Bikna', 'Kolkata Poush Mela'],
     relatedSites: ['Rasmancha', 'Jor Bangla Temple'],
-    featuredImage: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/God_astride_an_owl%2C_Dhokra_%28Dokra%29_craftsmen%2C_Bankura%2C_West_Bengal%2C_19th_century%2C_lost-wax_cast_brass%2C_HAA.JPG/1280px-God_astride_an_owl%2C_Dhokra_%28Dokra%29_craftsmen%2C_Bankura%2C_West_Bengal%2C_19th_century%2C_lost-wax_cast_brass%2C_HAA.JPG',
     gallery: [],
     verified: true,
     featured: true
@@ -98,7 +98,7 @@ export const CANONICAL_CULTURE_ENTRIES: CultureEntry[] = [
     historicalPeriod: 'Ancient to Present',
     connectedEvents: ['Pot Maya Festival Pingla', 'Kolkata Winter Fairs'],
     relatedSites: ['Kurumbera Fort', 'Gopegarh'],
-    featuredImage: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80',
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Pingla_Patachitra_Shilpi_Shyamsundar_Chitrokor%2C_Pingla%2C_West_Bengal.jpg/1280px-Pingla_Patachitra_Shilpi_Shyamsundar_Chitrokor%2C_Pingla%2C_West_Bengal.jpg',
     gallery: [],
     verified: true,
     featured: true
@@ -118,7 +118,7 @@ export const CANONICAL_CULTURE_ENTRIES: CultureEntry[] = [
     historicalPeriod: '18th Century to Present',
     connectedEvents: ['Bishnupur Mela', 'Bengal Handloom Expo'],
     relatedSites: ['Rasmancha', 'Hazarduari Palace'],
-    featuredImage: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&q=80',
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Baluchari_saree_of_Bishnupur_DSC06031.jpg/1280px-Baluchari_saree_of_Bishnupur_DSC06031.jpg',
     gallery: [],
     verified: true,
     featured: true
@@ -138,7 +138,7 @@ export const CANONICAL_CULTURE_ENTRIES: CultureEntry[] = [
     historicalPeriod: 'Ancient to Present',
     connectedEvents: ['Bishnupur Mela', 'Terracotta Utsav Panchmura'],
     relatedSites: ['Rasmancha', 'Jor Bangla Temple', 'Shyam Rai Temple'],
-    featuredImage: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Jor_Bangla_or_Keshta_Raya_temple_of_Bishnupur._Built_by_Raghunath_Singha_in_1655_AD._23.jpg/1280px-Jor_Bangla_or_Keshta_Raya_temple_of_Bishnupur._Built_by_Raghunath_Singha_in_1655_AD._23.jpg',
     gallery: [],
     verified: true,
     featured: true
@@ -158,7 +158,7 @@ export const CANONICAL_CULTURE_ENTRIES: CultureEntry[] = [
     historicalPeriod: '18th Century to Present',
     connectedEvents: ['Chokkhu Daan on Mahalaya', 'Durga Puja', 'Kali Puja'],
     relatedSites: ['Howrah Bridge', 'Dakshineswar Kali Temple'],
-    featuredImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Making_of_Durga_idol_in_Kumartuli_11.jpg/1280px-Making_of_Durga_idol_in_Kumartuli_11.jpg',
     gallery: [],
     verified: true,
     featured: true
@@ -178,7 +178,7 @@ export const CANONICAL_CULTURE_ENTRIES: CultureEntry[] = [
     historicalPeriod: 'Bengal Renaissance to Present',
     connectedEvents: ['Rabindra Jayanti (25th Boishakh)', 'Basanta Utsav', 'Brikkharopana'],
     relatedSites: ['Santiniketan', 'Rabindra Bhavan', 'Victoria Memorial'],
-    featuredImage: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80',
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Shantiniketan_Bari_of_Rabindranath_Tagore.jpg/1280px-Shantiniketan_Bari_of_Rabindranath_Tagore.jpg',
     gallery: [],
     verified: true,
     featured: true
@@ -198,7 +198,7 @@ export const CANONICAL_CULTURE_ENTRIES: CultureEntry[] = [
     historicalPeriod: 'Ancient to Present',
     connectedEvents: ['Bengali Weddings', 'Durga Puja Daaker Saaj', 'Saraswati Puja'],
     relatedSites: ['Kumartuli', 'Santiniketan'],
-    featuredImage: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Craft_sholapith.jpg/1280px-Craft_sholapith.jpg',
     gallery: [],
     verified: true
   },
@@ -217,7 +217,7 @@ export const CANONICAL_CULTURE_ENTRIES: CultureEntry[] = [
     historicalPeriod: 'Ancient to Present',
     connectedEvents: ['Lakshmi Puja', 'Basanta Utsav', 'Bengali Weddings'],
     relatedSites: ['Santiniketan', 'Kamal Kutir'],
-    featuredImage: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80',
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Alpona_-_Bengal_01.png/1280px-Alpona_-_Bengal_01.png',
     gallery: [],
     verified: true
   },
@@ -236,7 +236,7 @@ export const CANONICAL_CULTURE_ENTRIES: CultureEntry[] = [
     historicalPeriod: '1894 to Present',
     connectedEvents: ['7th Poush Upasana', 'Baul Gaan', 'Santhali Dance'],
     relatedSites: ['Santiniketan', 'Kamal Kutir'],
-    featuredImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Poush_Mela_Bazaar.JPG/1280px-Poush_Mela_Bazaar.JPG',
     gallery: [],
     verified: true,
     featured: true
@@ -256,7 +256,7 @@ export const CANONICAL_CULTURE_ENTRIES: CultureEntry[] = [
     historicalPeriod: 'Ancient to Present',
     connectedEvents: ['Makar Sankranti Holy Snan', 'Kapil Muni Puja'],
     relatedSites: ['Gangasagar Temple', 'Sundarbans National Park'],
-    featuredImage: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80',
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Ganga_Sagar_mela_2026_Vibes_59.jpg/1280px-Ganga_Sagar_mela_2026_Vibes_59.jpg',
     gallery: [],
     verified: true
   },
@@ -275,7 +275,7 @@ export const CANONICAL_CULTURE_ENTRIES: CultureEntry[] = [
     historicalPeriod: '1976 to Present',
     connectedEvents: ['Kolkata Literary Meet', 'Little Magazine Enclosure'],
     relatedSites: ['Victoria Memorial', 'Asiatic Society Building'],
-    featuredImage: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80',
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Victoria_Memorial_situated_in_Kolkata.jpg/1280px-Victoria_Memorial_situated_in_Kolkata.jpg',
     gallery: [],
     verified: true
   },
@@ -294,7 +294,7 @@ export const CANONICAL_CULTURE_ENTRIES: CultureEntry[] = [
     historicalPeriod: 'Ancient to Present',
     connectedEvents: ['Poila Boishakh Feast', 'Bhai Phota Sweets', 'Jamai Sashthi'],
     relatedSites: ['Howrah Bridge', 'Hazarduari Palace'],
-    featuredImage: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1200&q=80',
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Dakhineshwar_Temple_beside_the_Hoogly%2C_West_Bengal.JPG/1280px-Dakhineshwar_Temple_beside_the_Hoogly%2C_West_Bengal.JPG',
     gallery: [],
     verified: true,
     featured: true

@@ -22,10 +22,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹100 (Indians), ₹200 (Foreigners) + boat safari permit',
     accessibilityInfo: 'Boat accessible only. Launch boarding at Godkhali or Canning.',
     nearbySites: ['Gangasagar Temple', 'Netidhopani Watchtower'],
-    featuredImage: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1200&q=80',
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Sundarban_Tiger.jpg/1280px-Sundarban_Tiger.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=800&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Creeks_of_Sundarbans.jpg/1280px-Creeks_of_Sundarbans.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Sundarbans_web_ESA362980.jpg/1280px-Sundarbans_web_ESA362980.jpg'
     ],
     audioStory: 'Listen to the folklore of Bonbibi and the Royal Bengal Tigers across the mystic Sundarbans mangroves.',
     verified: true,
@@ -52,9 +52,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Steam Joyride: ₹1,500; Diesel: ₹1,000',
     accessibilityInfo: 'Station platform ramp available at Darjeeling & Ghum stations.',
     nearbySites: ['Darjeeling Town Hall', 'Tomb of Alexander Csoma de Körös'],
-    featuredImage: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80',
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Darjeeling_Himalayan_Railway%2Ctoy_train_%281%29.jpg/1280px-Darjeeling_Himalayan_Railway%2Ctoy_train_%281%29.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Batasia_Loop_War_Memorial_with_Kanchanjunga.jpg/1280px-Batasia_Loop_War_Memorial_with_Kanchanjunga.jpg'
     ],
     audioStory: 'The rhythmic chug of vintage steam whistles through the clouds of Ghum and Batasia Loop.',
     verified: true,
@@ -81,9 +81,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹70 (Tagore Museum & Uttarayan Complex)',
     accessibilityInfo: 'Paved walkways through Uttarayan complex and Kala Bhavana.',
     nearbySites: ['Kamal Kutir', 'Rabindra Bhavan'],
-    featuredImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Shantiniketan_Bari_of_Rabindranath_Tagore.jpg/1280px-Shantiniketan_Bari_of_Rabindranath_Tagore.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Rabindra_Bhavan_-_Santiniketan_2014-06-29_5373-5374.TIF/lossy-page1-1280px-Rabindra_Bhavan_-_Santiniketan_2014-06-29_5373-5374.TIF.jpg'
     ],
     audioStory: 'Tagore reciting under the Chhatimtala trees as spring blossoms in Visva-Bharati.',
     verified: true,
@@ -110,9 +110,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹50 (Museum for Indians), ₹20 (Gardens)',
     accessibilityInfo: 'Wheelchair ramps and motorized battery carts available on-site.',
     nearbySites: ['St. John’s Church', 'Metcalfe Hall', 'High Court Building'],
-    featuredImage: 'https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1200&q=80',
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Victoria_Memorial_situated_in_Kolkata.jpg/1280px-Victoria_Memorial_situated_in_Kolkata.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1588416936097-41850ab3d86d?auto=format&fit=crop&w=800&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Victoria_Memorial_hall_with_lake.jpg/1280px-Victoria_Memorial_hall_with_lake.jpg'
     ],
     audioStory: 'Echoes of colonial Calcutta and the bronze Angel of Victory turning in the evening breeze.',
     verified: true,
@@ -139,9 +139,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free Public Access',
     accessibilityInfo: 'Pedestrian footpaths on both flanks with ramps.',
     nearbySites: ['Currency Building', 'Metcalfe Hall', 'Kumartuli'],
-    featuredImage: 'https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1200&q=80',
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Howrah_bridge_at_night.jpg/1280px-Howrah_bridge_at_night.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1588416936097-41850ab3d86d?auto=format&fit=crop&w=800&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Howrah_bridge_at_night.jpg/1280px-Howrah_bridge_at_night.jpg'
     ],
     audioStory: 'Listen to the bustling dawn flower market under the towering steel girders of Rabindra Setu.',
     verified: true,
@@ -168,9 +168,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free Entry',
     accessibilityInfo: 'Paved courtyard with skywalk connection from Dakshineswar Metro Station.',
     nearbySites: ['Belur Math', 'Kumartuli'],
-    featuredImage: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Dakhineshwar_Temple_beside_the_Hoogly%2C_West_Bengal.JPG/1280px-Dakhineshwar_Temple_beside_the_Hoogly%2C_West_Bengal.JPG',
     gallery: [
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Dakhineshwar_Temple_beside_the_Hoogly%2C_West_Bengal.JPG/1280px-Dakhineshwar_Temple_beside_the_Hoogly%2C_West_Bengal.JPG'
     ],
     audioStory: 'Bhavatarini temple bells resounding over the Hooghly as Rani Rashmoni defied orthodox taboos to open the sanctuary.',
     verified: true,
@@ -197,9 +197,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free Entry',
     accessibilityInfo: 'Wheelchair access available throughout the riverside gardens and main sanctum.',
     nearbySites: ['Dakshineswar Kali Temple', 'Howrah Bridge'],
-    featuredImage: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80',
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Belur_Math%2C_Howrah.jpg/1280px-Belur_Math%2C_Howrah.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Belur_Math%2C_Howrah.jpg/1280px-Belur_Math%2C_Howrah.jpg'
     ],
     audioStory: 'Vedic chants and evening bells blending with the ripples of the Ganga at Swami Vivekananda’s samadhi shrine.',
     verified: true,
@@ -226,9 +226,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹25 (Indians), ₹300 (Foreigners)',
     accessibilityInfo: 'Ground floor accessible via ramps.',
     nearbySites: ['Nizamat Imambara', 'Tomb of Siraj-ud-Daulah', 'Tomb of Alivardi Khan'],
-    featuredImage: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80',
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Hazarduari_Palace%2C_Murshidabad_illuminated_at_night.jpg/1280px-Hazarduari_Palace%2C_Murshidabad_illuminated_at_night.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=800&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Hazarduari_Palace%2C_Murshidabad_illuminated_at_night.jpg/1280px-Hazarduari_Palace%2C_Murshidabad_illuminated_at_night.jpg'
     ],
     audioStory: 'Step into the Durbar hall of the Nawabs surrounded by royal chandelier crystals and century-old silver thrones.',
     verified: true,
@@ -255,8 +255,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free Entry',
     accessibilityInfo: 'Courtyard level ground.',
     nearbySites: ['Hazarduari Palace', 'Firoz Minar'],
-    featuredImage: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/4/47/Nizamat_Imambara_2%2C_Murshidabad.jpg',
+    gallery: [
+      'https://upload.wikimedia.org/wikipedia/commons/4/47/Nizamat_Imambara_2%2C_Murshidabad.jpg'
+    ],
     audioStory: 'The echoing call of Muharram across the vast tiled courtyards of Nizamat.',
     verified: true
   },
@@ -281,8 +283,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹25 (ASI ticket)',
     accessibilityInfo: 'Gravel pathway into outer courtyards.',
     nearbySites: ['Eklakhi Mausoleum', 'Qadam Rasul Mosque', 'Firoz Minar'],
-    featuredImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Adina_Mosque_at_Malda_district_of_West_Bengal_08.jpg/1280px-Adina_Mosque_at_Malda_district_of_West_Bengal_08.jpg',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Adina_Mosque_at_Malda_district_of_West_Bengal_08.jpg/1280px-Adina_Mosque_at_Malda_district_of_West_Bengal_08.jpg'
+    ],
     audioStory: 'Discover the grand vault of Sultan Sikandar Shah rising above the historic plains of Pandua.',
     verified: true
   },
@@ -307,8 +311,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹25 (ASI Gour pass)',
     accessibilityInfo: 'Grassy pathways surround the tower base.',
     nearbySites: ['Qadam Rasul Mosque', 'Eklakhi Mausoleum', 'Adina Mosque'],
-    featuredImage: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Firoze_Minar_at_Gaur_in_Malda_district_10.jpg/1280px-Firoze_Minar_at_Gaur_in_Malda_district_10.jpg',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Firoze_Minar_at_Gaur_in_Malda_district_10.jpg/1280px-Firoze_Minar_at_Gaur_in_Malda_district_10.jpg'
+    ],
     audioStory: 'The spiral stairs of Firoz Minar overlooking the ramparts of ancient Gour.',
     verified: true
   },
@@ -333,8 +339,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Included in Gour ASI ticket (₹25)',
     accessibilityInfo: 'Stone pathways inside sanctuary enclosure.',
     nearbySites: ['Firoz Minar', 'Eklakhi Mausoleum'],
-    featuredImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Full_view_of_Qadam_Rasul_Mosque.jpg/1280px-Full_view_of_Qadam_Rasul_Mosque.jpg',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Full_view_of_Qadam_Rasul_Mosque.jpg/1280px-Full_view_of_Qadam_Rasul_Mosque.jpg'
+    ],
     audioStory: 'The sacred relic of Qadam Rasul preserved under ornate brick domes in ancient Gour.',
     verified: true
   },
@@ -359,8 +367,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free Entry / ASI Monitored',
     accessibilityInfo: 'Direct flat approach.',
     nearbySites: ['Adina Mosque', 'Firoz Minar'],
-    featuredImage: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Eklakhi_Mausoleum.jpg/1280px-Eklakhi_Mausoleum.jpg',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Eklakhi_Mausoleum.jpg/1280px-Eklakhi_Mausoleum.jpg'
+    ],
     audioStory: 'How a converted prince constructed Bengal’s earliest domed brick mausoleum with one lakh silver tankas.',
     verified: true
   },
@@ -385,8 +395,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹10',
     accessibilityInfo: 'Paved garden paths.',
     nearbySites: ['Tomb of Siraj-ud-Daulah', 'Hazarduari Palace'],
-    featuredImage: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Khosbagh.JPG/1280px-Khosbagh.JPG',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Khosbagh.JPG/1280px-Khosbagh.JPG'
+    ],
     audioStory: 'Walk through Khushbagh where Nawab Alivardi Khan rests beside the tragic Siraj-ud-Daulah.',
     verified: true
   },
@@ -411,8 +423,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Covered under Khushbagh visit',
     accessibilityInfo: 'Flat garden approach.',
     nearbySites: ['Tomb of Alivardi Khan', 'Hazarduari Palace'],
-    featuredImage: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Khosbagh.JPG/1280px-Khosbagh.JPG',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Khosbagh.JPG/1280px-Khosbagh.JPG'
+    ],
     audioStory: 'Lutfunnisa Begum’s candle burning in the quiet gardens of Khushbagh beside Siraj’s grave.',
     verified: true
   },
@@ -437,9 +451,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹25 (Combined ASI ticket for all Bishnupur temples)',
     accessibilityInfo: 'Ramp and stone walkways around exterior arches.',
     nearbySites: ['Jor Bangla Temple', 'Shyam Rai Temple', 'Madan Mohan Temple', 'Dalmadal Gun'],
-    featuredImage: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Rasmancha_Arnab_Dutta_2011.JPG/1280px-Rasmancha_Arnab_Dutta_2011.JPG',
     gallery: [
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Rasmancha_Arnab_Dutta_2011.JPG/1280px-Rasmancha_Arnab_Dutta_2011.JPG'
     ],
     audioStory: 'Listen to the hymns of Malla kings as hundreds of Krishna idols convened under the stepped pyramid of Rasmancha.',
     verified: true,
@@ -466,8 +480,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Included in Bishnupur ASI ticket (₹25)',
     accessibilityInfo: 'Stone path around temple precinct.',
     nearbySites: ['Rasmancha', 'Shyam Rai Temple', 'Radha Shyam Temple'],
-    featuredImage: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Jor_Bangla_or_Keshta_Raya_temple_of_Bishnupur._Built_by_Raghunath_Singha_in_1655_AD._23.jpg/1280px-Jor_Bangla_or_Keshta_Raya_temple_of_Bishnupur._Built_by_Raghunath_Singha_in_1655_AD._23.jpg',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Jor_Bangla_or_Keshta_Raya_temple_of_Bishnupur._Built_by_Raghunath_Singha_in_1655_AD._23.jpg/1280px-Jor_Bangla_or_Keshta_Raya_temple_of_Bishnupur._Built_by_Raghunath_Singha_in_1655_AD._23.jpg'
+    ],
     audioStory: 'Deciphering the terracotta battlefield panels carved into the clay of Jor Bangla Temple.',
     verified: true,
     featured: true
@@ -493,8 +509,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Included in Bishnupur ASI ticket (₹25)',
     accessibilityInfo: 'Walkways accessible around garden.',
     nearbySites: ['Jor Bangla Temple', 'Rasmancha'],
-    featuredImage: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Shyam_Rai_Temple_in_Bishnupur%2C_West_Bengal%2C_India.jpg/1280px-Shyam_Rai_Temple_in_Bishnupur%2C_West_Bengal%2C_India.jpg',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Shyam_Rai_Temple_in_Bishnupur%2C_West_Bengal%2C_India.jpg/1280px-Shyam_Rai_Temple_in_Bishnupur%2C_West_Bengal%2C_India.jpg'
+    ],
     audioStory: 'The rhythmic dancers of the terracotta Rasamandala captured in eternal motion.',
     verified: true
   },
@@ -519,8 +537,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free entry for worship',
     accessibilityInfo: 'Street-level entrance.',
     nearbySites: ['Dalmadal Gun', 'Rasmancha', 'Jor Bangla Temple'],
-    featuredImage: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Madan_Mohan_Temple_of_Bishnupur_District_of_West_Bengal.jpg/1280px-Madan_Mohan_Temple_of_Bishnupur_District_of_West_Bengal.jpg',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Madan_Mohan_Temple_of_Bishnupur_District_of_West_Bengal.jpg/1280px-Madan_Mohan_Temple_of_Bishnupur_District_of_West_Bengal.jpg'
+    ],
     audioStory: 'How the deity Madan Mohan defended the ramparts of Bishnupur with the roar of the Dalmadal cannon.',
     verified: true
   },
@@ -545,8 +565,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Included in Bishnupur ASI ticket',
     accessibilityInfo: 'Open grounds.',
     nearbySites: ['Lalji Temple', 'Radha Madhav Temple'],
-    featuredImage: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Kalachand_Temple_of_Bishnupur_%2808%29.jpg/1280px-Kalachand_Temple_of_Bishnupur_%2808%29.jpg',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Kalachand_Temple_of_Bishnupur_%2808%29.jpg/1280px-Kalachand_Temple_of_Bishnupur_%2808%29.jpg'
+    ],
     audioStory: 'Laterite stone carvings glowing reddish gold in the Bishnupur sunset.',
     verified: true
   },
@@ -571,8 +593,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Included in Bishnupur ASI ticket',
     accessibilityInfo: 'Stone steps into compound.',
     nearbySites: ['Radha Shyam Temple', 'Rasmancha'],
-    featuredImage: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Lalji_Mandir_Area.jpg/1280px-Lalji_Mandir_Area.jpg',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Lalji_Mandir_Area.jpg/1280px-Lalji_Mandir_Area.jpg'
+    ],
     audioStory: 'The fortified stone arches of Lalji Temple where Malla queens offered morning prayers.',
     verified: true
   },
@@ -597,8 +621,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Included in Bishnupur ASI ticket',
     accessibilityInfo: 'Level lawn approach.',
     nearbySites: ['Radha Govinda Temple', 'Kalachand Temple'],
-    featuredImage: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/RADHA_MADHAB_TEMPLE.JPG/1280px-RADHA_MADHAB_TEMPLE.JPG',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/RADHA_MADHAB_TEMPLE.JPG/1280px-RADHA_MADHAB_TEMPLE.JPG'
+    ],
     audioStory: 'Royal lady Churamoni Devi’s peaceful temple sanctuary in Bishnupur.',
     verified: true
   },
@@ -623,8 +649,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Included in Bishnupur ASI ticket',
     accessibilityInfo: 'Open lawn.',
     nearbySites: ['Radha Madhav Temple', 'Rasmancha'],
-    featuredImage: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Radha_Gobinda_temple_01.jpg/1280px-Radha_Gobinda_temple_01.jpg',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Radha_Gobinda_temple_01.jpg/1280px-Radha_Gobinda_temple_01.jpg'
+    ],
     audioStory: 'Exploring the quiet laterite courtyards of Radha Govinda Temple.',
     verified: true
   },
@@ -649,8 +677,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Included in Bishnupur ASI ticket',
     accessibilityInfo: 'Stone paved path.',
     nearbySites: ['Jor Bangla Temple', 'Lalji Temple'],
-    featuredImage: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/6/6d/Radhashyam_Temple_-_Bishnupur.jpg',
+    gallery: [
+      'https://upload.wikimedia.org/wikipedia/commons/6/6d/Radhashyam_Temple_-_Bishnupur.jpg'
+    ],
     audioStory: 'Stucco reliefs of celestial musicians celebrating the divine pastime in Radha Shyam.',
     verified: true
   },
@@ -675,8 +705,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Included in Bishnupur ASI ticket',
     accessibilityInfo: 'Rural pathway access.',
     nearbySites: ['Jor Bangla Temple', 'Gokul Chand Temple'],
-    featuredImage: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Radhabinod_Temple_Joydev_Kenduli.jpg/1280px-Radhabinod_Temple_Joydev_Kenduli.jpg',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Radhabinod_Temple_Joydev_Kenduli.jpg/1280px-Radhabinod_Temple_Joydev_Kenduli.jpg'
+    ],
     audioStory: 'The beauty of the eight curved roofs of Radha Vinod Temple.',
     verified: true
   },
@@ -701,8 +733,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free / ASI Protected',
     accessibilityInfo: 'Stone staircase into outer courtyard.',
     nearbySites: ['Rasmancha', 'Shyam Rai Temple'],
-    featuredImage: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Gokul_Chand_Temple_at_Gokulnagar%2C_Bankura_district%2C_West_Bengal_01.jpg/1280px-Gokul_Chand_Temple_at_Gokulnagar%2C_Bankura_district%2C_West_Bengal_01.jpg',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Gokul_Chand_Temple_at_Gokulnagar%2C_Bankura_district%2C_West_Bengal_01.jpg/1280px-Gokul_Chand_Temple_at_Gokulnagar%2C_Bankura_district%2C_West_Bengal_01.jpg'
+    ],
     audioStory: 'The silence of the laterite towers in rural Gokulnagar.',
     verified: true
   },
@@ -727,8 +761,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹25 (Indians), ₹300 (Foreigners)',
     accessibilityInfo: 'Wheelchair access ramp to ground floor museum galleries.',
     nearbySites: ['Jalpaiguri Rajbati', 'Madan Mohan Temple Cooch Behar'],
-    featuredImage: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/The_Cooch_Behar_Palace_or_the_Cooch_Behar_Rajbari%2C_Cooch_Behar_District%2C_West_Bengal%2C_India_01.jpg/1280px-The_Cooch_Behar_Palace_or_the_Cooch_Behar_Rajbari%2C_Cooch_Behar_District%2C_West_Bengal%2C_India_01.jpg',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/The_Cooch_Behar_Palace_or_the_Cooch_Behar_Rajbari%2C_Cooch_Behar_District%2C_West_Bengal%2C_India_01.jpg/1280px-The_Cooch_Behar_Palace_or_the_Cooch_Behar_Rajbari%2C_Cooch_Behar_District%2C_West_Bengal%2C_India_01.jpg'
+    ],
     audioStory: 'Step into the Durbar hall under the grand dome where the Koch Maharajas held state.',
     verified: true,
     featured: true
@@ -754,8 +790,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free Entry / Grounds',
     accessibilityInfo: 'Roadside open access.',
     nearbySites: ['Cooch Behar Palace', 'Darjeeling Himalayan Railway'],
-    featuredImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/a/ae/Jalpaiguri_Rajbari_Gate.jpg',
+    gallery: [
+      'https://upload.wikimedia.org/wikipedia/commons/a/ae/Jalpaiguri_Rajbari_Gate.jpg'
+    ],
     audioStory: 'Legends of the Raikat rulers guarding the gateway forests of the Dooars.',
     verified: true
   },
@@ -780,8 +818,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹20',
     accessibilityInfo: 'Forest paths with rest gazebos.',
     nearbySites: ['Kurumbera Fort', 'Rasmancha'],
-    featuredImage: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Gopegarh_heritage_building.jpg/1280px-Gopegarh_heritage_building.jpg',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Gopegarh_heritage_building.jpg/1280px-Gopegarh_heritage_building.jpg'
+    ],
     audioStory: 'Sal breezes whispering ancient legends across the ramparts of Gopegarh.',
     verified: true
   },
@@ -806,8 +846,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free Entry',
     accessibilityInfo: 'Roadside paved platform.',
     nearbySites: ['Madan Mohan Temple', 'Rasmancha'],
-    featuredImage: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Dalmadal_Cannon%2C_Bishnupur.JPG/1280px-Dalmadal_Cannon%2C_Bishnupur.JPG',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Dalmadal_Cannon%2C_Bishnupur.JPG/1280px-Dalmadal_Cannon%2C_Bishnupur.JPG'
+    ],
     audioStory: 'How blacksmith Jagannath Karmakar forged the mighty iron rings of the Dalmadal cannon.',
     verified: true
   },
@@ -832,8 +874,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free Entry',
     accessibilityInfo: 'Flat grassy walkway.',
     nearbySites: ['Danish Governor House Serampore', 'Dupleix Palace Chandannagar'],
-    featuredImage: 'https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Danish_Cemetery._all_Tombs_%26_structure.jpg/1280px-Danish_Cemetery._all_Tombs_%26_structure.jpg',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Danish_Cemetery._all_Tombs_%26_structure.jpg/1280px-Danish_Cemetery._all_Tombs_%26_structure.jpg'
+    ],
     audioStory: 'The peaceful obelisks of Serampore telling tales of Danish merchants along the Hooghly.',
     verified: true
   },
@@ -858,8 +902,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹10',
     accessibilityInfo: 'Paved riverfront promenade.',
     nearbySites: ['Danish Cemetery Serampore', 'Dupleix Palace Chandannagar'],
-    featuredImage: 'https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Danish_Government_House_at_Serampore_in_West_Bengal.jpg/1280px-Danish_Government_House_at_Serampore_in_West_Bengal.jpg',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Danish_Government_House_at_Serampore_in_West_Bengal.jpg/1280px-Danish_Government_House_at_Serampore_in_West_Bengal.jpg'
+    ],
     audioStory: 'The restoration of Frederiksnagore’s grand Danish administrative seat on the banks of Hooghly.',
     verified: true
   },
@@ -884,8 +930,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹20',
     accessibilityInfo: 'Ground floor museum ramp.',
     nearbySites: ['Danish Governor House', 'Metcalfe Hall'],
-    featuredImage: 'https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Institut_de_Chandernagor_-_Strand_Road_-_Chandan_Nagar_-_Hooghly_-_2013-05-19_7899.JPG/1280px-Institut_de_Chandernagor_-_Strand_Road_-_Chandan_Nagar_-_Hooghly_-_2013-05-19_7899.JPG',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Institut_de_Chandernagor_-_Strand_Road_-_Chandan_Nagar_-_Hooghly_-_2013-05-19_7899.JPG/1280px-Institut_de_Chandernagor_-_Strand_Road_-_Chandan_Nagar_-_Hooghly_-_2013-05-19_7899.JPG'
+    ],
     audioStory: 'French romance and diplomacy along the quiet Strand promenade of Chandannagar.',
     verified: true
   },
@@ -910,8 +958,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹20',
     accessibilityInfo: 'Wheelchair ramp at rear entrance.',
     nearbySites: ['Currency Building', 'St. John’s Church', 'High Court Building'],
-    featuredImage: 'https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/1/1d/The_Imperial_Library.jpg',
+    gallery: [
+      'https://upload.wikimedia.org/wikipedia/commons/1/1d/The_Imperial_Library.jpg'
+    ],
     audioStory: 'How Metcalfe Hall championed the liberty of the printing press in colonial India.',
     verified: true
   },
@@ -936,8 +986,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free (Registration required)',
     accessibilityInfo: 'Elevator access inside building.',
     nearbySites: ['Victoria Memorial', 'St. John’s Church'],
-    featuredImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Asiatic_Society_-_Park_Street_-_Kolkata_2013-04-10_7830.JPG/1280px-Asiatic_Society_-_Park_Street_-_Kolkata_2013-04-10_7830.JPG',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Asiatic_Society_-_Park_Street_-_Kolkata_2013-04-10_7830.JPG/1280px-Asiatic_Society_-_Park_Street_-_Kolkata_2013-04-10_7830.JPG'
+    ],
     audioStory: 'Sir William Jones discovering the common roots of Sanskrit, Greek, and Latin in 1784.',
     verified: true
   },
@@ -962,8 +1014,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free with ID registration',
     accessibilityInfo: 'Ground floor main prayer hall flat access.',
     nearbySites: ['Beth-El Synagogue', 'Currency Building', 'St. John’s Church'],
-    featuredImage: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Maghen_David_Synagogue_-_Kolkata_2012-09-22_0275-0276_Combined.jpg/1280px-Maghen_David_Synagogue_-_Kolkata_2012-09-22_0275-0276_Combined.jpg',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Maghen_David_Synagogue_-_Kolkata_2012-09-22_0275-0276_Combined.jpg/1280px-Maghen_David_Synagogue_-_Kolkata_2012-09-22_0275-0276_Combined.jpg'
+    ],
     audioStory: 'Generations of Muslim caretakers preserving the silver Torah crowns of Maghen David in the heart of Kolkata.',
     verified: true
   },
@@ -988,8 +1042,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free with ID registration',
     accessibilityInfo: 'Staircase entrance to sanctuary.',
     nearbySites: ['Maghen David Synagogue', 'Currency Building'],
-    featuredImage: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Beth_El_Synagogue_-_Pollock_Street_-_Kolkata_2013-03-03_5371.JPG/1280px-Beth_El_Synagogue_-_Pollock_Street_-_Kolkata_2013-03-03_5371.JPG',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Beth_El_Synagogue_-_Pollock_Street_-_Kolkata_2013-03-03_5371.JPG/1280px-Beth_El_Synagogue_-_Pollock_Street_-_Kolkata_2013-03-03_5371.JPG'
+    ],
     audioStory: 'Sunlight filtering through Belgian stained glass into the quiet hall of Beth-El.',
     verified: true
   },
@@ -1014,8 +1070,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹10 maintenance donation',
     accessibilityInfo: 'Courtyard flat pathways.',
     nearbySites: ['High Court Building', 'Currency Building', 'Victoria Memorial'],
-    featuredImage: 'https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/St._John%27s_Church_at_Hastigns_Street%2CKolkata.JPG/1280px-St._John%27s_Church_at_Hastigns_Street%2CKolkata.JPG',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/St._John%27s_Church_at_Hastigns_Street%2CKolkata.JPG/1280px-St._John%27s_Church_at_Hastigns_Street%2CKolkata.JPG'
+    ],
     audioStory: 'The stones of medieval Gour resurrected as the foundation of Job Charnock’s mausoleum.',
     verified: true
   },
@@ -1040,8 +1098,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free Entry',
     accessibilityInfo: 'Full wheelchair accessibility with modern elevators.',
     nearbySites: ['Metcalfe Hall', 'High Court Building', 'St. John’s Church'],
-    featuredImage: 'https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Currency_Building_-_Dalhousie_Square_-_Kolkata_2012-09-22_0289.JPG/1280px-Currency_Building_-_Dalhousie_Square_-_Kolkata_2012-09-22_0289.JPG',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Currency_Building_-_Dalhousie_Square_-_Kolkata_2012-09-22_0289.JPG/1280px-Currency_Building_-_Dalhousie_Square_-_Kolkata_2012-09-22_0289.JPG'
+    ],
     audioStory: 'From minting early rupee notes to displaying contemporary Indian art under the sunlit atrium of the Currency Building.',
     verified: true
   },
@@ -1066,8 +1126,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Official access only / Free exterior view',
     accessibilityInfo: 'Security gate access.',
     nearbySites: ['St. John’s Church', 'Metcalfe Hall', 'Currency Building'],
-    featuredImage: 'https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Calcutta_High_Court.jpg/1280px-Calcutta_High_Court.jpg',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Calcutta_High_Court.jpg/1280px-Calcutta_High_Court.jpg'
+    ],
     audioStory: 'The Gothic arches of Calcutta High Court echoing with legendary legal battles for Indian freedom.',
     verified: true
   },
@@ -1092,8 +1154,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free (Exterior & Educational visits)',
     accessibilityInfo: 'Direct College Street pavement access.',
     nearbySites: ['House of Derozio', 'Bankim Chandra Chattopadhyay Bhawan'],
-    featuredImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Hindu_School_-_Kolkata_7409.JPG/1280px-Hindu_School_-_Kolkata_7409.JPG',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Hindu_School_-_Kolkata_7409.JPG/1280px-Hindu_School_-_Kolkata_7409.JPG'
+    ],
     audioStory: 'The passionate debates of Young Bengal students on freedom, reason, and poetry in Hindu College.',
     verified: true
   },
@@ -1118,8 +1182,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free',
     accessibilityInfo: 'Roadside viewing.',
     nearbySites: ['Hindu School Old Building', 'Asiatic Society Building'],
-    featuredImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Kolkata_Derozio_statue.jpg',
+    gallery: [
+      'https://upload.wikimedia.org/wikipedia/commons/2/2f/Kolkata_Derozio_statue.jpg'
+    ],
     audioStory: 'Reciting Derozio’s immortal verses: "My country! in thy day of glory past, a beauteous halo circled round thy brow."',
     verified: true
   },
@@ -1144,8 +1210,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹20 (Indians), ₹50 (Foreigners)',
     accessibilityInfo: 'Museum corridors paved.',
     nearbySites: ['House of Sarat Chandra Bose', 'Victoria Memorial'],
-    featuredImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/4/4e/Netaji_house_kolkatta.jpg',
+    gallery: [
+      'https://upload.wikimedia.org/wikipedia/commons/4/4e/Netaji_house_kolkatta.jpg'
+    ],
     audioStory: 'Midnight on Elgin Road: How Netaji donned disguise and began his epic journey across the frontier.',
     verified: true,
     featured: true
@@ -1171,8 +1239,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free / Donation',
     accessibilityInfo: 'Ground floor accessible.',
     nearbySites: ['House of Netaji Subhas Chandra Bose', 'Victoria Memorial'],
-    featuredImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/0/07/Sarat_Chandra_Bose.jpg',
+    gallery: [
+      'https://upload.wikimedia.org/wikipedia/commons/0/07/Sarat_Chandra_Bose.jpg'
+    ],
     audioStory: 'The brotherly bond between Sarat and Subhas Bose that shaped Indian national politics.',
     verified: true
   },
@@ -1197,8 +1267,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹10',
     accessibilityInfo: 'Paved garden paths inside cottage compound.',
     nearbySites: ['Howrah Bridge', 'Kurumbera Fort'],
-    featuredImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/9/96/Samta_-The_View_of_the_village_during_sunset.JPG',
+    gallery: [
+      'https://upload.wikimedia.org/wikipedia/commons/9/96/Samta_-The_View_of_the_village_during_sunset.JPG'
+    ],
     audioStory: 'Listen to the Rupnarayan River winds where Sarat Chandra penned the timeless heartbreak of Devdas and Paro.',
     verified: true,
     featured: true
@@ -1224,8 +1296,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free Entry',
     accessibilityInfo: 'Ground floor courtyard level access.',
     nearbySites: ['Dakshineswar Kali Temple', 'Dupleix Palace'],
-    featuredImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Bankimchandra_Chattapadhay.jpg/1280px-Bankimchandra_Chattapadhay.jpg',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Bankimchandra_Chattapadhay.jpg/1280px-Bankimchandra_Chattapadhay.jpg'
+    ],
     audioStory: 'In the stillness of Kanthalpara, Bankim Chandra penning the immortal verse "Vande Mataram, Sujalam Sufalam Malayaja Shitalam".',
     verified: true
   },
@@ -1250,8 +1324,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Included in Uttarayan museum ticket',
     accessibilityInfo: 'Ashram gravel pathways.',
     nearbySites: ['Rabindra Bhavan', 'Santiniketan'],
-    featuredImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Shantiniketan_Bari_of_Rabindranath_Tagore.jpg/1280px-Shantiniketan_Bari_of_Rabindranath_Tagore.jpg',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Shantiniketan_Bari_of_Rabindranath_Tagore.jpg/1280px-Shantiniketan_Bari_of_Rabindranath_Tagore.jpg'
+    ],
     audioStory: 'Simplicity and birdsong surrounding the earthen veranda of Kamal Kutir.',
     verified: true
   },
@@ -1276,8 +1352,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹70 (Museum entry)',
     accessibilityInfo: 'Paved ramps for museum entrance.',
     nearbySites: ['Santiniketan', 'Kamal Kutir'],
-    featuredImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Rabindra_Bhavan_-_Santiniketan_2014-06-29_5373-5374.TIF/lossy-page1-1280px-Rabindra_Bhavan_-_Santiniketan_2014-06-29_5373-5374.TIF.jpg',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Rabindra_Bhavan_-_Santiniketan_2014-06-29_5373-5374.TIF/lossy-page1-1280px-Rabindra_Bhavan_-_Santiniketan_2014-06-29_5373-5374.TIF.jpg'
+    ],
     audioStory: 'Discover Tagore’s hand-written song notations and international correspondence at Rabindra Bhavan.',
     verified: true
   },
@@ -1302,8 +1380,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free (Exterior & Public events)',
     accessibilityInfo: 'Pedestrian Mall road access.',
     nearbySites: ['Darjeeling Himalayan Railway', 'Tomb of Alexander Csoma de Körös'],
-    featuredImage: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Darjeeling_Clock_tower_%287168742033%29.jpg/1280px-Darjeeling_Clock_tower_%287168742033%29.jpg',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Darjeeling_Clock_tower_%287168742033%29.jpg/1280px-Darjeeling_Clock_tower_%287168742033%29.jpg'
+    ],
     audioStory: 'Bells chiming through the mountain fog above Darjeeling Mall from the Town Hall clock tower.',
     verified: true
   },
@@ -1328,8 +1408,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free Entry',
     accessibilityInfo: 'Terraced hillside steps.',
     nearbySites: ['Darjeeling Town Hall', 'Darjeeling Himalayan Railway'],
-    featuredImage: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Plaques_behind_the_tomb_of_Alexander_Csoma_De_Koros_at_Darjeeling_Old_Cemetery_in_Darjeeling_Town.jpg/1280px-Plaques_behind_the_tomb_of_Alexander_Csoma_De_Koros_at_Darjeeling_Old_Cemetery_in_Darjeeling_Town.jpg',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Plaques_behind_the_tomb_of_Alexander_Csoma_De_Koros_at_Darjeeling_Old_Cemetery_in_Darjeeling_Town.jpg/1280px-Plaques_behind_the_tomb_of_Alexander_Csoma_De_Koros_at_Darjeeling_Old_Cemetery_in_Darjeeling_Town.jpg'
+    ],
     audioStory: 'The Hungarian pilgrim who walked across continents to decipher the sacred scrolls of Tibet.',
     verified: true
   },
@@ -1354,8 +1436,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free Entry',
     accessibilityInfo: 'Trekking path up Susunia Hill slope.',
     nearbySites: ['Rasmancha', 'Gokul Chand Temple'],
-    featuredImage: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/29RCCMAK_-_Susunia_Hill.jpg/1280px-29RCCMAK_-_Susunia_Hill.jpg',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/29RCCMAK_-_Susunia_Hill.jpg/1280px-29RCCMAK_-_Susunia_Hill.jpg'
+    ],
     audioStory: 'Deciphering the 1,600-year-old Brahmi letters on the granite rock face of Susunia Hill.',
     verified: true
   },
@@ -1380,8 +1464,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free / ASI Protected',
     accessibilityInfo: 'Paved pathways around excavated mound perimeter.',
     nearbySites: ['Chandraketu Fort', 'Dakshineswar Kali Temple'],
-    featuredImage: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Khana-Mihirer_Dhipi_in_Chandraketugarh_15.jpg/1280px-Khana-Mihirer_Dhipi_in_Chandraketugarh_15.jpg',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Khana-Mihirer_Dhipi_in_Chandraketugarh_15.jpg/1280px-Khana-Mihirer_Dhipi_in_Chandraketugarh_15.jpg'
+    ],
     audioStory: 'The timeless agrarian wisdom of Khana echoing over the excavated brick mounds of Berachampa.',
     verified: true
   },
@@ -1406,8 +1492,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free / ASI Protected site',
     accessibilityInfo: 'Rural pathway access.',
     nearbySites: ['Khana-Mihirer Dhipi'],
-    featuredImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Khana-Mihirer_Dhipi_in_Chandraketugarh_15.jpg/1280px-Khana-Mihirer_Dhipi_in_Chandraketugarh_15.jpg',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Khana-Mihirer_Dhipi_in_Chandraketugarh_15.jpg/1280px-Khana-Mihirer_Dhipi_in_Chandraketugarh_15.jpg'
+    ],
     audioStory: 'Merchant ships laden with Bengal spices, muslin, and terracotta returning from Rome and Java into ancient Chandraketugarh.',
     verified: true,
     featured: true
@@ -1433,8 +1521,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free / ASI Protected',
     accessibilityInfo: 'Stone doorway threshold into open courtyard.',
     nearbySites: ['Gopegarh', 'Rasmancha'],
-    featuredImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Kurumbera_Fort_.jpg/1280px-Kurumbera_Fort_.jpg',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Kurumbera_Fort_.jpg/1280px-Kurumbera_Fort_.jpg'
+    ],
     audioStory: 'Walk through the endless stone pillar galleries of Kurumbera where Odia Gajapati stone carvers met Mughal masonry.',
     verified: true
   },
@@ -1459,8 +1549,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free Entry',
     accessibilityInfo: 'Paved beach pathways and passenger vessel boarding ramps from Harwood Point / Kakdwip.',
     nearbySites: ['Sundarbans National Park'],
-    featuredImage: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80',
-    gallery: [],
+    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Kapil_Muni_Temple.jpg/1280px-Kapil_Muni_Temple.jpg',
+    gallery: [
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Kapil_Muni_Temple.jpg/1280px-Kapil_Muni_Temple.jpg'
+    ],
     audioStory: 'Millions of conch shells and sacred fires chanting "Sob Tirtha Bar Bar, Ganga Sagar Ekbar" at dawn on Sagar Island.',
     verified: true,
     featured: true

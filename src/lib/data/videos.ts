@@ -9,7 +9,7 @@ export const CANONICAL_VIDEOS: VideoArchiveItem[] = [
     category: 'Documentary',
     district: 'Kolkata',
     videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
-    thumbnailUrl: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
+    thumbnailUrl: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Making_of_Durga_idol_in_Kumartuli_04.jpg/1280px-Making_of_Durga_idol_in_Kumartuli_04.jpg',
     uploader: 'Porjotok Cultural Archives',
     tags: ['Kumartuli', 'Durga Puja', 'Sculpture', 'Kolkata']
   },
@@ -21,7 +21,7 @@ export const CANONICAL_VIDEOS: VideoArchiveItem[] = [
     category: 'Craft Masterclass',
     district: 'Bankura',
     videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
-    thumbnailUrl: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80',
+    thumbnailUrl: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/God_astride_an_owl%2C_Dhokra_%28Dokra%29_craftsmen%2C_Bankura%2C_West_Bengal%2C_19th_century%2C_lost-wax_cast_brass%2C_HAA.JPG/1280px-God_astride_an_owl%2C_Dhokra_%28Dokra%29_craftsmen%2C_Bankura%2C_West_Bengal%2C_19th_century%2C_lost-wax_cast_brass%2C_HAA.JPG',
     uploader: 'Bengal Handicrafts Guild',
     tags: ['Dokra', 'Metalsmithing', 'Bikna', 'Tribal Art']
   },
@@ -33,7 +33,7 @@ export const CANONICAL_VIDEOS: VideoArchiveItem[] = [
     category: 'Music Performance',
     district: 'Birbhum',
     videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
-    thumbnailUrl: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80',
+    thumbnailUrl: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Vandari_Abdul_Jabbar%2C_folk_singer_singing_with_musical_instrument_%27Ektara%27%2C_Bangladesh.jpg/1280px-Vandari_Abdul_Jabbar%2C_folk_singer_singing_with_musical_instrument_%27Ektara%27%2C_Bangladesh.jpg',
     uploader: 'Folk Heritage Society of Bengal',
     tags: ['Baul', 'Ektara', 'Tagore', 'Birbhum']
   },
@@ -45,7 +45,7 @@ export const CANONICAL_VIDEOS: VideoArchiveItem[] = [
     category: 'Travel & Architecture',
     district: 'Darjeeling',
     videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
-    thumbnailUrl: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80',
+    thumbnailUrl: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Darjeeling_Himalayan_Railway%2Ctoy_train_%281%29.jpg/1280px-Darjeeling_Himalayan_Railway%2Ctoy_train_%281%29.jpg',
     uploader: 'Himalayan Railway Heritage',
     tags: ['Darjeeling', 'Steam Train', 'UNESCO', 'Mountains']
   }

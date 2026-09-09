@@ -20,7 +20,7 @@ export const CANONICAL_WORKSHOPS: Workshop[] = [
     goodieIncluded: true,
     certificateIncluded: true,
     description: 'Hands-on 1-day masterclass. Participants sculpt a clay core, extrude beeswax threads into traditional tribal motifs, wrap in alluvial clay mold, and participate in pouring molten bell metal into the furnace kiln. You keep your cast brass figurine!',
-    image: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80',
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/God_astride_an_owl%2C_Dhokra_%28Dokra%29_craftsmen%2C_Bankura%2C_West_Bengal%2C_19th_century%2C_lost-wax_cast_brass%2C_HAA.JPG/1280px-God_astride_an_owl%2C_Dhokra_%28Dokra%29_craftsmen%2C_Bankura%2C_West_Bengal%2C_19th_century%2C_lost-wax_cast_brass%2C_HAA.JPG',
     status: 'UPCOMING'
   },
   {
@@ -42,7 +42,7 @@ export const CANONICAL_WORKSHOPS: Workshop[] = [
     goodieIncluded: true,
     certificateIncluded: true,
     description: 'Learn to extract authentic natural pigments from turmeric, teak leaves, aparajita flowers, and lamp soot. Paint a handmade cloth-mounted scroll depicting folk tales, and learn the traditional musical ballad (Pater Gaan) that accompanies each unrolled frame.',
-    image: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80',
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Pingla_Patachitra_Shilpi_Shyamsundar_Chitrokor%2C_Pingla%2C_West_Bengal.jpg/1280px-Pingla_Patachitra_Shilpi_Shyamsundar_Chitrokor%2C_Pingla%2C_West_Bengal.jpg',
     status: 'UPCOMING'
   },
   {
@@ -64,7 +64,7 @@ export const CANONICAL_WORKSHOPS: Workshop[] = [
     goodieIncluded: true,
     certificateIncluded: true,
     description: 'Step-by-step guidance in molding river clay, layering paper pulp and starched cloth, hand-painting dramatic expression lines of mythological gods and demons, and adorning masks with beads and tinsel plumage.',
-    image: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=800&q=80',
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Chhau_Nritya_face_mask_001.jpg/1280px-Chhau_Nritya_face_mask_001.jpg',
     status: 'UPCOMING'
   },
   {
@@ -86,7 +86,7 @@ export const CANONICAL_WORKSHOPS: Workshop[] = [
     goodieIncluded: true,
     certificateIncluded: true,
     description: 'Learn the ancient carving techniques that adorn the 17th-century temples of Bishnupur. Mold red laterite clay, carve intricate friezes of birds, horses, and musicians, and learn traditional pit-kiln firing secrets.',
-    image: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80',
+    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Jor_Bangla_or_Keshta_Raya_temple_of_Bishnupur._Built_by_Raghunath_Singha_in_1655_AD._23.jpg/1280px-Jor_Bangla_or_Keshta_Raya_temple_of_Bishnupur._Built_by_Raghunath_Singha_in_1655_AD._23.jpg',
     status: 'UPCOMING'
   }
 ];

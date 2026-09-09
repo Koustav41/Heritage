@@ -13,7 +13,7 @@ export const CANONICAL_FOOD_ITEMS: FoodItem[] = [
     district: 'Kolkata',
     merchantRating: 4.9,
     openingHours: '08:00 AM - 09:30 PM',
-    images: ['https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80'],
+    images: ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs3dYwl1hN0X7onLg7WnO_ELh0eh11JDen-2Aog6V4ow&s=10'],
     isVegetarian: true,
     verifiedMerchant: true,
     available: true
@@ -30,7 +30,7 @@ export const CANONICAL_FOOD_ITEMS: FoodItem[] = [
     district: 'Hooghly',
     merchantRating: 4.95,
     openingHours: '07:30 AM - 10:00 PM',
-    images: ['https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80'],
+    images: ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlGvjTtuoSd3zbGUaT3B5bvFzCkwn3qDhzCcuzj5X1sQpyc7l3baxUsvo5&s=10'],
     isVegetarian: true,
     verifiedMerchant: true,
     available: true
@@ -47,7 +47,7 @@ export const CANONICAL_FOOD_ITEMS: FoodItem[] = [
     district: 'Kolkata',
     merchantRating: 4.8,
     openingHours: '11:00 AM - 10:30 PM',
-    images: ['https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=600&q=80'],
+    images: ['https://assets.telegraphindia.com/telegraph/2021/Oct/1634031927_roll-1.jpg'],
     isVegetarian: false,
     verifiedMerchant: true,
     available: true
@@ -64,7 +64,7 @@ export const CANONICAL_FOOD_ITEMS: FoodItem[] = [
     district: 'Kolkata',
     merchantRating: 4.88,
     openingHours: '03:30 PM - 09:30 PM',
-    images: ['https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=600&q=80'],
+    images: ['https://c.ndtvimg.com/2021-03/lppmgb5o_phuchka_625x300_02_March_21.jpg'],
     isVegetarian: true,
     verifiedMerchant: true,
     available: true
@@ -81,7 +81,7 @@ export const CANONICAL_FOOD_ITEMS: FoodItem[] = [
     district: 'Kolkata',
     merchantRating: 4.9,
     openingHours: '12:00 PM - 10:30 PM',
-    images: ['https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600&q=80'],
+    images: ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL3reTamDjA4MP18_qPK2hWp5xUyzA-d3TNGT4XnHs8keRRM8g9rEpi1k&s=10'],
     isVegetarian: false,
     verifiedMerchant: true,
     available: true
@@ -99,7 +99,7 @@ export const CANONICAL_FOOD_ITEMS: FoodItem[] = [
     district: 'Nadia',
     merchantRating: 4.92,
     openingHours: '07:00 AM - 09:00 PM',
-    images: ['https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80'],
+    images: ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQczM-i8NmhFefCfMBBVP43mun42ZPFnDJGPi3ESsTG3qxI0fL6KXLAzXo&s=10'],
     isVegetarian: true,
     verifiedMerchant: true,
     available: true

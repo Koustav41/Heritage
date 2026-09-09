@@ -14,7 +14,7 @@ export const CANONICAL_PRODUCTS: LocalProduct[] = [
     district: 'Bankura',
     sellerRating: 4.96,
     craftHeritage: 'Bishnupur Silk Weaving (Origin Baluchar)',
-    images: ['https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Baluchari_saree_of_Bishnupur_DSC06031.jpg/1280px-Baluchari_saree_of_Bishnupur_DSC06031.jpg'],
     verifiedSeller: true,
     available: true
   },
@@ -31,7 +31,7 @@ export const CANONICAL_PRODUCTS: LocalProduct[] = [
     district: 'Bankura',
     sellerRating: 4.9,
     craftHeritage: 'Ancient Lost-Wax Casting of Bengal',
-    images: ['https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/God_astride_an_owl%2C_Dhokra_%28Dokra%29_craftsmen%2C_Bankura%2C_West_Bengal%2C_19th_century%2C_lost-wax_cast_brass%2C_HAA.JPG/1280px-God_astride_an_owl%2C_Dhokra_%28Dokra%29_craftsmen%2C_Bankura%2C_West_Bengal%2C_19th_century%2C_lost-wax_cast_brass%2C_HAA.JPG'],
     verifiedSeller: true,
     available: true
   },
@@ -48,7 +48,7 @@ export const CANONICAL_PRODUCTS: LocalProduct[] = [
     district: 'Bankura',
     sellerRating: 4.88,
     craftHeritage: 'Bankura Terracotta Votive Traditions',
-    images: ['https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Jor_Bangla_or_Keshta_Raya_temple_of_Bishnupur._Built_by_Raghunath_Singha_in_1655_AD._23.jpg/1280px-Jor_Bangla_or_Keshta_Raya_temple_of_Bishnupur._Built_by_Raghunath_Singha_in_1655_AD._23.jpg'],
     verifiedSeller: true,
     available: true
   },
@@ -65,7 +65,7 @@ export const CANONICAL_PRODUCTS: LocalProduct[] = [
     district: 'Darjeeling',
     sellerRating: 4.98,
     craftHeritage: 'Darjeeling Himalayan Tea Culture',
-    images: ['https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/PXL_20240323_065728783_Cloud_and_Tea_Garden_at_Namring_Tea_Garden_Darjeeling_West_Bengal_734226_04.jpg/1280px-PXL_20240323_065728783_Cloud_and_Tea_Garden_at_Namring_Tea_Garden_Darjeeling_West_Bengal_734226_04.jpg'],
     verifiedSeller: true,
     available: true
   },
@@ -82,7 +82,7 @@ export const CANONICAL_PRODUCTS: LocalProduct[] = [
     district: 'Kolkata',
     sellerRating: 4.85,
     craftHeritage: '19th-Century Kalighat Brushwork',
-    images: ['https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=600&q=80'],
+    images: ['https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Pingla_Patachitra_Shilpi_Shyamsundar_Chitrokor%2C_Pingla%2C_West_Bengal.jpg/1280px-Pingla_Patachitra_Shilpi_Shyamsundar_Chitrokor%2C_Pingla%2C_West_Bengal.jpg'],
     verifiedSeller: true,
     available: true
   }
