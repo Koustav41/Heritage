@@ -112,7 +112,7 @@ export const DEMO_USERS: Record<UserRole, DemoUser> = {
   },
   ADMIN: {
     id: 'user-admin-1',
-    name: 'Porjotok Moderator',
+    name: 'Parampara Moderator',
     email: 'admin.heritage@wb.gov.in',
     phone: '+91 98000 00001',
     role: 'ADMIN',

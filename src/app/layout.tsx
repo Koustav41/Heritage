@@ -14,10 +14,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Porjotok (পর্যটক) — West Bengal Heritage & Cultural Tourism Ecosystem",
+  title: "Parampara (পরম্পরা) — West Bengal Heritage & Cultural Tourism Ecosystem",
   description: "Discover West Bengal's 55+ canonical heritage sites, living traditions, verified guides, artisan craft workshops, authentic sweets, and community green initiatives.",
-  keywords: ["West Bengal Heritage", "Bengal Culture", "Porjotok", "SIH 26197", "Bishnupur", "Santiniketan", "Durga Puja", "Darjeeling", "Dokra", "Baluchari"],
-  authors: [{ name: "Porjotok Team" }],
+  keywords: ["West Bengal Heritage", "Bengal Culture", "Parampara", "SIH 26197", "Bishnupur", "Santiniketan", "Durga Puja", "Darjeeling", "Dokra", "Baluchari"],
+  authors: [{ name: "Parampara Team" }],
 };
 
 export default function RootLayout({

@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="w-full bg-stone-900 text-stone-300 border-t border-stone-800 text-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
-          
+
           {/* Brand & Statement */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-2.5">
@@ -16,19 +16,19 @@ export function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="font-extrabold text-xl text-white tracking-tight flex items-center gap-1.5">
-                  Porjotok
+                  Parampara
                   <span className="text-xs px-1.5 py-0.5 rounded bg-amber-950 text-amber-300 font-normal">
-                    পর্যটক
+                    পরম্পরা
                   </span>
                 </span>
                 <span className="text-[10px] text-stone-400 font-medium">
-                  Smart India Hackathon • Problem Statement 26197
+                  Connecting people with cultural heritage and tourism
                 </span>
               </div>
             </div>
 
             <p className="text-xs text-stone-400 leading-relaxed max-w-sm">
-              Porjotok is West Bengal’s digital heritage, living culture, tourism, and community ecosystem. 
+              Parampara is West Bengal’s digital heritage, living culture, tourism, and community ecosystem.
               Connecting travelers with verified local guides, artisans, sweetmakers, and green cleanliness crews while preserving our timeless historical archives.
             </p>
 
@@ -98,7 +98,7 @@ export function Footer() {
 
         {/* Bottom copyright */}
         <div className="mt-12 pt-8 border-t border-stone-800 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500 gap-4">
-          <p>© 2026 Porjotok. Dedicated to the living culture and heritage of West Bengal.</p>
+          <p>© 2026 Parampara. Dedicated to the living culture and heritage of West Bengal.</p>
           <div className="flex items-center gap-6">
             <Link href="/auth/sign-in" className="hover:text-stone-300">Sign In</Link>
             <Link href="/auth/sign-up" className="hover:text-stone-300">Join as Member</Link>

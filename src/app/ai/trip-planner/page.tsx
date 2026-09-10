@@ -94,7 +94,7 @@ export default function AITripPlannerPage() {
               },
               {
                 time: '12:00 PM - 01:30 PM',
-                title: 'Traditional Bengali Lunch at Porjotok Partner Kitchen',
+                title: 'Traditional Bengali Lunch at Parampara Partner Kitchen',
                 description: 'Enjoy Gobindobhog rice, fragrant Postor Bora (poppy seed fritters), and Kosha Mangsho.',
                 location: 'Bishnupur Town',
                 category: 'FOOD',
@@ -247,7 +247,7 @@ export default function AITripPlannerPage() {
       <div className="space-y-3">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-950/60 text-amber-900 dark:text-amber-300 text-xs font-semibold">
           <Sparkles className="w-3.5 h-3.5" />
-          <span>Porjotok AI Engine • Spec 16.3 & 66</span>
+          <span>Parampara AI Engine • Spec 16.3 & 66</span>
         </div>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-stone-900 dark:text-stone-100 tracking-tight">
           AI-Powered Bengal Trip Planner

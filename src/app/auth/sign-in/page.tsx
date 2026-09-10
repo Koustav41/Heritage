@@ -108,7 +108,7 @@ export default function SignInPage() {
           <Compass className="w-6 h-6 text-amber-200" />
         </div>
         <h1 className="text-2xl font-black text-stone-900 dark:text-stone-100">
-          Sign In to Porjotok
+          Sign In to Parampara
         </h1>
         <p className="text-xs text-stone-500">
           West Bengal Heritage Ecosystem — Role-Aware Cultural Portal

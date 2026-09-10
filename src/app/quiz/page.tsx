@@ -212,7 +212,7 @@ export default function HeritageQuizPage() {
           </div>
 
           <div className="p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/40 text-emerald-900 dark:text-emerald-200 text-xs font-semibold inline-block">
-            🪙 +{score} Heritage Points have been deposited into your Porjotok profile wallet!
+            🪙 +{score} Heritage Points have been deposited into your Parampara profile wallet!
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">

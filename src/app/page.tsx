@@ -734,7 +734,7 @@ export default function HomePage() {
               AI-Assisted Tourism Engine
             </span>
             <h2 className="text-3xl sm:text-4xl font-black text-white leading-tight">
-              Plan Your Custom Bengal Heritage Journey with Porjotok AI
+              Plan Your Custom Bengal Heritage Journey with Parampara AI
             </h2>
             <p className="text-sm text-amber-100 leading-relaxed">
               Generate personalized multi-day itineraries, estimate travel costs, discover verified local guides, and scan landmark photos using our AI assistant grounded directly in canonical archive records.

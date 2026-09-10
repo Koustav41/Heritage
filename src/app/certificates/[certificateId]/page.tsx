@@ -18,7 +18,7 @@ export default function PublicCertificateVerificationPage() {
           href="/"
           className="inline-flex items-center gap-1.5 text-xs font-semibold text-stone-600 dark:text-stone-400 hover:text-amber-600"
         >
-          <ArrowLeft className="w-4 h-4" /> Back to Porjotok Home
+          <ArrowLeft className="w-4 h-4" /> Back to Parampara Home
         </Link>
       </div>
 
@@ -96,7 +96,7 @@ export default function PublicCertificateVerificationPage() {
 
           <div className="text-right space-y-1">
             <div className="font-serif font-bold text-sm text-stone-900 dark:text-stone-100">
-              Porjotok Oversight
+              Parampara Oversight
             </div>
             <div className="text-[10px] text-stone-500">SIH 26197 Digital Registrar</div>
             <div className="text-[10px] text-emerald-600 font-bold">Cryptographically Validated</div>

@@ -322,7 +322,7 @@ export function PorjotokProvider({ children }: { children: React.ReactNode }) {
       role: data.role,
       avatar: defaultForRole.avatar,
       district: data.district || 'Kolkata',
-      bio: `${data.role.replace('_', ' ')} community member on Porjotok.`,
+      bio: `${data.role.replace('_', ' ')} community member on Parampara.`,
       verified: data.role === 'VISITOR',
       subscriptionActive: true
     };
@@ -343,7 +343,7 @@ export function PorjotokProvider({ children }: { children: React.ReactNode }) {
   const logAction = (action: string, entityType: string, entityName: string, status: AuditLog['status'] = 'SUCCESS') => {
     const newLog: AuditLog = {
       id: `log-${Date.now()}-${Math.floor(Math.random() * 1000)}`,
-      actor: currentUser?.name || DEMO_USERS[currentRole]?.name || 'Porjotok User',
+      actor: currentUser?.name || DEMO_USERS[currentRole]?.name || 'Parampara User',
       action,
       entityType,
       entityName,
@@ -424,7 +424,7 @@ export function PorjotokProvider({ children }: { children: React.ReactNode }) {
     const newOrder: Order = {
       id,
       customerName: DEMO_USERS[currentRole].name,
-      merchantName: cart[0]?.merchantOrSeller || 'Porjotok Verified Merchant',
+      merchantName: cart[0]?.merchantOrSeller || 'Parampara Verified Merchant',
       items: cart.map(c => ({
         id: c.id,
         title: c.name,

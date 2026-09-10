@@ -82,7 +82,7 @@ export function AdminAccessDenied() {
               </span>
             </h1>
             <p className="text-sm text-stone-300 leading-relaxed max-w-xl">
-              The Porjotok Governance, Verification, and Oversight Console contains sensitive administrative controls. General visitors and unverified accounts cannot view or modify these resources.
+              The Parampara Governance, Verification, and Oversight Console contains sensitive administrative controls. General visitors and unverified accounts cannot view or modify these resources.
             </p>
           </div>
 

@@ -10,7 +10,7 @@ export const CANONICAL_VIDEOS: VideoArchiveItem[] = [
     district: 'Kolkata',
     videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
     thumbnailUrl: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Making_of_Durga_idol_in_Kumartuli_04.jpg/1280px-Making_of_Durga_idol_in_Kumartuli_04.jpg',
-    uploader: 'Porjotok Cultural Archives',
+    uploader: 'Parampara Cultural Archives',
     tags: ['Kumartuli', 'Durga Puja', 'Sculpture', 'Kolkata']
   },
   {

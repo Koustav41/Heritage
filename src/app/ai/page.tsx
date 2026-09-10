@@ -37,7 +37,7 @@ const INITIAL_MESSAGES: ChatMessage[] = [
   {
     id: 'msg-1',
     sender: 'AI',
-    text: 'Nomoshkar! I am Porjotok’s AI Heritage Assistant. I am grounded directly in West Bengal’s 55+ canonical heritage archives, living traditions, verified guides, and culinary masters. How may I assist your cultural journey today?',
+    text: 'Nomoshkar! I am Parampara’s AI Heritage Assistant. I am grounded directly in West Bengal’s 55+ canonical heritage archives, living traditions, verified guides, and culinary masters. How may I assist your cultural journey today?',
     timestamp: 'Just now'
   }
 ];
@@ -99,7 +99,7 @@ export default function AIChatPage() {
           { title: 'Dokra Lost-Wax Workshop', link: '/workshops' }
         ];
       } else {
-        answer = `According to Porjotok’s verified heritage catalogue, West Bengal features over 55 canonical sites and 15 living traditions spanning ancient Buddhist Pala kingdoms, medieval Sultanate mosques in Malda, terracotta temples in Bankura, Nawabi heritage in Murshidabad, and Kolkata’s Renaissance landmarks. You can explore curated circuits, book verified guides, or use our AI Trip Planner for a customized day-by-day itinerary.`;
+        answer = `According to Parampara’s verified heritage catalogue, West Bengal features over 55 canonical sites and 15 living traditions spanning ancient Buddhist Pala kingdoms, medieval Sultanate mosques in Malda, terracotta temples in Bankura, Nawabi heritage in Murshidabad, and Kolkata’s Renaissance landmarks. You can explore curated circuits, book verified guides, or use our AI Trip Planner for a customized day-by-day itinerary.`;
         citations = [
           { title: 'Browse 55 Heritage Sites', link: '/heritage' },
           { title: 'Launch AI Trip Planner', link: '/ai/trip-planner' }
@@ -130,7 +130,7 @@ export default function AIChatPage() {
           </div>
           <div>
             <h1 className="text-xl font-bold text-stone-900 dark:text-stone-100 flex items-center gap-2">
-              Porjotok Heritage AI
+              Parampara Heritage AI
               <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 font-bold flex items-center gap-1">
                 <ShieldCheck className="w-3 h-3" /> Grounded in Canonical Archive
               </span>
@@ -172,7 +172,7 @@ export default function AIChatPage() {
                 <div className="pt-2 border-t border-stone-100 dark:border-stone-800 space-y-1 text-[11px]">
                   <span className="font-bold text-stone-400 flex items-center gap-1">
                     <BookOpen className="w-3 h-3 text-amber-600" />
-                    Verified Porjotok References:
+                    Verified Parampara References:
                   </span>
                   <div className="flex flex-wrap gap-1.5">
                     {msg.citations.map((cite, i) => (

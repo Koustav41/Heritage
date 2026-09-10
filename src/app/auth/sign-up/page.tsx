@@ -41,7 +41,7 @@ export default function SignUpPage() {
           <Compass className="w-6 h-6 text-amber-200" />
         </div>
         <h1 className="text-2xl font-black text-stone-900 dark:text-stone-100">
-          Create Porjotok Account
+          Create Parampara Account
         </h1>
         <p className="text-xs text-stone-500">
           Join the West Bengal cultural tourism & community ecosystem
@@ -79,7 +79,7 @@ export default function SignUpPage() {
           <div className="w-16 h-16 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-600 flex items-center justify-center mx-auto">
             <CheckCircle2 className="w-10 h-10" />
           </div>
-          <h3 className="text-xl font-bold text-stone-900 dark:text-stone-100">Welcome to Porjotok, {name}!</h3>
+          <h3 className="text-xl font-bold text-stone-900 dark:text-stone-100">Welcome to Parampara, {name}!</h3>
           <p className="text-xs text-stone-500">
             {accountType === 'MEMBER'
               ? 'Your provider application is logged as PENDING_VERIFICATION. Administrative moderators verify credentials within 24 hours.'
@@ -170,7 +170,7 @@ export default function SignUpPage() {
                 UIDAI / Verification Privacy Note (Rule 9)
               </span>
               <p className="text-[11px] leading-relaxed">
-                Porjotok never stores raw Aadhaar numbers. Identity verification tokens are securely cross-checked with certified state registries.
+                Parampara never stores raw Aadhaar numbers. Identity verification tokens are securely cross-checked with certified state registries.
               </p>
             </div>
           )}

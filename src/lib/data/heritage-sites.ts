@@ -112,7 +112,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     nearbySites: ['St. John’s Church', 'Metcalfe Hall', 'High Court Building'],
     featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Victoria_Memorial_situated_in_Kolkata.jpg/1280px-Victoria_Memorial_situated_in_Kolkata.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Victoria_Memorial_hall_with_lake.jpg/1280px-Victoria_Memorial_hall_with_lake.jpg'
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Victoria_Memorial%2C_Kolkata_-_West_facade_01.jpg/1280px-Victoria_Memorial%2C_Kolkata_-_West_facade_01.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Victoria_Memorial_Illuminated_at_Night.jpg/1280px-Victoria_Memorial_Illuminated_at_Night.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Victoria_Memorial_Kolkata_at_night.jpg/1280px-Victoria_Memorial_Kolkata_at_night.jpg',
+      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Pavilion_at_the_Victoria_Memorial%2C_Kolkata_01.jpg/1280px-Pavilion_at_the_Victoria_Memorial%2C_Kolkata_01.jpg'
     ],
     audioStory: 'Echoes of colonial Calcutta and the bronze Angel of Victory turning in the evening breeze.',
     verified: true,

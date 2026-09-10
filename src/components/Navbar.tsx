@@ -90,9 +90,9 @@ export function Navbar({ onOpenSearch, onOpenCart }: NavbarProps) {
               </div>
               <div className="flex flex-col">
                 <span className="font-extrabold text-xl tracking-tight text-stone-900 dark:text-stone-100 flex items-center gap-1.5">
-                  Porjotok
+                  Parampara
                   <span className="text-xs px-1.5 py-0.5 rounded bg-amber-100 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300 font-normal">
-                    পর্যটক
+                    পরম্পরা
                   </span>
                 </span>
                 <span className="text-[10px] text-stone-500 dark:text-stone-400 font-medium tracking-wide">

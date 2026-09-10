@@ -20,7 +20,10 @@ import {
   ChevronRight,
   User,
   Utensils,
-  BookOpen
+  BookOpen,
+  Camera,
+  X,
+  Maximize2
 } from 'lucide-react';
 import { CANONICAL_HERITAGE_SITES } from '@/lib/data/heritage-sites';
 import { CANONICAL_GUIDES } from '@/lib/data/members';
@@ -33,6 +36,7 @@ export default function HeritageSiteDetailPage() {
   const slug = params?.slug as string;
   const { savedSiteSlugs, toggleSaveSite } = usePorjotok();
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
+  const [activeImage, setActiveImage] = useState<string | null>(null);
 
   const site = CANONICAL_HERITAGE_SITES.find(s => s.slug === slug);
 
@@ -207,13 +211,35 @@ export default function HeritageSiteDetailPage() {
           {/* Photo Gallery if present */}
           {site.gallery.length > 0 && (
             <div className="space-y-4">
-              <h3 className="text-lg font-bold text-stone-900 dark:text-stone-100">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2 text-amber-600 dark:text-amber-400 text-xs font-bold uppercase tracking-wider">
+                  <Camera className="w-4 h-4" />
+                  <span>Archival Visual Collection</span>
+                </div>
+                <span className="text-xs text-stone-500 font-medium">{site.gallery.length} Archival Views</span>
+              </div>
+              <h3 className="text-xl font-bold text-stone-900 dark:text-stone-100">
                 Archival Photo Gallery
               </h3>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {site.gallery.map((img, i) => (
-                  <div key={i} className="aspect-[4/3] rounded-2xl overflow-hidden shadow-md">
-                    <img src={img} alt={`Gallery ${i}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                  <div 
+                    key={i} 
+                    onClick={() => setActiveImage(img)}
+                    className="group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md bg-stone-100 dark:bg-stone-800 cursor-pointer border border-stone-200 dark:border-stone-800"
+                  >
+                    <img 
+                      src={img} 
+                      alt={`${site.name} Archival View ${i + 1}`} 
+                      onError={(e) => {
+                        (e.currentTarget as HTMLImageElement).src = site.featuredImage;
+                      }}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-between p-3.5 text-white text-xs">
+                      <span className="font-medium">View Photograph {i + 1}</span>
+                      <Maximize2 className="w-4 h-4 text-amber-400" />
+                    </div>
                   </div>
                 ))}
               </div>
@@ -332,6 +358,38 @@ export default function HeritageSiteDetailPage() {
         </div>
 
       </div>
+
+      {/* Archival Photo Lightbox Modal */}
+      {activeImage && (
+        <div 
+          onClick={() => setActiveImage(null)}
+          className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 animate-in fade-in duration-200"
+        >
+          <div 
+            className="relative max-w-4xl w-full max-h-[90vh] flex flex-col items-center" 
+            onClick={e => e.stopPropagation()}
+          >
+            <button 
+              onClick={() => setActiveImage(null)}
+              className="absolute -top-12 right-0 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+              aria-label="Close photo preview"
+            >
+              <X className="w-6 h-6" />
+            </button>
+            <div className="rounded-2xl overflow-hidden bg-stone-900 shadow-2xl border border-white/10 max-h-[80vh]">
+              <img 
+                src={activeImage} 
+                alt={site.name} 
+                className="w-full h-full max-h-[80vh] object-contain"
+              />
+            </div>
+            <div className="text-center mt-3 space-y-1">
+              <p className="text-white font-semibold text-sm">{site.name}</p>
+              <p className="text-stone-400 text-xs">Archival Photography Collection • {site.district}</p>
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   );

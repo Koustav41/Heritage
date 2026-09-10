@@ -80,7 +80,7 @@ export default function LandmarkScannerPage() {
           AI Landmark Recognition Scanner
         </h1>
         <p className="text-sm sm:text-base text-stone-600 dark:text-stone-300 max-w-2xl leading-relaxed">
-          Upload or capture an image of any monument or heritage structure in West Bengal. Our neural vision model matches candidates against Porjotok’s 55 verified canonical records.
+          Upload or capture an image of any monument or heritage structure in West Bengal. Our neural vision model matches candidates against Parampara’s 55 verified canonical records.
         </p>
       </div>
 

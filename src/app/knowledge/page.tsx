@@ -64,13 +64,13 @@ export default function KnowledgeArchivePage() {
       <div className="space-y-3">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-950/60 text-amber-900 dark:text-amber-300 text-xs font-semibold">
           <BookOpen className="w-3.5 h-3.5" />
-          <span>Porjotok Knowledge Repository • 70+ Indexed Records</span>
+          <span>Parampara Knowledge Repository • 70+ Indexed Records</span>
         </div>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-stone-900 dark:text-stone-100 tracking-tight">
           Heritage & Cultural Knowledge Archive
         </h1>
         <p className="text-sm sm:text-base text-stone-600 dark:text-stone-300 max-w-2xl leading-relaxed">
-          The verified knowledge core of Porjotok. Access grounded historical documentation, architectural analyses, oral traditions, and geographical records.
+          The verified knowledge core of Parampara. Access grounded historical documentation, architectural analyses, oral traditions, and geographical records.
         </p>
       </div>
 
