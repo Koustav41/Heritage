@@ -25,6 +25,7 @@ import {
   Navigation
 } from 'lucide-react';
 import { CANONICAL_HERITAGE_SITES } from '@/lib/data/heritage-sites';
+import { HeritageSiteImage } from '@/components/HeritageSiteImage';
 import { HeritageSite } from '@/types';
 
 type RegionFilter = 'ALL' | 'NORTH' | 'SOUTH' | 'EAST' | 'WEST' | 'CENTRAL' | 'NORTHEAST';
@@ -421,15 +422,7 @@ export default function InteractiveHeritageMapPage() {
                       }`}
                     >
                       <div className="w-16 h-16 rounded-xl overflow-hidden shrink-0 shadow-xs">
-                        <img 
-                          src={site.featuredImage} 
-                          alt={site.name}
-                          referrerPolicy="no-referrer"
-                          onError={(e) => {
-                            (e.currentTarget as HTMLImageElement).src = 'https://images.unsplash.com/photo-1599833975787-5c143f373c30?auto=format&fit=crop&q=80&w=300';
-                          }}
-                          className="w-full h-full object-cover"
-                        />
+                        <HeritageSiteImage site={site} className="w-full h-full object-cover" />
                       </div>
                       <div className="flex-1 min-w-0 space-y-1">
                         <div className="flex items-center justify-between text-[10px]">
@@ -459,15 +452,7 @@ export default function InteractiveHeritageMapPage() {
               
               {/* Site Photo */}
               <div className="relative aspect-[16/10] rounded-2xl overflow-hidden shadow-md">
-                <img 
-                  src={selectedSite.featuredImage} 
-                  alt={selectedSite.name} 
-                  referrerPolicy="no-referrer" 
-                  onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = 'https://images.unsplash.com/photo-1599833975787-5c143f373c30?auto=format&fit=crop&q=80&w=800';
-                  }}
-                  className="w-full h-full object-cover" 
-                />
+                <HeritageSiteImage site={selectedSite} className="w-full h-full object-cover" />
                 <div className="absolute top-3 left-3 flex items-center gap-1.5">
                   <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-600 text-white shadow-xs">
                     {selectedSite.state}

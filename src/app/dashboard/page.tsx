@@ -30,6 +30,7 @@ import { UserRole } from '@/types';
 import { canAccessProfileControls } from '@/lib/auth/rbac';
 import { ProviderAccessDenied } from '@/components/ProviderAccessDenied';
 import { CANONICAL_HERITAGE_SITES } from '@/lib/data/heritage-sites';
+import { HeritageSiteImage } from '@/components/HeritageSiteImage';
 import { CANONICAL_WORKSHOPS } from '@/lib/data/workshops';
 import { CANONICAL_FOOD_ITEMS } from '@/lib/data/food-items';
 import { CANONICAL_PRODUCTS } from '@/lib/data/products';
@@ -311,15 +312,9 @@ export default function UnifiedDashboardPage() {
                   href={`/heritage/${site.slug}`}
                   className="p-4 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 shadow-sm hover:border-amber-400 transition-all block group"
                 >
-                  <img 
-                    src={site.featuredImage} 
-                    alt={site.name} 
-                    referrerPolicy="no-referrer" 
-                    onError={(e) => {
-                      (e.currentTarget as HTMLImageElement).src = 'https://images.unsplash.com/photo-1599833975787-5c143f373c30?auto=format&fit=crop&q=80&w=800';
-                    }}
-                    className="w-full aspect-[16/10] rounded-xl object-cover mb-2" 
-                  />
+                  <div className="w-full aspect-[16/10] rounded-xl overflow-hidden mb-2">
+                    <HeritageSiteImage site={site} className="w-full h-full object-cover" />
+                  </div>
                   <h4 className="font-bold text-sm text-stone-900 dark:text-stone-100 group-hover:text-amber-600 truncate">{site.name}</h4>
                   <p className="text-xs text-stone-400">{site.district} • {site.historicalPeriod}</p>
                 </Link>

@@ -26,6 +26,7 @@ import {
   Maximize2
 } from 'lucide-react';
 import { CANONICAL_HERITAGE_SITES } from '@/lib/data/heritage-sites';
+import { HeritageSiteImage } from '@/components/HeritageSiteImage';
 import { CANONICAL_GUIDES } from '@/lib/data/members';
 import { CANONICAL_WORKSHOPS } from '@/lib/data/workshops';
 import { CANONICAL_FOOD_ITEMS } from '@/lib/data/food-items';
@@ -85,15 +86,7 @@ export default function HeritageSiteDetailPage() {
 
       {/* Hero Banner */}
       <div className="relative rounded-3xl overflow-hidden aspect-[21/9] min-h-[360px] shadow-2xl bg-stone-900">
-        <img
-          src={site.featuredImage}
-          alt={site.name}
-          referrerPolicy="no-referrer"
-          onError={(e) => {
-            (e.currentTarget as HTMLImageElement).src = 'https://images.unsplash.com/photo-1599833975787-5c143f373c30?auto=format&fit=crop&q=80&w=1200';
-          }}
-          className="w-full h-full object-cover opacity-85"
-        />
+        <HeritageSiteImage site={site} className="w-full h-full object-cover opacity-90" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
 
         <div className="absolute bottom-6 sm:bottom-10 left-6 sm:left-10 right-6 sm:right-10 text-white space-y-3">

@@ -1616,7 +1616,7 @@ export const PAN_INDIA_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹50 (Indians), ₹650 (Foreigners)',
     accessibilityInfo: 'Paved ramps available through Amar Singh Gate into the main courtyards.',
     nearbySites: ['Taj Mahal', 'Itmad-ud-Daulah', 'Fatehpur Sikri'],
-    featuredImage: 'https://img-cdn.publive.online/fit-in/1200x675/local-samosal/media/media_files/2025/01/10/IyeE4HbeMA6wdYjqYZTm.png',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Agra_Fort_1.jpg/1280px-Agra_Fort_1.jpg',
     gallery: [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Jahangir_Palace_Agra_Fort.jpg/1280px-Jahangir_Palace_Agra_Fort.jpg'
     ],
@@ -1646,7 +1646,7 @@ export const PAN_INDIA_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹50 (Indians), ₹610 (Foreigners)',
     accessibilityInfo: 'Paved pathways around courtyard; step ascents at Buland Darwaza.',
     nearbySites: ['Taj Mahal', 'Agra Fort', 'Keoladeo Ghana National Park'],
-    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Buland_Darwaza%2C_Fatehpur_Sikri.jpg/1280px-Buland_Darwaza%2C_Fatehpur_Sikri.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Buland_Darwaza%2C_Fatehpur_Sikri.jpg/1280px-Buland_Darwaza%2C_Fatehpur_Sikri.jpg',
     gallery: [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Panch_Mahal_Fatehpur_Sikri.jpg/1280px-Panch_Mahal_Fatehpur_Sikri.jpg'
     ],
@@ -1766,7 +1766,7 @@ export const PAN_INDIA_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹40 (Indians), ₹600 (Foreigners)',
     accessibilityInfo: 'Extensively upgraded paths with wheelchair ramps and Braille orientation displays by the Aga Khan Trust.',
     nearbySites: ['Nizamuddin Dargah', 'Sundar Nursery', 'India Gate'],
-    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Humayun%27s_Tomb%2C_Delhi.jpg/1280px-Humayun%27s_Tomb%2C_Delhi.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Humayun%27s_Tomb%2C_Delhi.jpg/1280px-Humayun%27s_Tomb%2C_Delhi.jpg',
     gallery: [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Humayun_Tomb_in_New_Delhi_03-2016.jpg/1280px-Humayun_Tomb_in_New_Delhi_03-2016.jpg'
     ],
@@ -1856,7 +1856,7 @@ export const PAN_INDIA_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹100 (Indians), ₹600 (Foreigners)',
     accessibilityInfo: 'Elevator operates from fort base directly to museum palace galleries for seniors and disabled guests.',
     nearbySites: ['Jaswant Thada', 'Umaid Bhawan Palace', 'Mandore Gardens'],
-    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Mehrangarh_Fort_at_night%2C_Jodhpur%2C_India.jpg/1280px-Mehrangarh_Fort_at_night%2C_Jodhpur%2C_India.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Mehrangarh_Fort_2%2C_Jodhpur%2C_Rajasthan%2C_India.jpg/1280px-Mehrangarh_Fort_2%2C_Jodhpur%2C_Rajasthan%2C_India.jpg',
     gallery: [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Mehrangarh_Fort_Jodhpur_Rajasthan.jpg/1280px-Mehrangarh_Fort_Jodhpur_Rajasthan.jpg'
     ],
@@ -1886,7 +1886,7 @@ export const PAN_INDIA_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹300 (Adults), ₹100 (Children)',
     accessibilityInfo: 'Ramps and accessible pathways at main courtyards; some historic turret stairs are steep.',
     nearbySites: ['Jag Mandir', 'Saheliyon-ki-Bari', 'Monsoon Palace (Sajjangarh)'],
-    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Udaipur_City_Palace.jpg/1280px-Udaipur_City_Palace.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Udaipur_City_Palace.jpg/1280px-Udaipur_City_Palace.jpg',
     gallery: [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/City_Palace_complex_at_night_Udaipur.jpg/1280px-City_Palace_complex_at_night_Udaipur.jpg'
     ],
@@ -2187,7 +2187,7 @@ export const PAN_INDIA_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free Entry (Traditional dress regulations apply)',
     accessibilityInfo: 'Battery carts available along the Grand Road (Bada Danda) leading to the Singhadwara lion gate.',
     nearbySites: ['Konark Sun Temple', 'Golden Beach Puri', 'Raghurajpur Heritage Craft Village'],
-    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Jagannath_Temple%2C_Puri.jpg/1280px-Jagannath_Temple%2C_Puri.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Jagannath_Temple%2C_Puri.jpg/1280px-Jagannath_Temple%2C_Puri.jpg',
     gallery: [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Puri_Rath_Yatra_chariots.jpg/1280px-Puri_Rath_Yatra_chariots.jpg'
     ],
@@ -2247,7 +2247,7 @@ export const PAN_INDIA_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹40 (Indians), ₹600 (Foreigners)',
     accessibilityInfo: 'Stone pathways around Stupa 1 with ramped circumambulatory terraces.',
     nearbySites: ['Udayagiri Caves', 'Vidisha Ruins', 'Heliodorus Pillar'],
-    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/The_Great_Stupa_at_Sanchi_01.jpg/1280px-The_Great_Stupa_at_Sanchi_01.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Stupa_1%2C_Sanchi_02.jpg/1280px-Stupa_1%2C_Sanchi_02.jpg',
     gallery: [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Sanchi_Stupa_Eastern_Torana.jpg/1280px-Sanchi_Stupa_Eastern_Torana.jpg'
     ],
@@ -2277,7 +2277,7 @@ export const PAN_INDIA_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free Entry (Mobile phones/cameras must be deposited at security counter)',
     accessibilityInfo: 'Full ramp access into the inner courtyard surrounding the sacred Bodhi Tree.',
     nearbySites: ['Great Buddha Statue', 'Dungeshwari Cave Temples', 'Nalanda Mahavihara'],
-    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Mahabodhi_Temple%2C_Bodh_Gaya%2C_Bihar%2C_India.jpg/1280px-Mahabodhi_Temple%2C_Bodh_Gaya%2C_Bihar%2C_India.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Mahabodhi_Temple%2C_Bodh_Gaya%2C_Bihar%2C_India.jpg/1280px-Mahabodhi_Temple%2C_Bodh_Gaya%2C_Bihar%2C_India.jpg',
     gallery: [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Mahabodhi_Temple_in_Bodh_Gaya_01.jpg/1280px-Mahabodhi_Temple_in_Bodh_Gaya_01.jpg'
     ],
@@ -2307,7 +2307,7 @@ export const PAN_INDIA_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹40 (Indians), ₹600 (Foreigners)',
     accessibilityInfo: 'Paved brick paths throughout the excavated monastery blocks.',
     nearbySites: ['Xuanzang Memorial Hall', 'Rajgir Cyclopean Wall', 'Vishwa Shanti Stupa'],
-    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Nalanda_Temple_No_3.jpg/1280px-Nalanda_Temple_No_3.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Temple_3_-_Sariputta_Stupa_-_Nalanda_Mahavihara_%2810%29.jpg/1280px-Temple_3_-_Sariputta_Stupa_-_Nalanda_Mahavihara_%2810%29.jpg',
     gallery: [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Nalanda_University_ruins.jpg/1280px-Nalanda_University_ruins.jpg'
     ],
@@ -2367,7 +2367,7 @@ export const PAN_INDIA_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹40 (Indians), ₹600 (Foreigners)',
     accessibilityInfo: 'Surrounding landscaped gardens are wheelchair accessible; stepwell descent has stone steps.',
     nearbySites: ['Modhera Sun Temple', 'Patan Patola Heritage Museum', 'Sahasralinga Talav'],
-    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Rani_ki_vav_07.jpg/1280px-Rani_ki_vav_07.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Rani_ki_vav_07.jpg/1280px-Rani_ki_vav_07.jpg',
     gallery: [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Rani_ki_vav%2C_Patan.jpg/1280px-Rani_ki_vav%2C_Patan.jpg'
     ],

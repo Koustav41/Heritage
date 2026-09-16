@@ -15,6 +15,7 @@ import {
   ArrowUpDown
 } from 'lucide-react';
 import { CANONICAL_HERITAGE_SITES } from '@/lib/data/heritage-sites';
+import { HeritageSiteImage } from '@/components/HeritageSiteImage';
 import { usePorjotok } from '@/lib/store/porjotok-context';
 import { SiteCategory } from '@/types';
 
@@ -213,15 +214,7 @@ export default function HeritageDirectoryPage() {
             <div>
               {/* Featured Image */}
               <div className="relative aspect-[16/10] overflow-hidden bg-stone-100 dark:bg-stone-800">
-                <img
-                  src={site.featuredImage}
-                  alt={site.name}
-                  referrerPolicy="no-referrer"
-                  onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = 'https://images.unsplash.com/photo-1599833975787-5c143f373c30?auto=format&fit=crop&q=80&w=800';
-                  }}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <HeritageSiteImage site={site} />
                 <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
                   <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-600 text-white shadow-xs">
                     {site.state}
