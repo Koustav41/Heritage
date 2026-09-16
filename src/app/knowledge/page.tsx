@@ -14,12 +14,12 @@ export default function KnowledgeArchivePage() {
     const siteEntries = CANONICAL_HERITAGE_SITES.map(s => ({
       id: s.id,
       title: s.name,
-      bengaliTitle: s.bengaliName,
+      bengaliTitle: s.nativeName || s.bengaliName,
       category: s.siteType,
       type: 'SITE' as const,
       slug: `/heritage/${s.slug}`,
       summary: s.shortDescription,
-      region: s.district,
+      region: s.state ? `${s.district}, ${s.state}` : s.district,
       period: s.historicalPeriod,
       image: s.featuredImage
     }));
@@ -27,12 +27,12 @@ export default function KnowledgeArchivePage() {
     const cultureEntries = CANONICAL_CULTURE_ENTRIES.map(c => ({
       id: c.id,
       title: c.name,
-      bengaliTitle: c.bengaliName,
+      bengaliTitle: c.nativeName || c.bengaliName,
       category: c.category,
       type: 'CULTURE' as const,
       slug: `/culture/${c.slug}`,
       summary: c.shortDescription,
-      region: c.geographicAssociation,
+      region: c.state ? `${c.geographicAssociation} • ${c.state}` : c.geographicAssociation,
       period: c.historicalPeriod,
       image: c.featuredImage
     }));
@@ -64,13 +64,13 @@ export default function KnowledgeArchivePage() {
       <div className="space-y-3">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-950/60 text-amber-900 dark:text-amber-300 text-xs font-semibold">
           <BookOpen className="w-3.5 h-3.5" />
-          <span>Parampara Knowledge Repository • 70+ Indexed Records</span>
+          <span>Pan-India Knowledge Repository • 110+ Indexed Records</span>
         </div>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-stone-900 dark:text-stone-100 tracking-tight">
           Heritage & Cultural Knowledge Archive
         </h1>
         <p className="text-sm sm:text-base text-stone-600 dark:text-stone-300 max-w-2xl leading-relaxed">
-          The verified knowledge core of Parampara. Access grounded historical documentation, architectural analyses, oral traditions, and geographical records.
+          The verified knowledge core of Parampara. Access grounded historical documentation, architectural analyses, oral traditions, and geographical records across India.
         </p>
       </div>
 
@@ -83,7 +83,7 @@ export default function KnowledgeArchivePage() {
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search knowledge repository by keyword, district, or era..."
+              placeholder="Search knowledge repository by monument, tradition, state, or era..."
               className="w-full pl-9 pr-4 py-2.5 rounded-xl bg-stone-50 dark:bg-stone-800/80 border border-stone-200 dark:border-stone-700 text-xs text-stone-900 dark:text-stone-100 placeholder-stone-400 outline-none focus:ring-1 focus:ring-amber-500"
             />
           </div>

@@ -37,10 +37,12 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
   const matchedSites = q ? CANONICAL_HERITAGE_SITES.filter(s => 
     s.name.toLowerCase().includes(q) || 
+    s.nativeName?.toLowerCase().includes(q) ||
     s.bengaliName?.includes(q) || 
+    s.state.toLowerCase().includes(q) ||
     s.district.toLowerCase().includes(q) ||
     s.shortDescription.toLowerCase().includes(q)
-  ).slice(0, 5) : [];
+  ).slice(0, 6) : [];
 
   const matchedCultures = q ? CANONICAL_CULTURE_ENTRIES.filter(c =>
     c.name.toLowerCase().includes(q) ||
@@ -51,9 +53,12 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
   const matchedFoods = q ? CANONICAL_FOOD_ITEMS.filter(f =>
     f.name.toLowerCase().includes(q) ||
+    f.nativeName?.toLowerCase().includes(q) ||
     f.bengaliName?.includes(q) ||
-    f.district.toLowerCase().includes(q)
-  ).slice(0, 3) : [];
+    f.state.toLowerCase().includes(q) ||
+    f.district.toLowerCase().includes(q) ||
+    f.description.toLowerCase().includes(q)
+  ).slice(0, 4) : [];
 
   const matchedProducts = q ? CANONICAL_PRODUCTS.filter(p =>
     p.name.toLowerCase().includes(q) ||
@@ -75,7 +80,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search 55+ heritage sites, festivals, crafts, sweets, guides..."
+            placeholder="Search heritage monuments (Taj Mahal, Hampi), famous foods, states, guides..."
             className="w-full bg-transparent border-none outline-none text-stone-900 dark:text-stone-100 placeholder-stone-400 text-base"
             autoFocus
           />
@@ -100,11 +105,11 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
           {!query && (
             <div className="py-8 text-center">
               <Compass className="w-10 h-10 mx-auto text-amber-600/40 mb-3" />
-              <p className="font-medium text-stone-700 dark:text-stone-300">Discover West Bengal’s Living Heritage</p>
-              <p className="text-xs text-stone-400 mt-1">Try typing &quot;Bishnupur&quot;, &quot;Durga Puja&quot;, &quot;Rosogolla&quot;, &quot;Darjeeling&quot;, or &quot;Santiniketan&quot;</p>
+              <p className="font-medium text-stone-700 dark:text-stone-300">Discover India’s Living Heritage & Cuisines</p>
+              <p className="text-xs text-stone-400 mt-1">Try searching for &quot;Taj Mahal&quot;, &quot;Hampi&quot;, &quot;Biryani&quot;, &quot;Konark&quot;, &quot;Vada Pav&quot;, &quot;Jaipur&quot;, or &quot;Rosogolla&quot;</p>
               
               <div className="flex flex-wrap justify-center gap-2 mt-4">
-                {['Victoria Memorial', 'Terracotta', 'Sundarbans', 'Dokra', 'Baluchari', 'Baul'].map((tag) => (
+                {['Taj Mahal', 'Hampi', 'Amer Fort', 'Brihadisvara', 'Konark', 'Vada Pav', 'Biryani', 'Rosogolla', 'Rajasthan', 'Uttar Pradesh'].map((tag) => (
                   <button
                     key={tag}
                     onClick={() => setQuery(tag)}
@@ -146,7 +151,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
                       <div className="text-xs text-stone-500 dark:text-stone-400 line-clamp-1">{site.shortDescription}</div>
                     </div>
                     <span className="text-xs px-2 py-0.5 rounded-full bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-400 shrink-0 ml-3">
-                      {site.district}
+                      {site.state} • {site.district}
                     </span>
                   </Link>
                 ))}
@@ -175,8 +180,8 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
                       </div>
                       <div className="text-xs text-stone-500 dark:text-stone-400 line-clamp-1">{culture.shortDescription}</div>
                     </div>
-                    <span className="text-xs px-2 py-0.5 rounded-full bg-orange-50 dark:bg-orange-950/50 text-orange-700 dark:text-orange-300 shrink-0 ml-3">
-                      {culture.category.replace('_', ' ')}
+                    <span className="text-xs px-2 py-0.5 rounded-full bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-400 shrink-0 ml-3">
+                      {culture.geographicAssociation}
                     </span>
                   </Link>
                 ))}
@@ -189,7 +194,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
             <div>
               <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-rose-700 dark:text-rose-400 mb-2">
                 <Utensils className="w-4 h-4" />
-                <span>Local Food & Sweets ({matchedFoods.length})</span>
+                <span>Famous Foods & Sweets ({matchedFoods.length})</span>
               </div>
               <div className="space-y-1">
                 {matchedFoods.map(food => (
@@ -203,7 +208,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
                       <div className="font-medium text-stone-900 dark:text-stone-100 group-hover:text-rose-700 dark:group-hover:text-rose-400">
                         {food.name}
                       </div>
-                      <div className="text-xs text-stone-500 dark:text-stone-400">{food.merchantName} • {food.district}</div>
+                      <div className="text-xs text-stone-500 dark:text-stone-400">{food.merchantName} • {food.state}</div>
                     </div>
                     <span className="text-xs font-semibold text-amber-600 dark:text-amber-400">
                       ₹{food.price}

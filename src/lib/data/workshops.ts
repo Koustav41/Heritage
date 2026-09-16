@@ -1,6 +1,101 @@
-import { Workshop } from '@/types';
+﻿import { Workshop } from '@/types';
 
 export const CANONICAL_WORKSHOPS: Workshop[] = [
+  // --- PAN-INDIA WORKSHOPS ---
+  {
+    id: 'workshop-jaipur-pottery',
+    title: 'Jaipur Blue Pottery Glazing & Decorative Tile Art',
+    slug: 'jaipur-blue-pottery-workshop',
+    category: 'Ceramic Art & Glazing',
+    instructorName: 'Gopal Saini (National Awardee)',
+    instructorBio: 'President of Jaipur Blue Art Guild with 35 years revitalizing Turko-Persian quartz ceramics.',
+    instructorPhoto: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80',
+    date: '2026-10-12',
+    startTime: '10:00 AM',
+    endTime: '04:00 PM',
+    venue: 'Kot Jeweler Craft Quarter, Jaipur',
+    state: 'Rajasthan',
+    district: 'Jaipur',
+    capacity: 16,
+    enrolledCount: 12,
+    price: 1950,
+    goodieIncluded: true,
+    certificateIncluded: true,
+    description: 'Master the ancient non-clay ceramic method using ground quartz stone, Fuller’s earth, and glass. Learn traditional brush-painting in Persian cobalt blue and turquoise floral arabesques, plus kiln firing secrets.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Blue_Pottery%2C_Jaipur_School_of_Art.jpg/1280px-Blue_Pottery%2C_Jaipur_School_of_Art.jpg',
+    status: 'UPCOMING'
+  },
+  {
+    id: 'workshop-thanjavur-painting',
+    title: 'Thanjavur 22K Gold Foil Classical Temple Painting',
+    slug: 'thanjavur-gold-foil-workshop',
+    category: 'Classical Temple Art',
+    instructorName: 'S. Rajagopalan (State Awardee)',
+    instructorBio: 'Master painter belonging to the historic Raju community of Thanjavur court painters.',
+    instructorPhoto: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80',
+    date: '2026-10-20',
+    startTime: '10:30 AM',
+    endTime: '04:30 PM',
+    venue: 'Raju Traditional Studio, Old Bus Stand Road, Thanjavur',
+    state: 'Tamil Nadu',
+    district: 'Thanjavur',
+    capacity: 14,
+    enrolledCount: 11,
+    price: 2400,
+    goodieIncluded: true,
+    certificateIncluded: true,
+    description: 'Learn the sacred gesso relief technique using limestone paste and unadulterated 22-karat gold foil leaves. Create a framed Balakrishna or Devi icon inlaid with sparkling Jaipur gemstones.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Tanjore_Painting_Vinyaka.jpg/1280px-Tanjore_Painting_Vinyaka.jpg',
+    status: 'UPCOMING'
+  },
+  {
+    id: 'workshop-varanasi-zari',
+    title: 'Varanasi Zari Brocade & Handloom Silk Weaving',
+    slug: 'varanasi-zari-weaving-workshop',
+    category: 'Textile Masterclass',
+    instructorName: 'Ustad Haji Nisar Ahmad',
+    instructorBio: 'Master jacquard weaver patronized by generations of Banarasi classical musicians.',
+    instructorPhoto: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
+    date: '2026-11-02',
+    startTime: '11:00 AM',
+    endTime: '03:30 PM',
+    venue: 'Madanpura Heritage Handloom Studio, Varanasi',
+    state: 'Uttar Pradesh',
+    district: 'Varanasi',
+    capacity: 12,
+    enrolledCount: 9,
+    price: 2100,
+    goodieIncluded: true,
+    certificateIncluded: true,
+    description: 'Operate an authentic wooden pit loom with electroplated gold zari threads. Learn warp-and-weft tensioning, floral jaal drafting, and take home an authentic handwoven zari silk runner.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Silk_Looms%2C_Varanasi.jpg/1280px-Silk_Looms%2C_Varanasi.jpg',
+    status: 'UPCOMING'
+  },
+  {
+    id: 'workshop-channapatna-wood',
+    title: 'Channapatna Eco-Friendly Lacquerware Woodturning',
+    slug: 'channapatna-wood-lacquer-workshop',
+    category: 'Natural Woodturning',
+    instructorName: 'B. R. Shivanna',
+    instructorBio: 'Master lathe craftsman teaching non-toxic ivory-wood crafts supported by the Handicrafts Board.',
+    instructorPhoto: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80',
+    date: '2026-11-12',
+    startTime: '10:00 AM',
+    endTime: '02:30 PM',
+    venue: 'Toy Town Artisan Guild, Bangalore-Mysore Highway, Ramanagara',
+    state: 'Karnataka',
+    district: 'Ramanagara',
+    capacity: 18,
+    enrolledCount: 15,
+    price: 1350,
+    goodieIncluded: true,
+    certificateIncluded: true,
+    description: 'Turn sustainable Wrightia tinctoria wood on hand lathes and apply organic vegetable lacquer dyed with turmeric, indigo, and kumkum. Polish with screw pine leaves and take home a handcrafted toy set.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Channapatna_artists_making_toys_2.jpg/1280px-Channapatna_artists_making_toys_2.jpg',
+    status: 'UPCOMING'
+  },
+
+  // --- WEST BENGAL WORKSHOPS ---
   {
     id: 'workshop-1',
     title: 'Ancient Dokra Lost-Wax Bell Metal Casting',
@@ -13,6 +108,7 @@ export const CANONICAL_WORKSHOPS: Workshop[] = [
     startTime: '10:00 AM',
     endTime: '04:00 PM',
     venue: 'Bikna Dokra Artisans Guild, Bikna Village',
+    state: 'West Bengal',
     district: 'Bankura',
     capacity: 15,
     enrolledCount: 11,
@@ -20,7 +116,7 @@ export const CANONICAL_WORKSHOPS: Workshop[] = [
     goodieIncluded: true,
     certificateIncluded: true,
     description: 'Hands-on 1-day masterclass. Participants sculpt a clay core, extrude beeswax threads into traditional tribal motifs, wrap in alluvial clay mold, and participate in pouring molten bell metal into the furnace kiln. You keep your cast brass figurine!',
-    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/God_astride_an_owl%2C_Dhokra_%28Dokra%29_craftsmen%2C_Bankura%2C_West_Bengal%2C_19th_century%2C_lost-wax_cast_brass%2C_HAA.JPG/1280px-God_astride_an_owl%2C_Dhokra_%28Dokra%29_craftsmen%2C_Bankura%2C_West_Bengal%2C_19th_century%2C_lost-wax_cast_brass%2C_HAA.JPG',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/God_astride_an_owl%2C_Dhokra_%28Dokra%29_craftsmen%2C_Bankura%2C_West_Bengal%2C_19th_century%2C_lost-wax_cast_brass%2C_HAA.JPG/1280px-God_astride_an_owl%2C_Dhokra_%28Dokra%29_craftsmen%2C_Bankura%2C_West_Bengal%2C_19th_century%2C_lost-wax_cast_brass%2C_HAA.JPG',
     status: 'UPCOMING'
   },
   {
@@ -35,6 +131,7 @@ export const CANONICAL_WORKSHOPS: Workshop[] = [
     startTime: '11:00 AM',
     endTime: '03:30 PM',
     venue: 'Naya Patachitra Hub, Pingla',
+    state: 'West Bengal',
     district: 'Paschim Medinipur',
     capacity: 20,
     enrolledCount: 14,
@@ -42,7 +139,7 @@ export const CANONICAL_WORKSHOPS: Workshop[] = [
     goodieIncluded: true,
     certificateIncluded: true,
     description: 'Learn to extract authentic natural pigments from turmeric, teak leaves, aparajita flowers, and lamp soot. Paint a handmade cloth-mounted scroll depicting folk tales, and learn the traditional musical ballad (Pater Gaan) that accompanies each unrolled frame.',
-    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Pingla_Patachitra_Shilpi_Shyamsundar_Chitrokor%2C_Pingla%2C_West_Bengal.jpg/1280px-Pingla_Patachitra_Shilpi_Shyamsundar_Chitrokor%2C_Pingla%2C_West_Bengal.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Pingla_Patachitra_Shilpi_Shyamsundar_Chitrokor%2C_Pingla%2C_West_Bengal.jpg/1280px-Pingla_Patachitra_Shilpi_Shyamsundar_Chitrokor%2C_Pingla%2C_West_Bengal.jpg',
     status: 'UPCOMING'
   },
   {
@@ -57,6 +154,7 @@ export const CANONICAL_WORKSHOPS: Workshop[] = [
     startTime: '10:30 AM',
     endTime: '04:30 PM',
     venue: 'Charida Mask Village Studio, Baghmundi',
+    state: 'West Bengal',
     district: 'Purulia',
     capacity: 18,
     enrolledCount: 16,
@@ -64,7 +162,7 @@ export const CANONICAL_WORKSHOPS: Workshop[] = [
     goodieIncluded: true,
     certificateIncluded: true,
     description: 'Step-by-step guidance in molding river clay, layering paper pulp and starched cloth, hand-painting dramatic expression lines of mythological gods and demons, and adorning masks with beads and tinsel plumage.',
-    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Chhau_Nritya_face_mask_001.jpg/1280px-Chhau_Nritya_face_mask_001.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Chhau_Nritya_face_mask_001.jpg/1280px-Chhau_Nritya_face_mask_001.jpg',
     status: 'UPCOMING'
   },
   {
@@ -79,6 +177,7 @@ export const CANONICAL_WORKSHOPS: Workshop[] = [
     startTime: '10:00 AM',
     endTime: '03:00 PM',
     venue: 'Panchmura Terracotta Village, Bankura',
+    state: 'West Bengal',
     district: 'Bankura',
     capacity: 15,
     enrolledCount: 9,
@@ -86,7 +185,7 @@ export const CANONICAL_WORKSHOPS: Workshop[] = [
     goodieIncluded: true,
     certificateIncluded: true,
     description: 'Learn the ancient carving techniques that adorn the 17th-century temples of Bishnupur. Mold red laterite clay, carve intricate friezes of birds, horses, and musicians, and learn traditional pit-kiln firing secrets.',
-    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Jor_Bangla_or_Keshta_Raya_temple_of_Bishnupur._Built_by_Raghunath_Singha_in_1655_AD._23.jpg/1280px-Jor_Bangla_or_Keshta_Raya_temple_of_Bishnupur._Built_by_Raghunath_Singha_in_1655_AD._23.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Jor_Bangla_or_Keshta_Raya_temple_of_Bishnupur._Built_by_Raghunath_Singha_in_1655_AD._23.jpg/1280px-Jor_Bangla_or_Keshta_Raya_temple_of_Bishnupur._Built_by_Raghunath_Singha_in_1655_AD._23.jpg',
     status: 'UPCOMING'
   }
 ];

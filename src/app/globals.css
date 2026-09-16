@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #faf7f2;
   --foreground: #1c1917;
@@ -92,3 +94,65 @@ body {
 .gradient-dark-heritage {
   background: linear-gradient(180deg, #141721 0%, #0c0d12 100%);
 }
+
+/* Google Translate Seamless Integration */
+.goog-te-banner-frame.skiptranslate,
+iframe.goog-te-banner-frame,
+iframe[id^=":"] {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+}
+
+body {
+  top: 0px !important;
+  position: static !important;
+}
+
+#google_translate_element,
+.goog-te-gadget {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.goog-tooltip,
+.goog-tooltip:hover {
+  display: none !important;
+}
+
+.goog-text-highlight {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#goog-gt-tt,
+.VIpgJd-yAWneB-L7t0Ce,
+.VIpgJd-ZVi9od-OR9Mb-Oxf5Fd,
+.VIpgJd-ZVi9od-xl07Ob-Oxf5Fd {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* AI Vision Scanner Animations */
+@keyframes laser-scan-line {
+  0% {
+    top: 2%;
+    opacity: 0.85;
+  }
+  50% {
+    top: 96%;
+    opacity: 1;
+  }
+  100% {
+    top: 2%;
+    opacity: 0.85;
+  }
+}
+
+.animate-laser-scan {
+  animation: laser-scan-line 2s ease-in-out infinite;
+}
+
+

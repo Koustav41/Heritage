@@ -35,6 +35,7 @@ export interface HeritageSite {
   id: string;
   name: string;
   bengaliName?: string;
+  nativeName?: string;
   slug: string;
   shortDescription: string;
   detailedHistory: string;
@@ -42,6 +43,7 @@ export interface HeritageSite {
   architecturalSignificance: string;
   historicalPeriod: string;
   constructionPeriod: string;
+  state: string;
   district: string;
   address: string;
   coordinates: Coordinates;
@@ -63,6 +65,8 @@ export interface CultureEntry {
   id: string;
   name: string;
   bengaliName?: string;
+  nativeName?: string;
+  state: string;
   slug: string;
   category: CultureCategory;
   shortDescription: string;
@@ -83,6 +87,7 @@ export interface CultureEntry {
 export interface Guide {
   id: string;
   name: string;
+  state: string;
   district: string;
   location: string;
   photo: string;
@@ -112,6 +117,7 @@ export interface Workshop {
   startTime: string;
   endTime: string;
   venue: string;
+  state: string;
   district: string;
   capacity: number;
   enrolledCount: number;
@@ -127,12 +133,14 @@ export interface FoodItem {
   id: string;
   name: string;
   bengaliName?: string;
+  nativeName?: string;
   slug?: string;
   category: 'SWEET' | 'STREET_FOOD' | 'TRADITIONAL_MEAL' | 'SNACK' | 'BEVERAGE';
   price: number;
   description: string;
   merchantName: string;
   merchantLocation: string;
+  state: string;
   district: string;
   merchantRating: number;
   openingHours: string;
@@ -146,12 +154,14 @@ export interface LocalProduct {
   id: string;
   name: string;
   bengaliName?: string;
+  nativeName?: string;
   category: 'TEXTILE' | 'CRAFT' | 'PAINTING' | 'POTTERY' | 'FOOD_PRODUCT' | 'SOUVENIR';
   price: number;
   stock: number;
   description: string;
   sellerName: string;
   sellerLocation: string;
+  state: string;
   district: string;
   sellerRating: number;
   craftHeritage: string;
@@ -196,6 +206,7 @@ export interface Fundraiser {
   title: string;
   crewName: string;
   district: string;
+  state?: string;
   location: string;
   targetAmount: number;
   raisedAmount: number;

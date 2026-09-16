@@ -1,4 +1,4 @@
-import { VideoArchiveItem } from '@/types';
+﻿import { VideoArchiveItem } from '@/types';
 
 export const CANONICAL_VIDEOS: VideoArchiveItem[] = [
   {
@@ -9,7 +9,7 @@ export const CANONICAL_VIDEOS: VideoArchiveItem[] = [
     category: 'Documentary',
     district: 'Kolkata',
     videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
-    thumbnailUrl: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Making_of_Durga_idol_in_Kumartuli_04.jpg/1280px-Making_of_Durga_idol_in_Kumartuli_04.jpg',
+    thumbnailUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Making_of_Durga_idol_in_Kumartuli_04.jpg/1280px-Making_of_Durga_idol_in_Kumartuli_04.jpg',
     uploader: 'Parampara Cultural Archives',
     tags: ['Kumartuli', 'Durga Puja', 'Sculpture', 'Kolkata']
   },
@@ -21,7 +21,7 @@ export const CANONICAL_VIDEOS: VideoArchiveItem[] = [
     category: 'Craft Masterclass',
     district: 'Bankura',
     videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
-    thumbnailUrl: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/God_astride_an_owl%2C_Dhokra_%28Dokra%29_craftsmen%2C_Bankura%2C_West_Bengal%2C_19th_century%2C_lost-wax_cast_brass%2C_HAA.JPG/1280px-God_astride_an_owl%2C_Dhokra_%28Dokra%29_craftsmen%2C_Bankura%2C_West_Bengal%2C_19th_century%2C_lost-wax_cast_brass%2C_HAA.JPG',
+    thumbnailUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/God_astride_an_owl%2C_Dhokra_%28Dokra%29_craftsmen%2C_Bankura%2C_West_Bengal%2C_19th_century%2C_lost-wax_cast_brass%2C_HAA.JPG/1280px-God_astride_an_owl%2C_Dhokra_%28Dokra%29_craftsmen%2C_Bankura%2C_West_Bengal%2C_19th_century%2C_lost-wax_cast_brass%2C_HAA.JPG',
     uploader: 'Bengal Handicrafts Guild',
     tags: ['Dokra', 'Metalsmithing', 'Bikna', 'Tribal Art']
   },
@@ -33,7 +33,7 @@ export const CANONICAL_VIDEOS: VideoArchiveItem[] = [
     category: 'Music Performance',
     district: 'Birbhum',
     videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
-    thumbnailUrl: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Vandari_Abdul_Jabbar%2C_folk_singer_singing_with_musical_instrument_%27Ektara%27%2C_Bangladesh.jpg/1280px-Vandari_Abdul_Jabbar%2C_folk_singer_singing_with_musical_instrument_%27Ektara%27%2C_Bangladesh.jpg',
+    thumbnailUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Vandari_Abdul_Jabbar%2C_folk_singer_singing_with_musical_instrument_%27Ektara%27%2C_Bangladesh.jpg/1280px-Vandari_Abdul_Jabbar%2C_folk_singer_singing_with_musical_instrument_%27Ektara%27%2C_Bangladesh.jpg',
     uploader: 'Folk Heritage Society of Bengal',
     tags: ['Baul', 'Ektara', 'Tagore', 'Birbhum']
   },
@@ -45,7 +45,7 @@ export const CANONICAL_VIDEOS: VideoArchiveItem[] = [
     category: 'Travel & Architecture',
     district: 'Darjeeling',
     videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
-    thumbnailUrl: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Darjeeling_Himalayan_Railway%2Ctoy_train_%281%29.jpg/1280px-Darjeeling_Himalayan_Railway%2Ctoy_train_%281%29.jpg',
+    thumbnailUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Darjeeling_Himalayan_Railway%2Ctoy_train_%281%29.jpg/1280px-Darjeeling_Himalayan_Railway%2Ctoy_train_%281%29.jpg',
     uploader: 'Himalayan Railway Heritage',
     tags: ['Darjeeling', 'Steam Train', 'UNESCO', 'Mountains']
   }

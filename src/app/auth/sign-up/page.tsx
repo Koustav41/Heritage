@@ -44,7 +44,7 @@ export default function SignUpPage() {
           Create Parampara Account
         </h1>
         <p className="text-xs text-stone-500">
-          Join the West Bengal cultural tourism & community ecosystem
+          Join India's premier cultural tourism & community heritage ecosystem
         </p>
       </div>
 

@@ -1,16 +1,71 @@
-import { HistoricalMilestone } from '@/types';
+﻿import { HistoricalMilestone } from '@/types';
 
 export const HISTORICAL_MILESTONES: HistoricalMilestone[] = [
   {
-    id: 'era-ancient',
+    id: 'era-indus-vedic',
+    era: 'ANCIENT',
+    yearRange: 'c. 2600 BCE – 6th Century BCE',
+    title: 'Indus Valley Civilization & The Vedic Age',
+    shortSummary: 'From the planned brick cities of Harappa, Mohenjo-daro, and Dholavira to the immortal composition of the four Vedas and Upanishads.',
+    detailedHistory: 'The Indus Valley (Harappan) Civilization was the ancient world’s largest urban culture, renowned for subterranean drainage systems, standardized weights, maritime docks at Lothal, and citadel water reservoirs at Dholavira. Following this, the Vedic period crystallized sacred Sanskrit oral literature—the Rigveda, Samaveda, Yajurveda, Atharvaveda, and the profound metaphysical philosophy of the Upanishads.',
+    majorPersonalities: ['Sage Vyasa', 'Sage Valmiki', 'Yajnavalkya', 'Gargi Vachaknavi'],
+    relatedSites: ['Rani ki Vav', 'Kashi Vishwanath Corridor', 'Sun Temple Modhera'],
+    image: 'https://images.unsplash.com/photo-1600100397608-f010f4439c09?q=80&w=1280&auto=format&fit=crop'
+  },
+  {
+    id: 'era-maurya-gupta',
+    era: 'ANCIENT',
+    yearRange: 'c. 322 BCE – 550 CE',
+    title: 'The Maurya Empire, Ashoka & The Gupta Golden Age',
+    shortSummary: 'Emperor Ashoka’s Dhamma edicts, the rise of Nalanda University, rock-cut Ajanta art, and classical scientific revolutions in mathematics and astronomy.',
+    detailedHistory: 'Under Chandragupta Maurya and his strategist Chanakya, the Mauryan Empire unified the subcontinent. Following the Kalinga War (261 BCE), Emperor Ashoka renounced violence and spread Buddhism and moral Dhamma across Asia, inscribing rock pillars with Lion Capitals that became India’s national emblem. Later, the Gupta Empire (320–550 CE) inaugurated the "Golden Age of India", witnessing Aryabhata calculate pi and planetary orbits, Kalidasa compose literary masterpieces, and sculptors chisel the cave murals of Ajanta.',
+    majorPersonalities: ['Emperor Ashoka the Great', 'Chanakya (Kautilya)', 'Chandragupta Vikramaditya', 'Aryabhata', 'Kalidasa'],
+    relatedSites: ['Mahabodhi Temple Complex', 'Sanchi Stupa Complex', 'Nalanda Mahavihara Archaeological Ruins', 'Ajanta Caves'],
+    image: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?q=80&w=1280&auto=format&fit=crop'
+  },
+  {
+    id: 'era-ancient-bengal',
     era: 'ANCIENT',
     yearRange: '4th Century BCE – 11th Century CE',
     title: 'Gangaridai, Chandraketugarh & The Pala Buddhist Empire',
-    shortSummary: 'When Greek historians marveled at the Gangaridai elephant armies, and Bengal’s Pala emperors patronized Nalanda and Somapura universities.',
+    shortSummary: 'When Greek historians marveled at Gangaridai elephant armies, and Bengal’s Pala emperors patronized Nalanda and Somapura universities.',
     detailedHistory: 'Ancient Bengal was recognized in Greek and Roman texts as "Gangaridai", a formidable realm at the mouth of the Ganges. Excavations at Chandraketugarh reveal a sophisticated international maritime port trading with Rome and Southeast Asia. Later, the Buddhist Pala Dynasty (750–1161 CE), founded by Gopala through popular election, ushered in a golden era of Mahayana-Vajrayana Buddhism, founding the universities of Vikramashila, Odantapuri, and Somapura, while master artists Dhiman and Vitapala revolutionized bronze sculpture.',
     majorPersonalities: ['Emperor Dharmapala', 'Atisha Dipankara Srijnana', 'Dhiman', 'Vitapala'],
     relatedSites: ['Chandraketu Fort', 'Khana-Mihirer Dhipi', 'Rock Inscription of Chandra Varman'],
-    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Khana-Mihirer_Dhipi_in_Chandraketugarh_15.jpg/1280px-Khana-Mihirer_Dhipi_in_Chandraketugarh_15.jpg'
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Khana-Mihirer_Dhipi_in_Chandraketugarh_15.jpg/1280px-Khana-Mihirer_Dhipi_in_Chandraketugarh_15.jpg'
+  },
+  {
+    id: 'era-chola-dravidian',
+    era: 'MEDIEVAL',
+    yearRange: 'c. 850 – 1279 CE',
+    title: 'The Imperial Cholas & The Dravidian Golden Age',
+    shortSummary: 'Raja Raja Chola and Rajendra Chola building the Great Living Chola Temples and dominating Bay of Bengal maritime trade routes to Southeast Asia.',
+    detailedHistory: 'The Imperial Chola Dynasty transformed South India into an economic and maritime superpower. Raja Raja Chola I built the colossal Brihadisvara Temple at Thanjavur without mortar in 1010 CE, crowned by an 80-tonne monolithic cupola. Rajendra Chola led naval expeditions across Sri Lanka, the Andaman Islands, and the Srivijaya Empire in Indonesia, while royal foundries perfected lost-wax Chola bronze Nataraja masterpieces.',
+    majorPersonalities: ['Raja Raja Chola I', 'Rajendra Chola I', 'Karikala Chola'],
+    relatedSites: ['Brihadisvara Temple', 'Group of Monuments at Mahabalipuram', 'Meenakshi Amman Temple'],
+    image: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=1280&auto=format&fit=crop'
+  },
+  {
+    id: 'era-delhi-mughal',
+    era: 'MEDIEVAL',
+    yearRange: '1206 – 1707 CE',
+    title: 'The Delhi Sultanate & The Mughal Empire',
+    shortSummary: 'Monumental Indo-Islamic architecture from Qutub Minar to Fatehpur Sikri, culminating in the sublime marble poetry of the Taj Mahal.',
+    detailedHistory: 'Beginning with Qutb-ud-din Aibak in 1206, the Delhi Sultanate introduced arches, domes, and soaring minarets to the Indian landscape. In 1526, Babur established the Mughal Empire. Emperor Akbar pioneered Din-i Ilahi, patronized Navaratnas including Tansen and Birbal, and planned Fatehpur Sikri. Under Shah Jahan, Mughal aesthetics culminated in the Taj Mahal, Agra Fort, and Delhi Red Fort, fusing Persian, Central Asian, and indigenous Indian craft.',
+    majorPersonalities: ['Emperor Akbar the Great', 'Shah Jahan', 'Tansen', 'Amir Khusrau', 'Nur Jahan'],
+    relatedSites: ['Taj Mahal', 'Agra Fort', 'Qutub Minar and its Monuments', 'Red Fort Complex', 'Humayun’s Tomb', 'Fatehpur Sikri'],
+    image: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=1280&auto=format&fit=crop'
+  },
+  {
+    id: 'era-vijayanagara-maratha',
+    era: 'MEDIEVAL',
+    yearRange: '1336 – 1818 CE',
+    title: 'Vijayanagara Empire & The Maratha Swarajya',
+    shortSummary: 'Krishnadevaraya’s glorious capital at Hampi and Chhatrapati Shivaji Maharaj establishing Hindavi Swarajya across Sahyadri hill forts.',
+    detailedHistory: 'Founded on the banks of the Tungabhadra in 1336 by Harihara and Bukka, Vijayanagara became one of the wealthiest cosmopolitan capitals in the medieval world under Emperor Krishnadevaraya, trading in diamonds, horses, and silks. In the 17th century, Chhatrapati Shivaji Maharaj ignited the spirit of Swarajya (self-rule), constructing impregnable hill forts across Maharashtra and pioneering guerrilla warfare (Ganimi Kava) against imperial forces.',
+    majorPersonalities: ['Emperor Krishnadevaraya', 'Chhatrapati Shivaji Maharaj', 'Tenali Rama', 'Peshwa Baji Rao I'],
+    relatedSites: ['Group of Monuments at Hampi', 'Mysore Palace', 'Ellora Caves', 'Mehrangarh Fort'],
+    image: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?q=80&w=1280&auto=format&fit=crop'
   },
   {
     id: 'era-sultanate',
@@ -21,7 +76,7 @@ export const HISTORICAL_MILESTONES: HistoricalMilestone[] = [
     detailedHistory: 'Founded by Shamsuddin Ilyas Shah in 1342, the Bengal Sultanate severed ties with Delhi and forged diplomatic relations with China, Arabia, and Persia. The Sultans constructed staggering monuments like the Adina Mosque in Pandua and Firoz Minar in Gour. Crucially, the court patronized the first Bengali translations of the Ramayana by Krittibas Ojha and the Mahabharata, establishing Bengali as a royal literary language.',
     majorPersonalities: ['Shamsuddin Ilyas Shah', 'Sultan Sikandar Shah', 'Alauddin Husain Shah', 'Krittibas Ojha'],
     relatedSites: ['Adina Mosque', 'Firoz Minar', 'Qadam Rasul Mosque', 'Eklakhi Mausoleum'],
-    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Adina_Mosque_at_Malda_district_of_West_Bengal_08.jpg/1280px-Adina_Mosque_at_Malda_district_of_West_Bengal_08.jpg'
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Adina_Mosque_at_Malda_district_of_West_Bengal_08.jpg/1280px-Adina_Mosque_at_Malda_district_of_West_Bengal_08.jpg'
   },
   {
     id: 'era-malla',
@@ -32,7 +87,7 @@ export const HISTORICAL_MILESTONES: HistoricalMilestone[] = [
     detailedHistory: 'Following King Bir Hambir’s conversion to Gaudiya Vaishnavism under the guidance of Srinivas Acharya, the Malla kings transformed Bishnupur into a center of art and spiritual devotion. In the absence of stone, sculptors molded alluvial clay into thousands of narrative terracotta tiles depicting the Ramayana, Mahabharata, and Krishna-lila. Simultaneously, the Bishnupur Gharana of Dhrupad classical music was born.',
     majorPersonalities: ['King Bir Hambir', 'King Raghunath Singha', 'King Durjan Singha', 'Srinivas Acharya'],
     relatedSites: ['Rasmancha', 'Jor Bangla Temple', 'Shyam Rai Temple', 'Madan Mohan Temple', 'Dalmadal Gun'],
-    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Jor_Bangla_or_Keshta_Raya_temple_of_Bishnupur._Built_by_Raghunath_Singha_in_1655_AD._23.jpg/1280px-Jor_Bangla_or_Keshta_Raya_temple_of_Bishnupur._Built_by_Raghunath_Singha_in_1655_AD._23.jpg'
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Jor_Bangla_or_Keshta_Raya_temple_of_Bishnupur._Built_by_Raghunath_Singha_in_1655_AD._23.jpg/1280px-Jor_Bangla_or_Keshta_Raya_temple_of_Bishnupur._Built_by_Raghunath_Singha_in_1655_AD._23.jpg'
   },
   {
     id: 'era-nawabi',
@@ -43,28 +98,28 @@ export const HISTORICAL_MILESTONES: HistoricalMilestone[] = [
     detailedHistory: 'Murshid Quli Khan transferred the capital of the Subah of Bengal from Dhaka to Murshidabad in 1704. In the early 18th century, Bengal was generating 50% of the Mughal Empire’s GDP through silk, muslin, and agricultural wealth. However, tensions with the British East India Company culminated on June 23, 1757, at Plassey, where Mir Jafar’s treachery led to the defeat and murder of the young Nawab Siraj-ud-Daulah, beginning 190 years of British colonial rule.',
     majorPersonalities: ['Murshid Quli Khan', 'Nawab Alivardi Khan', 'Nawab Siraj-ud-Daulah', 'Robert Clive', 'Mir Jafar'],
     relatedSites: ['Hazarduari Palace', 'Nizamat Imambara', 'Tomb of Siraj-ud-Daulah', 'Tomb of Alivardi Khan'],
-    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Hazarduari_Palace%2C_Murshidabad_illuminated_at_night.jpg/1280px-Hazarduari_Palace%2C_Murshidabad_illuminated_at_night.jpg'
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Hazarduari_Palace%2C_Murshidabad_illuminated_at_night.jpg/1280px-Hazarduari_Palace%2C_Murshidabad_illuminated_at_night.jpg'
   },
   {
     id: 'era-renaissance',
     era: 'COLONIAL_RENAISSANCE',
     yearRange: '1815 – 1913 CE',
-    title: 'The Bengal Renaissance: Literature, Science & Reform',
-    shortSummary: 'Raja Ram Mohan Roy, Vidyasagar, Swami Vivekananda, and Rabindranath Tagore reshaping modern Indian thought.',
-    detailedHistory: 'Centering in Kolkata, the 19th-century Bengal Renaissance was a vibrant intellectual awakening. Raja Ram Mohan Roy championed the abolition of Sati and modern education; Ishwar Chandra Vidyasagar legalized widow remarriage and standardized the Bengali alphabet; Henry Derozio led the Young Bengal youth; Bankim Chandra gave India "Vande Mataram"; Swami Vivekananda carried Vedanta to the World’s Parliament of Religions in Chicago; and Rabindranath Tagore was awarded the Nobel Prize in Literature in 1913.',
+    title: 'The Indian Awakening & Bengal Renaissance',
+    shortSummary: 'Raja Ram Mohan Roy, Vidyasagar, Swami Vivekananda, and Rabindranath Tagore reshaping modern Indian thought and literature.',
+    detailedHistory: 'Centering in Kolkata and radiating across the subcontinent, the 19th-century Indian Renaissance was a vibrant intellectual awakening. Raja Ram Mohan Roy championed social reform and modern education; Ishwar Chandra Vidyasagar legalized widow remarriage; Bankim Chandra gave India "Vande Mataram"; Swami Vivekananda carried Vedanta to the 1893 World’s Parliament of Religions in Chicago; and Rabindranath Tagore was awarded the Nobel Prize in Literature in 1913.',
     majorPersonalities: ['Raja Ram Mohan Roy', 'Ishwar Chandra Vidyasagar', 'Rabindranath Tagore', 'Swami Vivekananda', 'Bankim Chandra Chattopadhyay'],
     relatedSites: ['Santiniketan', 'Belur Math', 'Dakshineswar Kali Temple', 'Victoria Memorial', 'Hindu School Old Building'],
-    image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Victoria_Memorial_situated_in_Kolkata.jpg/1280px-Victoria_Memorial_situated_in_Kolkata.jpg'
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Victoria_Memorial_situated_in_Kolkata.jpg/1280px-Victoria_Memorial_situated_in_Kolkata.jpg'
   },
   {
     id: 'era-freedom',
     era: 'FREEDOM_STRUGGLE',
-    yearRange: '1905 – 1947 CE',
-    title: 'Bengal’s Crucible in the Indian Freedom Struggle',
-    shortSummary: 'From the anti-partition Swadeshi movement and revolutionary secret societies to Netaji’s Indian National Army.',
-    detailedHistory: 'When Lord Curzon partitioned Bengal in 1905, the province exploded in the Swadeshi movement, boycotting British goods and singing Tagore’s songs. Secret revolutionary societies like Anushilan Samiti and Jugantar inspired Khudiram Bose, Prafulla Chaki, Surya Sen (Chittagong Armoury Raid), and Matangini Hazra. Later, Netaji Subhas Chandra Bose escaped Calcutta in 1941 to organize the Azad Hind Fauj, delivering the clarion calls "Give me blood, and I shall give you freedom" and "Delhi Chalo".',
-    majorPersonalities: ['Netaji Subhas Chandra Bose', 'Surya Sen', 'Matangini Hazra', 'Khudiram Bose', 'Deshbandhu Chittaranjan Das'],
-    relatedSites: ['House of Netaji Subhas Chandra Bose', 'House of Sarat Chandra Bose', 'High Court Building'],
-    image: 'https://upload.wikimedia.org/wikipedia/commons/4/4e/Netaji_house_kolkatta.jpg'
+    yearRange: '1857 – 1947 CE',
+    title: 'The Great Indian Freedom Struggle & Independence',
+    shortSummary: 'From the 1857 Revolt to Mahatma Gandhi’s Satyagraha, Bhagat Singh, and Netaji Subhas Chandra Bose’s Indian National Army.',
+    detailedHistory: 'From the First War of Independence in 1857 through the anti-partition Swadeshi movement, the struggle for Swaraj united all of India. Mahatma Gandhi mobilized hundreds of millions through Ahimsa and Satyagraha during the Non-Cooperation and Salt March movements. Revolutionary heroes like Bhagat Singh, Chandrashekhar Azad, and Surya Sen inspired the youth, while Netaji Subhas Chandra Bose established the Provisional Government of Free India and the Azad Hind Fauj, storming through Kohima and Manipur to accelerate Indian independence on August 15, 1947.',
+    majorPersonalities: ['Mahatma Gandhi', 'Netaji Subhas Chandra Bose', 'Bhagat Singh', 'Sardar Vallabhbhai Patel', 'Jawaharlal Nehru', 'Matangini Hazra'],
+    relatedSites: ['House of Netaji Subhas Chandra Bose', 'Red Fort Complex', 'Gateway of India'],
+    image: 'https://images.unsplash.com/photo-1532375810709-75b1da00537c?q=80&w=1280&auto=format&fit=crop'
   }
 ];

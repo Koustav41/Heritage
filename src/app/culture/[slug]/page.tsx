@@ -64,16 +64,23 @@ export default function CultureDetailPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
 
         <div className="absolute bottom-6 sm:bottom-10 left-6 sm:left-10 right-6 sm:right-10 text-white space-y-3">
-          <span className="px-3 py-1 rounded-full text-xs font-bold bg-orange-600 text-white inline-block">
-            {culture.category.replace('_', ' ')}
-          </span>
+          <div className="flex flex-wrap gap-2 items-center">
+            <span className="px-3 py-1 rounded-full text-xs font-bold bg-orange-600 text-white inline-block">
+              {culture.category.replace('_', ' ')}
+            </span>
+            {culture.state && (
+              <span className="px-3 py-1 rounded-full text-xs font-bold bg-white/20 backdrop-blur-md text-amber-200 border border-white/20">
+                {culture.state}
+              </span>
+            )}
+          </div>
 
           <div className="space-y-1">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
               {culture.name}
             </h1>
-            {culture.bengaliName && (
-              <p className="text-lg sm:text-xl text-amber-300 font-medium">{culture.bengaliName}</p>
+            {(culture.nativeName || culture.bengaliName) && (
+              <p className="text-lg sm:text-xl text-amber-300 font-medium">{culture.nativeName || culture.bengaliName}</p>
             )}
           </div>
 

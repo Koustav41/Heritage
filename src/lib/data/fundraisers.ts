@@ -6,6 +6,7 @@ export const CANONICAL_FUNDRAISERS: Fundraiser[] = [
     title: 'Post-Festive Clean River Ghats & Floral Bio-Composting Drive',
     crewName: 'Bhagirathi Clean Ghats Mission',
     district: 'Kolkata',
+    state: 'West Bengal',
     location: 'Babu Ghat & Prinsep Ghat, Hooghly Riverfront',
     targetAmount: 150000,
     raisedAmount: 112400,
@@ -18,10 +19,45 @@ export const CANONICAL_FUNDRAISERS: Fundraiser[] = [
     status: 'ACTIVE'
   },
   {
+    id: 'fund-varanasi-ghats',
+    title: 'Sacred Ganga Ghats Stone Embankment & Clean Waters Initiative',
+    crewName: 'Kashi Heritage Green Guardians',
+    district: 'Varanasi',
+    state: 'Uttar Pradesh',
+    location: 'Assi Ghat to Dashashwamedh Ghat, River Ganga',
+    targetAmount: 200000,
+    raisedAmount: 168500,
+    donorsCount: 412,
+    purpose: 'Deploy floating solar skimmers, install copper recycling collection bins for earthen diyas, and provide eco-friendly cleaning kits to prevent river debris accumulation along ancient stone ghats.',
+    description: 'Protecting the sanctified banks of Mother Ganga and the 84 historic stone ghats of Kashi through dedicated morning volunteer patrols and youth environmental stewards.',
+    image: 'https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=800&q=80',
+    startDate: '2026-09-10',
+    endDate: '2026-12-31',
+    status: 'ACTIVE'
+  },
+  {
+    id: 'fund-hampi-sanctuary',
+    title: 'Tungabhadra River Corridors & Boulder Sanctuary Mission',
+    crewName: 'Vijayanagara Eco Heritage Corps',
+    district: 'Vijayanagara',
+    state: 'Karnataka',
+    location: 'Chakratirtha Ghat & Vittala Temple Riverside Trail',
+    targetAmount: 110000,
+    raisedAmount: 89000,
+    donorsCount: 195,
+    purpose: 'Establish plastic-free trail zones, supply biodegradable trash collection sacks for backpackers, and restore natural granite pathways eroded by monsoonal runoff.',
+    description: 'Preserving the pristine boulder-strewn river landscape of ancient Kishkindha and Vijayanagara ruins from plastic litter and unauthorized graffiti.',
+    image: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?q=80&w=800&auto=format&fit=crop',
+    startDate: '2026-09-05',
+    endDate: '2026-11-25',
+    status: 'ACTIVE'
+  },
+  {
     id: 'fund-2',
     title: 'Bishnupur Terracotta Sanctuary Plastic-Free Guarding Initiative',
     crewName: 'Bishnupur Temple Heritage Green Force',
     district: 'Bankura',
+    state: 'West Bengal',
     location: 'Rasmancha, Jor Bangla & Dalmadal Gun Precincts',
     targetAmount: 85000,
     raisedAmount: 64200,
@@ -38,6 +74,7 @@ export const CANONICAL_FUNDRAISERS: Fundraiser[] = [
     title: 'Darjeeling Himalayan Toy Train Line Ridge Cleanup Drive',
     crewName: 'Himalayan Ridge Keepers',
     district: 'Darjeeling',
+    state: 'West Bengal',
     location: 'Batasia Loop to Ghum Station',
     targetAmount: 120000,
     raisedAmount: 0,
@@ -50,3 +87,4 @@ export const CANONICAL_FUNDRAISERS: Fundraiser[] = [
     status: 'PENDING_APPROVAL'
   }
 ];
+

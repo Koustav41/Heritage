@@ -1,26 +1,46 @@
 'use client';
 
-import React, { useState } from 'react';
-import { Utensils, Star, ShieldCheck, ShoppingBag, Plus, Sparkles, MapPin, Clock } from 'lucide-react';
+import React, { useState, useMemo } from 'react';
+import { Utensils, Star, ShieldCheck, ShoppingBag, MapPin, Clock, Search, Sparkles } from 'lucide-react';
 import { CANONICAL_FOOD_ITEMS } from '@/lib/data/food-items';
 import { usePorjotok } from '@/lib/store/porjotok-context';
 
 export default function LocalFoodPage() {
   const { addToCart } = usePorjotok();
+  const [selectedState, setSelectedState] = useState<string>('ALL');
   const [selectedCategory, setSelectedCategory] = useState<string>('ALL');
+  const [searchQuery, setSearchQuery] = useState('');
   const [justAddedId, setJustAddedId] = useState<string | null>(null);
+
+  const states = useMemo(() => {
+    return ['ALL', ...Array.from(new Set(CANONICAL_FOOD_ITEMS.map(f => f.state))).sort()];
+  }, []);
 
   const categories = [
     { id: 'ALL', label: 'All Delicacies' },
-    { id: 'SWEET', label: 'Artisanal Sweets (মিষ্টি)' },
-    { id: 'STREET_FOOD', label: 'Kolkata Street Food' },
-    { id: 'TRADITIONAL_MEAL', label: 'Traditional Meals' },
-    { id: 'SNACK', label: 'Snacks & Savories' }
+    { id: 'TRADITIONAL_MEAL', label: 'Traditional Meals (थाली / ಭೋಜನ)' },
+    { id: 'SWEET', label: 'Artisanal Sweets (মিষ্টি / मिठाई)' },
+    { id: 'STREET_FOOD', label: 'Iconic Street Food' },
+    { id: 'SNACK', label: 'Snacks & Savories' },
+    { id: 'BEVERAGE', label: 'Heritage Beverages & Chai' }
   ];
 
-  const filteredItems = selectedCategory === 'ALL'
-    ? CANONICAL_FOOD_ITEMS
-    : CANONICAL_FOOD_ITEMS.filter(f => f.category === selectedCategory);
+  const filteredItems = useMemo(() => {
+    return CANONICAL_FOOD_ITEMS.filter(f => {
+      const matchesState = selectedState === 'ALL' || f.state === selectedState;
+      const matchesCategory = selectedCategory === 'ALL' || f.category === selectedCategory;
+      const matchesSearch = 
+        f.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        f.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        f.merchantName.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        f.state.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        f.district.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        f.nativeName?.includes(searchQuery) ||
+        f.bengaliName?.includes(searchQuery);
+
+      return matchesState && matchesCategory && matchesSearch;
+    });
+  }, [selectedState, selectedCategory, searchQuery]);
 
   const handleAdd = (item: typeof CANONICAL_FOOD_ITEMS[0]) => {
     addToCart({
@@ -43,31 +63,80 @@ export default function LocalFoodPage() {
       <div className="space-y-3">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-100 dark:bg-rose-950/60 text-rose-900 dark:text-rose-300 text-xs font-semibold">
           <Utensils className="w-3.5 h-3.5" />
-          <span>Bengal Culinary Heritage • GI-Tagged Sweets & Heritage Kitchens</span>
+          <span>Gastronomic Heritage of India • GI-Tagged Sweets, Curries & Heritage Kitchens</span>
         </div>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-stone-900 dark:text-stone-100 tracking-tight">
-          Authentic Sweets & Local Food
+          Famous Foods & Sweets of Indian States
         </h1>
-        <p className="text-sm sm:text-base text-stone-600 dark:text-stone-300 max-w-2xl leading-relaxed">
-          Savor spongy Banglar Rosogolla from Bagbazar, date-palm Nolen Gur Sandesh, spicy Kolkata mutton rolls, and matir bhar mishti doi from verified confectioners.
+        <p className="text-sm sm:text-base text-stone-600 dark:text-stone-300 max-w-3xl leading-relaxed">
+          From fiery Rajasthani Dal Baati Churma and melt-in-mouth Awadhi Galouti Kebabs to crisp Madurai Ghee Roast Dosa, Mumbai Vada Pav, and classic Banglar Rosogolla—savor India’s authentic culinary traditions.
         </p>
       </div>
 
-      {/* Categories */}
-      <div className="flex flex-wrap gap-2">
-        {categories.map(cat => (
-          <button
-            key={cat.id}
-            onClick={() => setSelectedCategory(cat.id)}
-            className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all ${
-              selectedCategory === cat.id
-                ? 'bg-rose-600 text-white shadow-sm'
-                : 'bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-700 dark:text-stone-300 hover:bg-stone-50'
-            }`}
-          >
-            {cat.label}
-          </button>
-        ))}
+      {/* State Filter Ribbon */}
+      <div className="space-y-2">
+        <div className="flex items-center justify-between text-xs font-bold text-stone-600 dark:text-stone-400 uppercase tracking-wider">
+          <span>Filter by State:</span>
+          {selectedState !== 'ALL' && (
+            <button 
+              onClick={() => setSelectedState('ALL')}
+              className="text-rose-600 font-semibold hover:underline normal-case"
+            >
+              Clear State Filter
+            </button>
+          )}
+        </div>
+        <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-thin">
+          {states.map(st => (
+            <button
+              key={st}
+              onClick={() => setSelectedState(st)}
+              className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all shrink-0 ${
+                selectedState === st
+                  ? 'bg-rose-600 text-white shadow-sm'
+                  : 'bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-700 dark:text-stone-300 hover:border-rose-400'
+              }`}
+            >
+              {st === 'ALL' ? 'All of India' : st}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Controls: Search and Categories */}
+      <div className="p-4 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 shadow-sm space-y-3">
+        <div className="relative">
+          <Search className="w-4 h-4 text-stone-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Search famous dishes by name, state, city, or merchant..."
+            className="w-full pl-9 pr-4 py-2.5 rounded-xl bg-stone-50 dark:bg-stone-800/80 border border-stone-200 dark:border-stone-700 text-xs text-stone-900 dark:text-stone-100 placeholder-stone-400 outline-none focus:ring-1 focus:ring-rose-500"
+          />
+        </div>
+
+        {/* Categories */}
+        <div className="flex flex-wrap gap-2 pt-1 border-t border-stone-100 dark:border-stone-800">
+          {categories.map(cat => (
+            <button
+              key={cat.id}
+              onClick={() => setSelectedCategory(cat.id)}
+              className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold transition-all ${
+                selectedCategory === cat.id
+                  ? 'bg-rose-600 text-white shadow-sm'
+                  : 'bg-stone-50 dark:bg-stone-800/60 border border-stone-200 dark:border-stone-700 text-stone-700 dark:text-stone-300 hover:bg-stone-100'
+              }`}
+            >
+              {cat.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Showing counter */}
+      <div className="text-xs text-stone-500 flex items-center justify-between">
+        <span>Showing <strong>{filteredItems.length}</strong> delicacies across India</span>
       </div>
 
       {/* Food Grid */}
@@ -84,12 +153,17 @@ export default function LocalFoodPage() {
                   alt={food.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <span className="absolute top-3 left-3 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-white/90 dark:bg-stone-900/90 text-stone-900 dark:text-stone-100">
-                  {food.district}
-                </span>
+                <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
+                  <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-600 text-white shadow-xs">
+                    {food.state}
+                  </span>
+                  <span className="px-2.5 py-0.5 rounded-full text-[10px] font-medium bg-white/90 dark:bg-stone-900/90 text-stone-900 dark:text-stone-100 backdrop-blur-md">
+                    {food.district}
+                  </span>
+                </div>
 
                 {food.isVegetarian && (
-                  <span className="absolute top-3 right-3 px-2 py-0.5 rounded-md text-[10px] font-bold bg-emerald-600 text-white flex items-center gap-1">
+                  <span className="absolute top-3 right-3 px-2 py-0.5 rounded-md text-[10px] font-bold bg-emerald-600 text-white flex items-center gap-1 shadow-xs">
                     🌱 Pure Veg
                   </span>
                 )}
@@ -111,19 +185,19 @@ export default function LocalFoodPage() {
                   <h3 className="font-extrabold text-lg text-stone-900 dark:text-stone-100 group-hover:text-rose-600 transition-colors">
                     {food.name}
                   </h3>
-                  {food.bengaliName && (
-                    <p className="text-xs text-stone-400 font-medium">{food.bengaliName}</p>
+                  {(food.nativeName || food.bengaliName) && (
+                    <p className="text-xs text-stone-400 font-medium">{food.nativeName || food.bengaliName}</p>
                   )}
                 </div>
 
-                <p className="text-xs text-stone-600 dark:text-stone-300 leading-relaxed">
+                <p className="text-xs text-stone-600 dark:text-stone-300 leading-relaxed line-clamp-3">
                   {food.description}
                 </p>
 
                 <div className="pt-2 text-[11px] text-stone-500 space-y-1">
                   <div className="flex items-center gap-1.5">
                     <MapPin className="w-3.5 h-3.5 text-stone-400 shrink-0" />
-                    <span className="font-medium text-stone-800 dark:text-stone-200">{food.merchantName}</span>
+                    <span className="font-medium text-stone-800 dark:text-stone-200 truncate">{food.merchantName} ({food.merchantLocation})</span>
                   </div>
                   <div className="flex items-center gap-1.5">
                     <Clock className="w-3.5 h-3.5 text-stone-400 shrink-0" />
@@ -160,6 +234,14 @@ export default function LocalFoodPage() {
           </div>
         ))}
       </div>
+
+      {filteredItems.length === 0 && (
+        <div className="py-20 text-center text-stone-500 bg-white dark:bg-stone-900 rounded-3xl border border-stone-200 dark:border-stone-800">
+          <Utensils className="w-12 h-12 mx-auto text-rose-500/40 mb-3" />
+          <p className="text-lg font-bold text-stone-800 dark:text-stone-200">No delicacies match your filter</p>
+          <p className="text-xs text-stone-400 mt-1">Try selecting "All of India" or choosing a different category.</p>
+        </div>
+      )}
 
     </div>
   );

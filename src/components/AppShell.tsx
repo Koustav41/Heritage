@@ -2,22 +2,27 @@
 
 import React, { useState } from 'react';
 import { PorjotokProvider } from '@/lib/store/porjotok-context';
+import { LanguageProvider } from '@/lib/i18n/language-context';
+import { ThemeProvider } from '@/lib/theme/theme-context';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { SearchModal } from '@/components/SearchModal';
 import { CartDrawer } from '@/components/CartDrawer';
+import { GoogleTranslateLoader } from '@/components/GoogleTranslateLoader';
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   const [searchOpen, setSearchOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
 
   return (
-    <PorjotokProvider>
-      <div className="min-h-screen flex flex-col bg-[#FAF7F2] dark:bg-[#0C0D12] text-stone-900 dark:text-stone-100 selection:bg-amber-500 selection:text-white transition-colors duration-200">
-        <Navbar 
-          onOpenSearch={() => setSearchOpen(true)} 
-          onOpenCart={() => setCartOpen(true)} 
-        />
+    <ThemeProvider>
+      <LanguageProvider>
+        <PorjotokProvider>
+        <div className="min-h-screen flex flex-col bg-[#FAF7F2] dark:bg-[#0C0D12] text-stone-900 dark:text-stone-100 selection:bg-amber-500 selection:text-white transition-colors duration-200">
+          <Navbar 
+            onOpenSearch={() => setSearchOpen(true)} 
+            onOpenCart={() => setCartOpen(true)} 
+          />
         
         <main className="flex-1 w-full">
           {children}
@@ -34,7 +39,10 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           isOpen={cartOpen} 
           onClose={() => setCartOpen(false)} 
         />
-      </div>
-    </PorjotokProvider>
+        <GoogleTranslateLoader />
+        </div>
+      </PorjotokProvider>
+    </LanguageProvider>
+    </ThemeProvider>
   );
 }

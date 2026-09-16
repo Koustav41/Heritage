@@ -9,17 +9,17 @@ export default function HistoryTimelinePage() {
   const [selectedEra, setSelectedEra] = useState<string>('ALL');
 
   const eras = [
-    { id: 'ALL', label: 'All 6 Epochs' },
-    { id: 'ANCIENT', label: 'Ancient & Pala' },
-    { id: 'MEDIEVAL', label: 'Sultanate & Malla' },
-    { id: 'NAWABI', label: 'Nawabs of Bengal' },
-    { id: 'COLONIAL_RENAISSANCE', label: 'Bengal Renaissance' },
-    { id: 'FREEDOM_STRUGGLE', label: 'Freedom Struggle' }
+    { id: 'ALL', label: 'All Civilizational Epochs' },
+    { id: 'ANCIENT', label: 'Indus, Maurya & Ancient' },
+    { id: 'MEDIEVAL', label: 'Chola, Mughal & Vijayanagara' },
+    { id: 'NAWABI', label: 'Nawabs & Regional Courts' },
+    { id: 'COLONIAL_RENAISSANCE', label: 'Indian Renaissance' },
+    { id: 'FREEDOM_STRUGGLE', label: 'Freedom Struggle & Swaraj' }
   ];
 
   const filteredMilestones = selectedEra === 'ALL'
     ? HISTORICAL_MILESTONES
-    : HISTORICAL_MILESTONES.filter(m => m.era === selectedEra || (selectedEra === 'MEDIEVAL' && m.era === 'MEDIEVAL'));
+    : HISTORICAL_MILESTONES.filter(m => m.era === selectedEra);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
@@ -28,13 +28,13 @@ export default function HistoryTimelinePage() {
       <div className="space-y-3">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-950/60 text-amber-900 dark:text-amber-300 text-xs font-semibold">
           <Calendar className="w-3.5 h-3.5" />
-          <span>Deep Historical Archive • Millennia of Bengal History</span>
+          <span>Deep Historical Archive • Millennia of Indian Civilization</span>
         </div>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-stone-900 dark:text-stone-100 tracking-tight">
-          Timeline of Bengal Civilization
+          Timeline of Indian Civilization
         </h1>
         <p className="text-sm sm:text-base text-stone-600 dark:text-stone-300 max-w-2xl leading-relaxed">
-          Journey from the ancient maritime ports of Gangaridai through the independent Sultanate of Gour, royal Malla terracotta cities, the Nawabi court of Murshidabad, and the Bengal Renaissance.
+          Journey from the ancient brick cities of the Indus Valley and Emperor Ashoka’s Dhamma pillars through the Imperial Cholas, Vijayanagara at Hampi, Mughal architectural splendors, the Indian Renaissance, and the epic national struggle for Swaraj.
         </p>
       </div>
 

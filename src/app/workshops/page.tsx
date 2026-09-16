@@ -55,7 +55,7 @@ export default function WorkshopsDirectoryPage() {
           Artisan Craft & Tradition Workshops
         </h1>
         <p className="text-sm sm:text-base text-stone-600 dark:text-stone-300 max-w-2xl leading-relaxed">
-          Experience authentic Bengal craftsmanship. Create your own lost-wax Dokra brass sculptures, paint scroll patachitras with natural dyes, or sculpt Purulia Chhau masks with master artisans.
+          Experience authentic Indian craftsmanship. Create Jaipur blue pottery, Thanjavur gold foil art, Varanasi zari handloom runners, ancient Dokra brass sculptures, or Purulia Chhau masks directly with master artisans across India.
         </p>
       </div>
 
@@ -80,7 +80,7 @@ export default function WorkshopsDirectoryPage() {
 
                 <span className="absolute bottom-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-black/70 backdrop-blur-md text-white flex items-center gap-1.5">
                   <MapPin className="w-3.5 h-3.5 text-amber-400" />
-                  <span>{ws.district} District</span>
+                  <span>{ws.district}{ws.state ? `, ${ws.state}` : ''}</span>
                 </span>
               </div>
 

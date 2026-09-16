@@ -26,28 +26,75 @@ interface ChatMessage {
 }
 
 const SAMPLE_PROMPTS = [
+  'Plan a 3-day heritage trail of Hampi and Badami.',
+  'What makes the Kailasa temple at Ellora an architectural miracle?',
   'Tell me about the terracotta temples of Bishnupur.',
-  'What is the connection between Kumartuli and Durga Puja?',
-  'What is special about the Darjeeling Himalayan Railway?',
-  'Which heritage sites can I visit near Murshidabad?',
-  'Explain the history of Dokra lost-wax metallurgy.'
+  'What is the history of Chola bronzes and Brihadisvara?',
+  'Explain the history of Dokra lost-wax metallurgy.',
+  'What are the must-see UNESCO World Heritage sites in Rajasthan?'
 ];
 
 const INITIAL_MESSAGES: ChatMessage[] = [
   {
     id: 'msg-1',
     sender: 'AI',
-    text: 'Nomoshkar! I am Parampara’s AI Heritage Assistant. I am grounded directly in West Bengal’s 55+ canonical heritage archives, living traditions, verified guides, and culinary masters. How may I assist your cultural journey today?',
+    text: 'Namaste & Welcome! I am Parampara’s AI Heritage Guide, powered by Google Gemini and grounded in India’s canonical heritage archives, UNESCO World Heritage monuments, living traditions, verified guides, and regional culinary cultures. How may I assist your cultural journey across India today?',
     timestamp: 'Just now'
   }
 ];
+
+function FormattedText({ text }: { text: string }) {
+  // Parse paragraphs and bullet points
+  const paragraphs = text.split('\n\n');
+
+  return (
+    <div className="space-y-2 sm:text-sm leading-relaxed">
+      {paragraphs.map((para, idx) => {
+        const lines = para.split('\n');
+        const isBulletList = lines.every(l => l.trim().startsWith('* ') || l.trim().startsWith('- ') || l.trim().match(/^\d+\.\s/));
+
+        if (isBulletList) {
+          return (
+            <ul key={idx} className="list-disc list-inside space-y-1 my-1 pl-1">
+              {lines.map((line, lIdx) => {
+                const clean = line.replace(/^[\*\-]\s+/, '').replace(/^\d+\.\s+/, '');
+                return <li key={lIdx}>{renderInline(clean)}</li>;
+              })}
+            </ul>
+          );
+        }
+
+        return (
+          <p key={idx}>
+            {lines.map((l, lIdx) => (
+              <React.Fragment key={lIdx}>
+                {renderInline(l)}
+                {lIdx < lines.length - 1 && <br />}
+              </React.Fragment>
+            ))}
+          </p>
+        );
+      })}
+    </div>
+  );
+}
+
+function renderInline(str: string) {
+  const parts = str.split(/(\*\*.*?\*\*)/g);
+  return parts.map((part, i) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return <strong key={i} className="font-semibold text-amber-700 dark:text-amber-400">{part.slice(2, -2)}</strong>;
+    }
+    return part;
+  });
+}
 
 export default function AIChatPage() {
   const [messages, setMessages] = useState<ChatMessage[]>(INITIAL_MESSAGES);
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
 
-  const handleSend = (textToSend?: string) => {
+  const handleSend = async (textToSend?: string) => {
     const text = textToSend || input;
     if (!text.trim()) return;
 
@@ -62,47 +109,53 @@ export default function AIChatPage() {
     if (!textToSend) setInput('');
     setIsTyping(true);
 
-    // AI answer matching engine
-    setTimeout(() => {
+    try {
+      const res = await fetch('/api/ai/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          message: text,
+          history: messages.map(m => ({ sender: m.sender, text: m.text }))
+        })
+      });
+
+      if (!res.ok) throw new Error('API failed');
+      const data = await res.json();
+
+      const aiMsg: ChatMessage = {
+        id: `ai-${Date.now()}`,
+        sender: 'AI',
+        text: data.text,
+        citations: data.citations || [],
+        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+      };
+
+      setMessages(prev => [...prev, aiMsg]);
+    } catch (err) {
+      console.error('AI chat error:', err);
+      // Fallback
       const q = text.toLowerCase();
       let answer = '';
       let citations: { title: string; link: string }[] = [];
 
-      if (q.includes('bishnupur') || q.includes('terracotta') || q.includes('rasmancha')) {
-        answer = 'Bishnupur in Bankura was the fortified capital of the Malla kings. In the absence of stone, sculptors molded alluvial Ganges clay into thousands of intricate narrative terracotta relief tiles illustrating the Ramayana, Mahabharata, and Krishna-lila. Key monuments include Rasmancha (1600 CE), Jor Bangla (1655 CE), and Shyam Rai (1643 CE). Bishnupur is also the birthplace of the Bishnupur Gharana of Dhrupad classical music and GI-certified Baluchari silk weaving.';
+      if (q.includes('taj mahal') || q.includes('agra')) {
+        answer = 'The Taj Mahal in Agra, Uttar Pradesh, is a UNESCO World Heritage site and one of the New Seven Wonders of the World. Commissioned in 1632 by Mughal Emperor Shah Jahan as an ivory-white marble mausoleum for his beloved consort Mumtaz Mahal, it sits amidst classical Charbagh gardens on the banks of the Yamuna River.';
+        citations = [
+          { title: 'Taj Mahal Heritage Record', link: '/heritage/taj-mahal' },
+          { title: 'Agra Fort Monument', link: '/heritage/agra-fort' }
+        ];
+      } else if (q.includes('bishnupur') || q.includes('terracotta') || q.includes('rasmancha')) {
+        answer = 'Bishnupur in Bankura was the fortified capital of the Malla kings. In the absence of stone, sculptors molded alluvial Ganges clay into thousands of intricate narrative terracotta relief tiles illustrating the Ramayana, Mahabharata, and Krishna-lila. Key monuments include Rasmancha (1600 CE), Jor Bangla (1655 CE), and Shyam Rai (1643 CE).';
         citations = [
           { title: 'Rasmancha Heritage Record', link: '/heritage/rasmancha' },
           { title: 'Jor Bangla Terracotta Temple', link: '/heritage/jor-bangla-temple' },
           { title: 'Baluchari Silk Tradition', link: '/culture/baluchari-sari' }
         ];
-      } else if (q.includes('kumartuli') || q.includes('durga puja')) {
-        answer = 'Kumartuli is the 300-year-old potters’ quarter located on the banks of the Hooghly River in North Kolkata. Generations of master artisans (Pals) sculpt thousands of earthen Durga idols every autumn using holy Ganga silt (entel mati), straw frames, and natural paints. On the dawn of Mahalaya, artisans perform "Chokkhu Daan" (painting of the eyes), infusing the idol with divine life before it is worshipped across community pandals in UNESCO-inscribed Durga Puja.';
-        citations = [
-          { title: 'Durga Puja UNESCO Heritage', link: '/culture/durga-puja' },
-          { title: 'Kumartuli Clay Idol Making', link: '/culture/kumartuli-idol-making' }
-        ];
-      } else if (q.includes('darjeeling') || q.includes('toy train') || q.includes('railway')) {
-        answer = 'The Darjeeling Himalayan Railway (DHR), affectionately known as the "Toy Train", was opened in 1881 and is inscribed on the UNESCO World Heritage list. It scales from New Jalpaiguri to Darjeeling at 7,400 feet elevation on a 2-foot narrow gauge using innovative loops and zig-zag reverses, such as the famous Batasia Loop overlooking Mount Kanchenjunga.';
-        citations = [
-          { title: 'Darjeeling Himalayan Railway', link: '/heritage/darjeeling-himalayan-railway' }
-        ];
-      } else if (q.includes('murshidabad') || q.includes('hazarduari') || q.includes('siraj')) {
-        answer = 'Murshidabad was the capital of the Nawabs of Bengal. Its centerpiece is the magnificent Hazarduari Palace (Palace of 1,000 Doors) built in 1837 by Colonel Duncan MacLeod for Nawab Humayun Jah. Nearby, you can explore the Nizamat Imambara, the peaceful cemetery garden of Khushbagh where Nawab Alivardi Khan and Siraj-ud-Daulah rest, and the medieval Sultanate ruins of Gour and Pandua in neighboring Malda.';
-        citations = [
-          { title: 'Hazarduari Palace Archive', link: '/heritage/hazarduari-palace' },
-          { title: 'Tomb of Siraj-ud-Daulah', link: '/heritage/tomb-of-siraj-ud-daulah' }
-        ];
-      } else if (q.includes('dokra')) {
-        answer = 'Dokra is a 4,000-year-old non-ferrous metal casting craft that uses the ancient lost-wax (cire perdue) process, tracing unbroken continuity to the Dancing Girl of Mohenjo-daro. In West Bengal, Bikna village in Bankura and Dariyapur in Purba Bardhaman are the premier craft clusters where artisans mold beeswax threads around clay cores before casting with molten bell metal.';
-        citations = [
-          { title: 'Dokra Metal Casting', link: '/culture/dokra-metal-casting' },
-          { title: 'Dokra Lost-Wax Workshop', link: '/workshops' }
-        ];
       } else {
-        answer = `According to Parampara’s verified heritage catalogue, West Bengal features over 55 canonical sites and 15 living traditions spanning ancient Buddhist Pala kingdoms, medieval Sultanate mosques in Malda, terracotta temples in Bankura, Nawabi heritage in Murshidabad, and Kolkata’s Renaissance landmarks. You can explore curated circuits, book verified guides, or use our AI Trip Planner for a customized day-by-day itinerary.`;
+        answer = `Namaste! As your Parampara Heritage Guide, I am delighted to share that ${text} is deeply intertwined with India's celebrated cultural tapestry. From classical monument preservation to sacred living craft lineages, our heritage directory catalogs verified details, visiting logistics, and archival histories for your journey.`;
         citations = [
-          { title: 'Browse 55 Heritage Sites', link: '/heritage' },
-          { title: 'Launch AI Trip Planner', link: '/ai/trip-planner' }
+          { title: 'Browse 85+ Heritage Sites', link: '/heritage' },
+          { title: 'Living Traditions & Culture', link: '/culture' }
         ];
       }
 
@@ -113,10 +166,10 @@ export default function AIChatPage() {
         citations,
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
       };
-
       setMessages(prev => [...prev, aiMsg]);
+    } finally {
       setIsTyping(false);
-    }, 700);
+    }
   };
 
   return (
@@ -129,23 +182,35 @@ export default function AIChatPage() {
             <Bot className="w-5 h-5" />
           </div>
           <div>
-            <h1 className="text-xl font-bold text-stone-900 dark:text-stone-100 flex items-center gap-2">
-              Parampara Heritage AI
-              <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 font-bold flex items-center gap-1">
-                <ShieldCheck className="w-3 h-3" /> Grounded in Canonical Archive
+            <div className="flex items-center gap-2">
+              <h1 className="text-lg font-bold text-stone-900 dark:text-stone-100">Parampara Heritage AI Guide</h1>
+              <span className="flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                Gemini Live
               </span>
-            </h1>
-            <p className="text-xs text-stone-500">Retrieving from 55 canonical sites, living traditions, and verified services</p>
+            </div>
+            <p className="text-xs text-stone-500 dark:text-stone-400">
+              Conversational intelligence grounded in India&apos;s verified cultural archives
+            </p>
           </div>
         </div>
 
-        <Link
-          href="/ai/trip-planner"
-          className="text-xs font-bold text-amber-600 dark:text-amber-400 hover:underline flex items-center gap-1"
-        >
-          <span>Custom Trip Planner</span>
-          <ArrowRight className="w-3.5 h-3.5" />
-        </Link>
+        <div className="flex items-center gap-2">
+          <Link
+            href="/ai/trip-planner"
+            className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-800/80 hover:border-amber-400 text-xs font-semibold text-stone-700 dark:text-stone-300 transition-colors"
+          >
+            <Compass className="w-3.5 h-3.5 text-amber-600" />
+            <span>AI Trip Planner</span>
+          </Link>
+          <button
+            onClick={() => setMessages(INITIAL_MESSAGES)}
+            className="p-2 rounded-xl text-stone-400 hover:text-stone-600 dark:hover:text-stone-200 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors"
+            title="Reset Conversation"
+          >
+            <RotateCcw className="w-4 h-4" />
+          </button>
+        </div>
       </div>
 
       {/* Chat Messages Log */}
@@ -161,12 +226,16 @@ export default function AIChatPage() {
               </div>
             )}
 
-            <div className={`max-w-[80%] rounded-2xl p-4 space-y-2 text-xs leading-relaxed shadow-xs ${
+            <div className={`max-w-[85%] sm:max-w-[80%] rounded-2xl p-4 space-y-2 text-xs leading-relaxed shadow-xs ${
               msg.sender === 'USER'
                 ? 'bg-amber-600 text-white rounded-tr-none'
                 : 'bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-800 dark:text-stone-200 rounded-tl-none'
             }`}>
-              <p className="whitespace-pre-line sm:text-sm">{msg.text}</p>
+              {msg.sender === 'USER' ? (
+                <p className="whitespace-pre-line sm:text-sm">{msg.text}</p>
+              ) : (
+                <FormattedText text={msg.text} />
+              )}
 
               {msg.citations && msg.citations.length > 0 && (
                 <div className="pt-2 border-t border-stone-100 dark:border-stone-800 space-y-1 text-[11px]">
@@ -210,7 +279,7 @@ export default function AIChatPage() {
               <span className="w-1.5 h-1.5 rounded-full bg-amber-600 animate-bounce"></span>
               <span className="w-1.5 h-1.5 rounded-full bg-amber-600 animate-bounce [animation-delay:0.2s]"></span>
               <span className="w-1.5 h-1.5 rounded-full bg-amber-600 animate-bounce [animation-delay:0.4s]"></span>
-              <span className="ml-1 font-medium">Retrieving archive knowledge...</span>
+              <span className="ml-1 font-medium">Consulting Gemini heritage intelligence...</span>
             </div>
           </div>
         )}
@@ -244,7 +313,7 @@ export default function AIChatPage() {
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Ask anything about Bengal history, temples, festivals, or trips..."
+          placeholder="Ask anything about Indian history, temples, festivals, crafts, or trip logistics..."
           className="flex-1 px-3 py-2 text-xs sm:text-sm bg-transparent border-none outline-none text-stone-900 dark:text-stone-100 placeholder-stone-400"
         />
         <button

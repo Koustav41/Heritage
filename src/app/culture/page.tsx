@@ -18,9 +18,15 @@ import { CultureCategory } from '@/types';
 export default function CultureDirectoryPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('ALL');
+  const [selectedState, setSelectedState] = useState<string>('ALL');
 
   const categories = useMemo(() => {
     return ['ALL', 'FESTIVAL', 'MUSIC', 'DANCE', 'CRAFT', 'PAINTING', 'TEXTILE', 'FOOD_CULTURE', 'FAIR', 'CULTURAL_EVENT'];
+  }, []);
+
+  const allStates = useMemo(() => {
+    const states = Array.from(new Set(CANONICAL_CULTURE_ENTRIES.map(c => c.state).filter(Boolean))).sort();
+    return ['ALL', ...states];
   }, []);
 
   const filteredCultures = useMemo(() => {
@@ -28,14 +34,17 @@ export default function CultureDirectoryPage() {
       const matchesSearch = 
         c.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         c.bengaliName?.includes(searchQuery) ||
+        c.nativeName?.includes(searchQuery) ||
+        c.state?.toLowerCase().includes(searchQuery.toLowerCase()) ||
         c.shortDescription.toLowerCase().includes(searchQuery.toLowerCase()) ||
         c.geographicAssociation.toLowerCase().includes(searchQuery.toLowerCase());
       
       const matchesCategory = selectedCategory === 'ALL' || c.category === selectedCategory;
+      const matchesState = selectedState === 'ALL' || c.state === selectedState;
 
-      return matchesSearch && matchesCategory;
+      return matchesSearch && matchesCategory && matchesState;
     });
-  }, [searchQuery, selectedCategory]);
+  }, [searchQuery, selectedCategory, selectedState]);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-10">
@@ -44,14 +53,35 @@ export default function CultureDirectoryPage() {
       <div className="space-y-3">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-950/60 text-orange-900 dark:text-orange-300 text-xs font-semibold">
           <Sparkles className="w-3.5 h-3.5" />
-          <span>Living Traditions & Arts • Intangible Cultural Heritage</span>
+          <span>Living Traditions & Arts • Intangible Cultural Heritage of India</span>
         </div>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-stone-900 dark:text-stone-100 tracking-tight">
-          Living Culture & Traditions of Bengal
+          Living Culture & Intangible Heritage of India
         </h1>
-        <p className="text-sm sm:text-base text-stone-600 dark:text-stone-300 max-w-2xl leading-relaxed">
-          From UNESCO-inscribed Durga Puja to wandering Baul minstrels, martial Purulia Chhau dances, 4,000-year-old Dokra metallurgy, and the narrative scrolls of Patachitra.
+        <p className="text-sm sm:text-base text-stone-600 dark:text-stone-300 max-w-3xl leading-relaxed">
+          From UNESCO-inscribed Durga Puja, Garba, and the sacred Kumbh Mela to wandering Baul minstrels, Kerala’s Kathakali & Theyyam, Rajasthan’s serpentine Kalbelia, Madhubani ritual paintings, Assamese Bihu, and timeless Vedic chanting across Indian states.
         </p>
+      </div>
+
+      {/* State Filter Pills */}
+      <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+        <span className="text-xs font-bold text-stone-500 uppercase tracking-wider shrink-0 mr-1 flex items-center gap-1">
+          <Compass className="w-3.5 h-3.5 text-orange-600" />
+          State:
+        </span>
+        {allStates.map(st => (
+          <button
+            key={st}
+            onClick={() => setSelectedState(st)}
+            className={`px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
+              selectedState === st
+                ? 'bg-orange-600 text-white shadow-md'
+                : 'bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-700 dark:text-stone-300 hover:border-orange-300'
+            }`}
+          >
+            {st === 'ALL' ? 'All India (27 Traditions)' : st}
+          </button>
+        ))}
       </div>
 
       {/* Filter Bar */}
@@ -64,7 +94,7 @@ export default function CultureDirectoryPage() {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search festivals, dance, music, or craft traditions..."
+              placeholder="Search festivals, dance, state, music, or craft traditions..."
               className="w-full pl-9 pr-4 py-2.5 rounded-xl bg-stone-50 dark:bg-stone-800/80 border border-stone-200 dark:border-stone-700 text-xs text-stone-900 dark:text-stone-100 placeholder-stone-400 outline-none focus:ring-1 focus:ring-orange-500"
             />
           </div>
@@ -86,12 +116,13 @@ export default function CultureDirectoryPage() {
         </div>
 
         <div className="flex items-center justify-between text-xs text-stone-500 pt-2 border-t border-stone-100 dark:border-stone-800">
-          <span>Showing <strong>{filteredCultures.length}</strong> living traditions</span>
-          {(searchQuery || selectedCategory !== 'ALL') && (
+          <span>Showing <strong>{filteredCultures.length}</strong> living traditions {selectedState !== 'ALL' && `in ${selectedState}`}</span>
+          {(searchQuery || selectedCategory !== 'ALL' || selectedState !== 'ALL') && (
             <button
               onClick={() => {
                 setSearchQuery('');
                 setSelectedCategory('ALL');
+                setSelectedState('ALL');
               }}
               className="text-orange-600 dark:text-orange-400 font-semibold hover:underline"
             >
@@ -115,9 +146,16 @@ export default function CultureDirectoryPage() {
                   alt={item.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold bg-orange-600 text-white shadow-sm">
-                  {item.category.replace('_', ' ')}
-                </span>
+                <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
+                  <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-orange-600 text-white shadow-sm">
+                    {item.category.replace('_', ' ')}
+                  </span>
+                  {item.state && (
+                    <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-stone-900/80 backdrop-blur-md text-amber-300 border border-white/20">
+                      {item.state}
+                    </span>
+                  )}
+                </div>
               </div>
 
               <div className="p-5 space-y-3">
@@ -125,8 +163,8 @@ export default function CultureDirectoryPage() {
                   <h3 className="font-extrabold text-lg text-stone-900 dark:text-stone-100 group-hover:text-orange-600 transition-colors">
                     {item.name}
                   </h3>
-                  {item.bengaliName && (
-                    <p className="text-xs text-stone-400 font-medium">{item.bengaliName}</p>
+                  {(item.nativeName || item.bengaliName) && (
+                    <p className="text-xs text-stone-400 font-medium">{item.nativeName || item.bengaliName}</p>
                   )}
                 </div>
 

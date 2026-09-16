@@ -61,7 +61,7 @@ export default function AdminConsolePage() {
             <span>Administrator Console • Rule-Enforced Moderation</span>
           </div>
           <h1 className="text-3xl font-black text-stone-900 dark:text-stone-100 mt-1">
-            Parampara Governance & Oversight Dashboard
+            <span className="notranslate" translate="no">Parampara</span> Governance & Oversight Dashboard
           </h1>
         </div>
 

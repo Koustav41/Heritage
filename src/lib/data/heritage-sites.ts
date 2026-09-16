@@ -1,6 +1,6 @@
 import { HeritageSite } from '@/types';
 
-export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
+const WEST_BENGAL_HERITAGE_SITES: Omit<HeritageSite, 'state'>[] = [
   {
     id: 'sundarbans-national-park',
     name: 'Sundarbans National Park',
@@ -22,10 +22,10 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹100 (Indians), ₹200 (Foreigners) + boat safari permit',
     accessibilityInfo: 'Boat accessible only. Launch boarding at Godkhali or Canning.',
     nearbySites: ['Gangasagar Temple', 'Netidhopani Watchtower'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Sundarban_Tiger.jpg/1280px-Sundarban_Tiger.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Sundarban_Tiger.jpg/1280px-Sundarban_Tiger.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Creeks_of_Sundarbans.jpg/1280px-Creeks_of_Sundarbans.jpg',
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Sundarbans_web_ESA362980.jpg/1280px-Sundarbans_web_ESA362980.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Creeks_of_Sundarbans.jpg/1280px-Creeks_of_Sundarbans.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Sundarbans_web_ESA362980.jpg/1280px-Sundarbans_web_ESA362980.jpg'
     ],
     audioStory: 'Listen to the folklore of Bonbibi and the Royal Bengal Tigers across the mystic Sundarbans mangroves.',
     verified: true,
@@ -52,9 +52,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Steam Joyride: ₹1,500; Diesel: ₹1,000',
     accessibilityInfo: 'Station platform ramp available at Darjeeling & Ghum stations.',
     nearbySites: ['Darjeeling Town Hall', 'Tomb of Alexander Csoma de Körös'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Darjeeling_Himalayan_Railway%2Ctoy_train_%281%29.jpg/1280px-Darjeeling_Himalayan_Railway%2Ctoy_train_%281%29.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Darjeeling_Himalayan_Railway%2Ctoy_train_%281%29.jpg/1280px-Darjeeling_Himalayan_Railway%2Ctoy_train_%281%29.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Batasia_Loop_War_Memorial_with_Kanchanjunga.jpg/1280px-Batasia_Loop_War_Memorial_with_Kanchanjunga.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Batasia_Loop_War_Memorial_with_Kanchanjunga.jpg/1280px-Batasia_Loop_War_Memorial_with_Kanchanjunga.jpg'
     ],
     audioStory: 'The rhythmic chug of vintage steam whistles through the clouds of Ghum and Batasia Loop.',
     verified: true,
@@ -81,9 +81,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹70 (Tagore Museum & Uttarayan Complex)',
     accessibilityInfo: 'Paved walkways through Uttarayan complex and Kala Bhavana.',
     nearbySites: ['Kamal Kutir', 'Rabindra Bhavan'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Shantiniketan_Bari_of_Rabindranath_Tagore.jpg/1280px-Shantiniketan_Bari_of_Rabindranath_Tagore.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Shantiniketan_Bari_of_Rabindranath_Tagore.jpg/1280px-Shantiniketan_Bari_of_Rabindranath_Tagore.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Rabindra_Bhavan_-_Santiniketan_2014-06-29_5373-5374.TIF/lossy-page1-1280px-Rabindra_Bhavan_-_Santiniketan_2014-06-29_5373-5374.TIF.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Santiniketan_Prayer_Hall.jpg/1280px-Santiniketan_Prayer_Hall.jpg'
     ],
     audioStory: 'Tagore reciting under the Chhatimtala trees as spring blossoms in Visva-Bharati.',
     verified: true,
@@ -110,12 +110,12 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹50 (Museum for Indians), ₹20 (Gardens)',
     accessibilityInfo: 'Wheelchair ramps and motorized battery carts available on-site.',
     nearbySites: ['St. John’s Church', 'Metcalfe Hall', 'High Court Building'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Victoria_Memorial_situated_in_Kolkata.jpg/1280px-Victoria_Memorial_situated_in_Kolkata.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Victoria_Memorial_situated_in_Kolkata.jpg/1280px-Victoria_Memorial_situated_in_Kolkata.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Victoria_Memorial%2C_Kolkata_-_West_facade_01.jpg/1280px-Victoria_Memorial%2C_Kolkata_-_West_facade_01.jpg',
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Victoria_Memorial_Illuminated_at_Night.jpg/1280px-Victoria_Memorial_Illuminated_at_Night.jpg',
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Victoria_Memorial_Kolkata_at_night.jpg/1280px-Victoria_Memorial_Kolkata_at_night.jpg',
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Pavilion_at_the_Victoria_Memorial%2C_Kolkata_01.jpg/1280px-Pavilion_at_the_Victoria_Memorial%2C_Kolkata_01.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Victoria_Memorial%2C_Kolkata_-_West_facade_01.jpg/1280px-Victoria_Memorial%2C_Kolkata_-_West_facade_01.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Victoria_Memorial_Illuminated_at_Night.jpg/1280px-Victoria_Memorial_Illuminated_at_Night.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Victoria_Memorial_Kolkata_at_night.jpg/1280px-Victoria_Memorial_Kolkata_at_night.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Pavilion_at_the_Victoria_Memorial%2C_Kolkata_01.jpg/1280px-Pavilion_at_the_Victoria_Memorial%2C_Kolkata_01.jpg'
     ],
     audioStory: 'Echoes of colonial Calcutta and the bronze Angel of Victory turning in the evening breeze.',
     verified: true,
@@ -142,9 +142,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free Public Access',
     accessibilityInfo: 'Pedestrian footpaths on both flanks with ramps.',
     nearbySites: ['Currency Building', 'Metcalfe Hall', 'Kumartuli'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Howrah_bridge_at_night.jpg/1280px-Howrah_bridge_at_night.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Howrah_bridge_at_night.jpg/1280px-Howrah_bridge_at_night.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Howrah_bridge_at_night.jpg/1280px-Howrah_bridge_at_night.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Howrah_bridge_at_night.jpg/1280px-Howrah_bridge_at_night.jpg'
     ],
     audioStory: 'Listen to the bustling dawn flower market under the towering steel girders of Rabindra Setu.',
     verified: true,
@@ -171,9 +171,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free Entry',
     accessibilityInfo: 'Paved courtyard with skywalk connection from Dakshineswar Metro Station.',
     nearbySites: ['Belur Math', 'Kumartuli'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Dakhineshwar_Temple_beside_the_Hoogly%2C_West_Bengal.JPG/1280px-Dakhineshwar_Temple_beside_the_Hoogly%2C_West_Bengal.JPG',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Dakhineshwar_Temple_beside_the_Hoogly%2C_West_Bengal.JPG/1280px-Dakhineshwar_Temple_beside_the_Hoogly%2C_West_Bengal.JPG',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Dakhineshwar_Temple_beside_the_Hoogly%2C_West_Bengal.JPG/1280px-Dakhineshwar_Temple_beside_the_Hoogly%2C_West_Bengal.JPG'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Dakhineshwar_Temple_beside_the_Hoogly%2C_West_Bengal.JPG/1280px-Dakhineshwar_Temple_beside_the_Hoogly%2C_West_Bengal.JPG'
     ],
     audioStory: 'Bhavatarini temple bells resounding over the Hooghly as Rani Rashmoni defied orthodox taboos to open the sanctuary.',
     verified: true,
@@ -200,9 +200,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free Entry',
     accessibilityInfo: 'Wheelchair access available throughout the riverside gardens and main sanctum.',
     nearbySites: ['Dakshineswar Kali Temple', 'Howrah Bridge'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Belur_Math%2C_Howrah.jpg/1280px-Belur_Math%2C_Howrah.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Belur_Math%2C_Howrah.jpg/1280px-Belur_Math%2C_Howrah.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Belur_Math%2C_Howrah.jpg/1280px-Belur_Math%2C_Howrah.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Belur_Math%2C_Howrah.jpg/1280px-Belur_Math%2C_Howrah.jpg'
     ],
     audioStory: 'Vedic chants and evening bells blending with the ripples of the Ganga at Swami Vivekananda’s samadhi shrine.',
     verified: true,
@@ -229,9 +229,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹25 (Indians), ₹300 (Foreigners)',
     accessibilityInfo: 'Ground floor accessible via ramps.',
     nearbySites: ['Nizamat Imambara', 'Tomb of Siraj-ud-Daulah', 'Tomb of Alivardi Khan'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Hazarduari_Palace%2C_Murshidabad_illuminated_at_night.jpg/1280px-Hazarduari_Palace%2C_Murshidabad_illuminated_at_night.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Hazarduari_Palace%2C_Murshidabad_illuminated_at_night.jpg/1280px-Hazarduari_Palace%2C_Murshidabad_illuminated_at_night.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Hazarduari_Palace%2C_Murshidabad_illuminated_at_night.jpg/1280px-Hazarduari_Palace%2C_Murshidabad_illuminated_at_night.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Hazarduari_Palace%2C_Murshidabad_illuminated_at_night.jpg/1280px-Hazarduari_Palace%2C_Murshidabad_illuminated_at_night.jpg'
     ],
     audioStory: 'Step into the Durbar hall of the Nawabs surrounded by royal chandelier crystals and century-old silver thrones.',
     verified: true,
@@ -286,9 +286,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹25 (ASI ticket)',
     accessibilityInfo: 'Gravel pathway into outer courtyards.',
     nearbySites: ['Eklakhi Mausoleum', 'Qadam Rasul Mosque', 'Firoz Minar'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Adina_Mosque_at_Malda_district_of_West_Bengal_08.jpg/1280px-Adina_Mosque_at_Malda_district_of_West_Bengal_08.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Adina_Mosque_at_Malda_district_of_West_Bengal_08.jpg/1280px-Adina_Mosque_at_Malda_district_of_West_Bengal_08.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Adina_Mosque_at_Malda_district_of_West_Bengal_08.jpg/1280px-Adina_Mosque_at_Malda_district_of_West_Bengal_08.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Adina_Mosque_at_Malda_district_of_West_Bengal_08.jpg/1280px-Adina_Mosque_at_Malda_district_of_West_Bengal_08.jpg'
     ],
     audioStory: 'Discover the grand vault of Sultan Sikandar Shah rising above the historic plains of Pandua.',
     verified: true
@@ -314,9 +314,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹25 (ASI Gour pass)',
     accessibilityInfo: 'Grassy pathways surround the tower base.',
     nearbySites: ['Qadam Rasul Mosque', 'Eklakhi Mausoleum', 'Adina Mosque'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Firoze_Minar_at_Gaur_in_Malda_district_10.jpg/1280px-Firoze_Minar_at_Gaur_in_Malda_district_10.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Firoze_Minar_at_Gaur_in_Malda_district_10.jpg/1280px-Firoze_Minar_at_Gaur_in_Malda_district_10.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Firoze_Minar_at_Gaur_in_Malda_district_10.jpg/1280px-Firoze_Minar_at_Gaur_in_Malda_district_10.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Firoze_Minar_at_Gaur_in_Malda_district_10.jpg/1280px-Firoze_Minar_at_Gaur_in_Malda_district_10.jpg'
     ],
     audioStory: 'The spiral stairs of Firoz Minar overlooking the ramparts of ancient Gour.',
     verified: true
@@ -342,9 +342,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Included in Gour ASI ticket (₹25)',
     accessibilityInfo: 'Stone pathways inside sanctuary enclosure.',
     nearbySites: ['Firoz Minar', 'Eklakhi Mausoleum'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Full_view_of_Qadam_Rasul_Mosque.jpg/1280px-Full_view_of_Qadam_Rasul_Mosque.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Full_view_of_Qadam_Rasul_Mosque.jpg/1280px-Full_view_of_Qadam_Rasul_Mosque.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Full_view_of_Qadam_Rasul_Mosque.jpg/1280px-Full_view_of_Qadam_Rasul_Mosque.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Full_view_of_Qadam_Rasul_Mosque.jpg/1280px-Full_view_of_Qadam_Rasul_Mosque.jpg'
     ],
     audioStory: 'The sacred relic of Qadam Rasul preserved under ornate brick domes in ancient Gour.',
     verified: true
@@ -370,9 +370,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free Entry / ASI Monitored',
     accessibilityInfo: 'Direct flat approach.',
     nearbySites: ['Adina Mosque', 'Firoz Minar'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Eklakhi_Mausoleum.jpg/1280px-Eklakhi_Mausoleum.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Eklakhi_Mausoleum.jpg/1280px-Eklakhi_Mausoleum.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Eklakhi_Mausoleum.jpg/1280px-Eklakhi_Mausoleum.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Eklakhi_Mausoleum.jpg/1280px-Eklakhi_Mausoleum.jpg'
     ],
     audioStory: 'How a converted prince constructed Bengal’s earliest domed brick mausoleum with one lakh silver tankas.',
     verified: true
@@ -398,9 +398,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹10',
     accessibilityInfo: 'Paved garden paths.',
     nearbySites: ['Tomb of Siraj-ud-Daulah', 'Hazarduari Palace'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Khosbagh.JPG/1280px-Khosbagh.JPG',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/AlivardiKhanTomb.jpg/1280px-AlivardiKhanTomb.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Khosbagh.JPG/1280px-Khosbagh.JPG'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Khosbagh.JPG/1280px-Khosbagh.JPG'
     ],
     audioStory: 'Walk through Khushbagh where Nawab Alivardi Khan rests beside the tragic Siraj-ud-Daulah.',
     verified: true
@@ -426,9 +426,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Covered under Khushbagh visit',
     accessibilityInfo: 'Flat garden approach.',
     nearbySites: ['Tomb of Alivardi Khan', 'Hazarduari Palace'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Khosbagh.JPG/1280px-Khosbagh.JPG',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/TombSirajUdDaulah.jpg/1280px-TombSirajUdDaulah.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Khosbagh.JPG/1280px-Khosbagh.JPG'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/MosqueKhoshbagh.jpg/1280px-MosqueKhoshbagh.jpg'
     ],
     audioStory: 'Lutfunnisa Begum’s candle burning in the quiet gardens of Khushbagh beside Siraj’s grave.',
     verified: true
@@ -454,9 +454,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹25 (Combined ASI ticket for all Bishnupur temples)',
     accessibilityInfo: 'Ramp and stone walkways around exterior arches.',
     nearbySites: ['Jor Bangla Temple', 'Shyam Rai Temple', 'Madan Mohan Temple', 'Dalmadal Gun'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Rasmancha_Arnab_Dutta_2011.JPG/1280px-Rasmancha_Arnab_Dutta_2011.JPG',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Rasmancha_Arnab_Dutta_2011.JPG/1280px-Rasmancha_Arnab_Dutta_2011.JPG',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Rasmancha_Arnab_Dutta_2011.JPG/1280px-Rasmancha_Arnab_Dutta_2011.JPG'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Rasmancha_Arnab_Dutta_2011.JPG/1280px-Rasmancha_Arnab_Dutta_2011.JPG'
     ],
     audioStory: 'Listen to the hymns of Malla kings as hundreds of Krishna idols convened under the stepped pyramid of Rasmancha.',
     verified: true,
@@ -483,9 +483,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Included in Bishnupur ASI ticket (₹25)',
     accessibilityInfo: 'Stone path around temple precinct.',
     nearbySites: ['Rasmancha', 'Shyam Rai Temple', 'Radha Shyam Temple'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Jor_Bangla_or_Keshta_Raya_temple_of_Bishnupur._Built_by_Raghunath_Singha_in_1655_AD._23.jpg/1280px-Jor_Bangla_or_Keshta_Raya_temple_of_Bishnupur._Built_by_Raghunath_Singha_in_1655_AD._23.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Jor_Bangla_or_Keshta_Raya_temple_of_Bishnupur._Built_by_Raghunath_Singha_in_1655_AD._23.jpg/1280px-Jor_Bangla_or_Keshta_Raya_temple_of_Bishnupur._Built_by_Raghunath_Singha_in_1655_AD._23.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Jor_Bangla_or_Keshta_Raya_temple_of_Bishnupur._Built_by_Raghunath_Singha_in_1655_AD._23.jpg/1280px-Jor_Bangla_or_Keshta_Raya_temple_of_Bishnupur._Built_by_Raghunath_Singha_in_1655_AD._23.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Jor_Bangla_or_Keshta_Raya_temple_of_Bishnupur._Built_by_Raghunath_Singha_in_1655_AD._23.jpg/1280px-Jor_Bangla_or_Keshta_Raya_temple_of_Bishnupur._Built_by_Raghunath_Singha_in_1655_AD._23.jpg'
     ],
     audioStory: 'Deciphering the terracotta battlefield panels carved into the clay of Jor Bangla Temple.',
     verified: true,
@@ -512,9 +512,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Included in Bishnupur ASI ticket (₹25)',
     accessibilityInfo: 'Walkways accessible around garden.',
     nearbySites: ['Jor Bangla Temple', 'Rasmancha'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Shyam_Rai_Temple_in_Bishnupur%2C_West_Bengal%2C_India.jpg/1280px-Shyam_Rai_Temple_in_Bishnupur%2C_West_Bengal%2C_India.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Shyam_Rai_Temple_in_Bishnupur%2C_West_Bengal%2C_India.jpg/1280px-Shyam_Rai_Temple_in_Bishnupur%2C_West_Bengal%2C_India.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Shyam_Rai_Temple_in_Bishnupur%2C_West_Bengal%2C_India.jpg/1280px-Shyam_Rai_Temple_in_Bishnupur%2C_West_Bengal%2C_India.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Shyam_Rai_Temple_in_Bishnupur%2C_West_Bengal%2C_India.jpg/1280px-Shyam_Rai_Temple_in_Bishnupur%2C_West_Bengal%2C_India.jpg'
     ],
     audioStory: 'The rhythmic dancers of the terracotta Rasamandala captured in eternal motion.',
     verified: true
@@ -540,9 +540,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free entry for worship',
     accessibilityInfo: 'Street-level entrance.',
     nearbySites: ['Dalmadal Gun', 'Rasmancha', 'Jor Bangla Temple'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Madan_Mohan_Temple_of_Bishnupur_District_of_West_Bengal.jpg/1280px-Madan_Mohan_Temple_of_Bishnupur_District_of_West_Bengal.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Madan_Mohan_Temple_of_Bishnupur_District_of_West_Bengal.jpg/1280px-Madan_Mohan_Temple_of_Bishnupur_District_of_West_Bengal.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Madan_Mohan_Temple_of_Bishnupur_District_of_West_Bengal.jpg/1280px-Madan_Mohan_Temple_of_Bishnupur_District_of_West_Bengal.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Madan_Mohan_Temple_of_Bishnupur_District_of_West_Bengal.jpg/1280px-Madan_Mohan_Temple_of_Bishnupur_District_of_West_Bengal.jpg'
     ],
     audioStory: 'How the deity Madan Mohan defended the ramparts of Bishnupur with the roar of the Dalmadal cannon.',
     verified: true
@@ -568,9 +568,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Included in Bishnupur ASI ticket',
     accessibilityInfo: 'Open grounds.',
     nearbySites: ['Lalji Temple', 'Radha Madhav Temple'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Kalachand_Temple_of_Bishnupur_%2808%29.jpg/1280px-Kalachand_Temple_of_Bishnupur_%2808%29.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Kalachand_Temple_of_Bishnupur_%2808%29.jpg/1280px-Kalachand_Temple_of_Bishnupur_%2808%29.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Kalachand_Temple_of_Bishnupur_%2808%29.jpg/1280px-Kalachand_Temple_of_Bishnupur_%2808%29.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Kalachand_Temple_of_Bishnupur_%2808%29.jpg/1280px-Kalachand_Temple_of_Bishnupur_%2808%29.jpg'
     ],
     audioStory: 'Laterite stone carvings glowing reddish gold in the Bishnupur sunset.',
     verified: true
@@ -596,9 +596,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Included in Bishnupur ASI ticket',
     accessibilityInfo: 'Stone steps into compound.',
     nearbySites: ['Radha Shyam Temple', 'Rasmancha'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Lalji_Mandir_Area.jpg/1280px-Lalji_Mandir_Area.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Lalji_Mandir_Area.jpg/1280px-Lalji_Mandir_Area.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Lalji_Mandir_Area.jpg/1280px-Lalji_Mandir_Area.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Lalji_Mandir_Area.jpg/1280px-Lalji_Mandir_Area.jpg'
     ],
     audioStory: 'The fortified stone arches of Lalji Temple where Malla queens offered morning prayers.',
     verified: true
@@ -624,9 +624,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Included in Bishnupur ASI ticket',
     accessibilityInfo: 'Level lawn approach.',
     nearbySites: ['Radha Govinda Temple', 'Kalachand Temple'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/RADHA_MADHAB_TEMPLE.JPG/1280px-RADHA_MADHAB_TEMPLE.JPG',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/RADHA_MADHAB_TEMPLE.JPG/1280px-RADHA_MADHAB_TEMPLE.JPG',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/RADHA_MADHAB_TEMPLE.JPG/1280px-RADHA_MADHAB_TEMPLE.JPG'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/RADHA_MADHAB_TEMPLE.JPG/1280px-RADHA_MADHAB_TEMPLE.JPG'
     ],
     audioStory: 'Royal lady Churamoni Devi’s peaceful temple sanctuary in Bishnupur.',
     verified: true
@@ -652,9 +652,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Included in Bishnupur ASI ticket',
     accessibilityInfo: 'Open lawn.',
     nearbySites: ['Radha Madhav Temple', 'Rasmancha'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Radha_Gobinda_temple_01.jpg/1280px-Radha_Gobinda_temple_01.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Radha_Gobinda_temple_01.jpg/1280px-Radha_Gobinda_temple_01.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Radha_Gobinda_temple_01.jpg/1280px-Radha_Gobinda_temple_01.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Radha_Gobinda_temple_01.jpg/1280px-Radha_Gobinda_temple_01.jpg'
     ],
     audioStory: 'Exploring the quiet laterite courtyards of Radha Govinda Temple.',
     verified: true
@@ -708,9 +708,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Included in Bishnupur ASI ticket',
     accessibilityInfo: 'Rural pathway access.',
     nearbySites: ['Jor Bangla Temple', 'Gokul Chand Temple'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Radhabinod_Temple_Joydev_Kenduli.jpg/1280px-Radhabinod_Temple_Joydev_Kenduli.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Radhabinod_Temple_Joydev_Kenduli.jpg/1280px-Radhabinod_Temple_Joydev_Kenduli.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Radhabinod_Temple_Joydev_Kenduli.jpg/1280px-Radhabinod_Temple_Joydev_Kenduli.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Radhabinod_Temple_Joydev_Kenduli.jpg/1280px-Radhabinod_Temple_Joydev_Kenduli.jpg'
     ],
     audioStory: 'The beauty of the eight curved roofs of Radha Vinod Temple.',
     verified: true
@@ -736,9 +736,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free / ASI Protected',
     accessibilityInfo: 'Stone staircase into outer courtyard.',
     nearbySites: ['Rasmancha', 'Shyam Rai Temple'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Gokul_Chand_Temple_at_Gokulnagar%2C_Bankura_district%2C_West_Bengal_01.jpg/1280px-Gokul_Chand_Temple_at_Gokulnagar%2C_Bankura_district%2C_West_Bengal_01.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Gokul_Chand_Temple_at_Gokulnagar%2C_Bankura_district%2C_West_Bengal_01.jpg/1280px-Gokul_Chand_Temple_at_Gokulnagar%2C_Bankura_district%2C_West_Bengal_01.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Gokul_Chand_Temple_at_Gokulnagar%2C_Bankura_district%2C_West_Bengal_01.jpg/1280px-Gokul_Chand_Temple_at_Gokulnagar%2C_Bankura_district%2C_West_Bengal_01.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Gokul_Chand_Temple_at_Gokulnagar%2C_Bankura_district%2C_West_Bengal_01.jpg/1280px-Gokul_Chand_Temple_at_Gokulnagar%2C_Bankura_district%2C_West_Bengal_01.jpg'
     ],
     audioStory: 'The silence of the laterite towers in rural Gokulnagar.',
     verified: true
@@ -764,9 +764,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹25 (Indians), ₹300 (Foreigners)',
     accessibilityInfo: 'Wheelchair access ramp to ground floor museum galleries.',
     nearbySites: ['Jalpaiguri Rajbati', 'Madan Mohan Temple Cooch Behar'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/The_Cooch_Behar_Palace_or_the_Cooch_Behar_Rajbari%2C_Cooch_Behar_District%2C_West_Bengal%2C_India_01.jpg/1280px-The_Cooch_Behar_Palace_or_the_Cooch_Behar_Rajbari%2C_Cooch_Behar_District%2C_West_Bengal%2C_India_01.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/The_Cooch_Behar_Palace_or_the_Cooch_Behar_Rajbari%2C_Cooch_Behar_District%2C_West_Bengal%2C_India_01.jpg/1280px-The_Cooch_Behar_Palace_or_the_Cooch_Behar_Rajbari%2C_Cooch_Behar_District%2C_West_Bengal%2C_India_01.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/The_Cooch_Behar_Palace_or_the_Cooch_Behar_Rajbari%2C_Cooch_Behar_District%2C_West_Bengal%2C_India_01.jpg/1280px-The_Cooch_Behar_Palace_or_the_Cooch_Behar_Rajbari%2C_Cooch_Behar_District%2C_West_Bengal%2C_India_01.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/The_Cooch_Behar_Palace_or_the_Cooch_Behar_Rajbari%2C_Cooch_Behar_District%2C_West_Bengal%2C_India_01.jpg/1280px-The_Cooch_Behar_Palace_or_the_Cooch_Behar_Rajbari%2C_Cooch_Behar_District%2C_West_Bengal%2C_India_01.jpg'
     ],
     audioStory: 'Step into the Durbar hall under the grand dome where the Koch Maharajas held state.',
     verified: true,
@@ -821,9 +821,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹20',
     accessibilityInfo: 'Forest paths with rest gazebos.',
     nearbySites: ['Kurumbera Fort', 'Rasmancha'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Gopegarh_heritage_building.jpg/1280px-Gopegarh_heritage_building.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Gopegarh_heritage_building.jpg/1280px-Gopegarh_heritage_building.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Gopegarh_heritage_building.jpg/1280px-Gopegarh_heritage_building.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Gopegarh_heritage_building.jpg/1280px-Gopegarh_heritage_building.jpg'
     ],
     audioStory: 'Sal breezes whispering ancient legends across the ramparts of Gopegarh.',
     verified: true
@@ -849,9 +849,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free Entry',
     accessibilityInfo: 'Roadside paved platform.',
     nearbySites: ['Madan Mohan Temple', 'Rasmancha'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Dalmadal_Cannon%2C_Bishnupur.JPG/1280px-Dalmadal_Cannon%2C_Bishnupur.JPG',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Dalmadal_Cannon%2C_Bishnupur.JPG/1280px-Dalmadal_Cannon%2C_Bishnupur.JPG',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Dalmadal_Cannon%2C_Bishnupur.JPG/1280px-Dalmadal_Cannon%2C_Bishnupur.JPG'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Dalmadal_Cannon%2C_Bishnupur.JPG/1280px-Dalmadal_Cannon%2C_Bishnupur.JPG'
     ],
     audioStory: 'How blacksmith Jagannath Karmakar forged the mighty iron rings of the Dalmadal cannon.',
     verified: true
@@ -877,9 +877,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free Entry',
     accessibilityInfo: 'Flat grassy walkway.',
     nearbySites: ['Danish Governor House Serampore', 'Dupleix Palace Chandannagar'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Danish_Cemetery._all_Tombs_%26_structure.jpg/1280px-Danish_Cemetery._all_Tombs_%26_structure.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Danish_Cemetery._all_Tombs_%26_structure.jpg/1280px-Danish_Cemetery._all_Tombs_%26_structure.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Danish_Cemetery._all_Tombs_%26_structure.jpg/1280px-Danish_Cemetery._all_Tombs_%26_structure.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Danish_Cemetery._all_Tombs_%26_structure.jpg/1280px-Danish_Cemetery._all_Tombs_%26_structure.jpg'
     ],
     audioStory: 'The peaceful obelisks of Serampore telling tales of Danish merchants along the Hooghly.',
     verified: true
@@ -905,9 +905,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹10',
     accessibilityInfo: 'Paved riverfront promenade.',
     nearbySites: ['Danish Cemetery Serampore', 'Dupleix Palace Chandannagar'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Danish_Government_House_at_Serampore_in_West_Bengal.jpg/1280px-Danish_Government_House_at_Serampore_in_West_Bengal.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Danish_Government_House_at_Serampore_in_West_Bengal.jpg/1280px-Danish_Government_House_at_Serampore_in_West_Bengal.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Danish_Government_House_at_Serampore_in_West_Bengal.jpg/1280px-Danish_Government_House_at_Serampore_in_West_Bengal.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Danish_Government_House_at_Serampore_in_West_Bengal.jpg/1280px-Danish_Government_House_at_Serampore_in_West_Bengal.jpg'
     ],
     audioStory: 'The restoration of Frederiksnagore’s grand Danish administrative seat on the banks of Hooghly.',
     verified: true
@@ -933,9 +933,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹20',
     accessibilityInfo: 'Ground floor museum ramp.',
     nearbySites: ['Danish Governor House', 'Metcalfe Hall'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Institut_de_Chandernagor_-_Strand_Road_-_Chandan_Nagar_-_Hooghly_-_2013-05-19_7899.JPG/1280px-Institut_de_Chandernagor_-_Strand_Road_-_Chandan_Nagar_-_Hooghly_-_2013-05-19_7899.JPG',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Institut_de_Chandernagor_-_Strand_Road_-_Chandan_Nagar_-_Hooghly_-_2013-05-19_7899.JPG/1280px-Institut_de_Chandernagor_-_Strand_Road_-_Chandan_Nagar_-_Hooghly_-_2013-05-19_7899.JPG',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Institut_de_Chandernagor_-_Strand_Road_-_Chandan_Nagar_-_Hooghly_-_2013-05-19_7899.JPG/1280px-Institut_de_Chandernagor_-_Strand_Road_-_Chandan_Nagar_-_Hooghly_-_2013-05-19_7899.JPG'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Institut_de_Chandernagor_-_Strand_Road_-_Chandan_Nagar_-_Hooghly_-_2013-05-19_7899.JPG/1280px-Institut_de_Chandernagor_-_Strand_Road_-_Chandan_Nagar_-_Hooghly_-_2013-05-19_7899.JPG'
     ],
     audioStory: 'French romance and diplomacy along the quiet Strand promenade of Chandannagar.',
     verified: true
@@ -989,9 +989,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free (Registration required)',
     accessibilityInfo: 'Elevator access inside building.',
     nearbySites: ['Victoria Memorial', 'St. John’s Church'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Asiatic_Society_-_Park_Street_-_Kolkata_2013-04-10_7830.JPG/1280px-Asiatic_Society_-_Park_Street_-_Kolkata_2013-04-10_7830.JPG',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Asiatic_Society_-_Park_Street_-_Kolkata_2013-04-10_7830.JPG/1280px-Asiatic_Society_-_Park_Street_-_Kolkata_2013-04-10_7830.JPG',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Asiatic_Society_-_Park_Street_-_Kolkata_2013-04-10_7830.JPG/1280px-Asiatic_Society_-_Park_Street_-_Kolkata_2013-04-10_7830.JPG'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Asiatic_Society_-_Park_Street_-_Kolkata_2013-04-10_7830.JPG/1280px-Asiatic_Society_-_Park_Street_-_Kolkata_2013-04-10_7830.JPG'
     ],
     audioStory: 'Sir William Jones discovering the common roots of Sanskrit, Greek, and Latin in 1784.',
     verified: true
@@ -1017,9 +1017,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free with ID registration',
     accessibilityInfo: 'Ground floor main prayer hall flat access.',
     nearbySites: ['Beth-El Synagogue', 'Currency Building', 'St. John’s Church'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Maghen_David_Synagogue_-_Kolkata_2012-09-22_0275-0276_Combined.jpg/1280px-Maghen_David_Synagogue_-_Kolkata_2012-09-22_0275-0276_Combined.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Maghen_David_Synagogue_-_Kolkata_2012-09-22_0275-0276_Combined.jpg/1280px-Maghen_David_Synagogue_-_Kolkata_2012-09-22_0275-0276_Combined.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Maghen_David_Synagogue_-_Kolkata_2012-09-22_0275-0276_Combined.jpg/1280px-Maghen_David_Synagogue_-_Kolkata_2012-09-22_0275-0276_Combined.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Maghen_David_Synagogue_-_Kolkata_2012-09-22_0275-0276_Combined.jpg/1280px-Maghen_David_Synagogue_-_Kolkata_2012-09-22_0275-0276_Combined.jpg'
     ],
     audioStory: 'Generations of Muslim caretakers preserving the silver Torah crowns of Maghen David in the heart of Kolkata.',
     verified: true
@@ -1045,9 +1045,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free with ID registration',
     accessibilityInfo: 'Staircase entrance to sanctuary.',
     nearbySites: ['Maghen David Synagogue', 'Currency Building'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Beth_El_Synagogue_-_Pollock_Street_-_Kolkata_2013-03-03_5371.JPG/1280px-Beth_El_Synagogue_-_Pollock_Street_-_Kolkata_2013-03-03_5371.JPG',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Beth_El_Synagogue_-_Pollock_Street_-_Kolkata_2013-03-03_5371.JPG/1280px-Beth_El_Synagogue_-_Pollock_Street_-_Kolkata_2013-03-03_5371.JPG',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Beth_El_Synagogue_-_Pollock_Street_-_Kolkata_2013-03-03_5371.JPG/1280px-Beth_El_Synagogue_-_Pollock_Street_-_Kolkata_2013-03-03_5371.JPG'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Beth_El_Synagogue_-_Pollock_Street_-_Kolkata_2013-03-03_5371.JPG/1280px-Beth_El_Synagogue_-_Pollock_Street_-_Kolkata_2013-03-03_5371.JPG'
     ],
     audioStory: 'Sunlight filtering through Belgian stained glass into the quiet hall of Beth-El.',
     verified: true
@@ -1073,9 +1073,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹10 maintenance donation',
     accessibilityInfo: 'Courtyard flat pathways.',
     nearbySites: ['High Court Building', 'Currency Building', 'Victoria Memorial'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/St._John%27s_Church_at_Hastigns_Street%2CKolkata.JPG/1280px-St._John%27s_Church_at_Hastigns_Street%2CKolkata.JPG',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/St._John%27s_Church_at_Hastigns_Street%2CKolkata.JPG/1280px-St._John%27s_Church_at_Hastigns_Street%2CKolkata.JPG',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/St._John%27s_Church_at_Hastigns_Street%2CKolkata.JPG/1280px-St._John%27s_Church_at_Hastigns_Street%2CKolkata.JPG'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/St._John%27s_Church_at_Hastigns_Street%2CKolkata.JPG/1280px-St._John%27s_Church_at_Hastigns_Street%2CKolkata.JPG'
     ],
     audioStory: 'The stones of medieval Gour resurrected as the foundation of Job Charnock’s mausoleum.',
     verified: true
@@ -1101,9 +1101,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free Entry',
     accessibilityInfo: 'Full wheelchair accessibility with modern elevators.',
     nearbySites: ['Metcalfe Hall', 'High Court Building', 'St. John’s Church'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Currency_Building_-_Dalhousie_Square_-_Kolkata_2012-09-22_0289.JPG/1280px-Currency_Building_-_Dalhousie_Square_-_Kolkata_2012-09-22_0289.JPG',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Currency_Building_-_Dalhousie_Square_-_Kolkata_2012-09-22_0289.JPG/1280px-Currency_Building_-_Dalhousie_Square_-_Kolkata_2012-09-22_0289.JPG',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Currency_Building_-_Dalhousie_Square_-_Kolkata_2012-09-22_0289.JPG/1280px-Currency_Building_-_Dalhousie_Square_-_Kolkata_2012-09-22_0289.JPG'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Currency_Building_-_Dalhousie_Square_-_Kolkata_2012-09-22_0289.JPG/1280px-Currency_Building_-_Dalhousie_Square_-_Kolkata_2012-09-22_0289.JPG'
     ],
     audioStory: 'From minting early rupee notes to displaying contemporary Indian art under the sunlit atrium of the Currency Building.',
     verified: true
@@ -1129,9 +1129,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Official access only / Free exterior view',
     accessibilityInfo: 'Security gate access.',
     nearbySites: ['St. John’s Church', 'Metcalfe Hall', 'Currency Building'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Calcutta_High_Court.jpg/1280px-Calcutta_High_Court.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Calcutta_High_Court.jpg/1280px-Calcutta_High_Court.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Calcutta_High_Court.jpg/1280px-Calcutta_High_Court.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Calcutta_High_Court.jpg/1280px-Calcutta_High_Court.jpg'
     ],
     audioStory: 'The Gothic arches of Calcutta High Court echoing with legendary legal battles for Indian freedom.',
     verified: true
@@ -1157,9 +1157,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free (Exterior & Educational visits)',
     accessibilityInfo: 'Direct College Street pavement access.',
     nearbySites: ['House of Derozio', 'Bankim Chandra Chattopadhyay Bhawan'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Hindu_School_-_Kolkata_7409.JPG/1280px-Hindu_School_-_Kolkata_7409.JPG',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Hindu_School_-_Kolkata_7409.JPG/1280px-Hindu_School_-_Kolkata_7409.JPG',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Hindu_School_-_Kolkata_7409.JPG/1280px-Hindu_School_-_Kolkata_7409.JPG'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Hindu_School_-_Kolkata_7409.JPG/1280px-Hindu_School_-_Kolkata_7409.JPG'
     ],
     audioStory: 'The passionate debates of Young Bengal students on freedom, reason, and poetry in Hindu College.',
     verified: true
@@ -1299,9 +1299,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free Entry',
     accessibilityInfo: 'Ground floor courtyard level access.',
     nearbySites: ['Dakshineswar Kali Temple', 'Dupleix Palace'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Bankimchandra_Chattapadhay.jpg/1280px-Bankimchandra_Chattapadhay.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Bankimchandra_Chattapadhay.jpg/1280px-Bankimchandra_Chattapadhay.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Bankimchandra_Chattapadhay.jpg/1280px-Bankimchandra_Chattapadhay.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Bankimchandra_Chattapadhay.jpg/1280px-Bankimchandra_Chattapadhay.jpg'
     ],
     audioStory: 'In the stillness of Kanthalpara, Bankim Chandra penning the immortal verse "Vande Mataram, Sujalam Sufalam Malayaja Shitalam".',
     verified: true
@@ -1327,9 +1327,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Included in Uttarayan museum ticket',
     accessibilityInfo: 'Ashram gravel pathways.',
     nearbySites: ['Rabindra Bhavan', 'Santiniketan'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Shantiniketan_Bari_of_Rabindranath_Tagore.jpg/1280px-Shantiniketan_Bari_of_Rabindranath_Tagore.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Mastermoshai_Studio_-_Kala_Bhavana_-_Shantiniketan_-_West_Bengal_-_India.jpg/1280px-Mastermoshai_Studio_-_Kala_Bhavana_-_Shantiniketan_-_West_Bengal_-_India.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Shantiniketan_Bari_of_Rabindranath_Tagore.jpg/1280px-Shantiniketan_Bari_of_Rabindranath_Tagore.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Kala_Bhavan%2C_Santiniketan.jpg/1280px-Kala_Bhavan%2C_Santiniketan.jpg'
     ],
     audioStory: 'Simplicity and birdsong surrounding the earthen veranda of Kamal Kutir.',
     verified: true
@@ -1355,9 +1355,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹70 (Museum entry)',
     accessibilityInfo: 'Paved ramps for museum entrance.',
     nearbySites: ['Santiniketan', 'Kamal Kutir'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Rabindra_Bhavan_-_Santiniketan_2014-06-29_5373-5374.TIF/lossy-page1-1280px-Rabindra_Bhavan_-_Santiniketan_2014-06-29_5373-5374.TIF.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Rabindra_Bhavan_-_Santiniketan_2014-06-29_5373-5374.TIF/lossy-page1-1280px-Rabindra_Bhavan_-_Santiniketan_2014-06-29_5373-5374.TIF.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Rabindra_Bhavan_-_Santiniketan_2014-06-29_5373-5374.TIF/lossy-page1-1280px-Rabindra_Bhavan_-_Santiniketan_2014-06-29_5373-5374.TIF.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Visva-Bharati_Central_Library.jpg/1280px-Visva-Bharati_Central_Library.jpg'
     ],
     audioStory: 'Discover Tagore’s hand-written song notations and international correspondence at Rabindra Bhavan.',
     verified: true
@@ -1383,9 +1383,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free (Exterior & Public events)',
     accessibilityInfo: 'Pedestrian Mall road access.',
     nearbySites: ['Darjeeling Himalayan Railway', 'Tomb of Alexander Csoma de Körös'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Darjeeling_Clock_tower_%287168742033%29.jpg/1280px-Darjeeling_Clock_tower_%287168742033%29.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Darjeeling_Clock_tower_%287168742033%29.jpg/1280px-Darjeeling_Clock_tower_%287168742033%29.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Darjeeling_Clock_tower_%287168742033%29.jpg/1280px-Darjeeling_Clock_tower_%287168742033%29.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Darjeeling_Clock_tower_%287168742033%29.jpg/1280px-Darjeeling_Clock_tower_%287168742033%29.jpg'
     ],
     audioStory: 'Bells chiming through the mountain fog above Darjeeling Mall from the Town Hall clock tower.',
     verified: true
@@ -1411,9 +1411,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free Entry',
     accessibilityInfo: 'Terraced hillside steps.',
     nearbySites: ['Darjeeling Town Hall', 'Darjeeling Himalayan Railway'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Plaques_behind_the_tomb_of_Alexander_Csoma_De_Koros_at_Darjeeling_Old_Cemetery_in_Darjeeling_Town.jpg/1280px-Plaques_behind_the_tomb_of_Alexander_Csoma_De_Koros_at_Darjeeling_Old_Cemetery_in_Darjeeling_Town.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Plaques_behind_the_tomb_of_Alexander_Csoma_De_Koros_at_Darjeeling_Old_Cemetery_in_Darjeeling_Town.jpg/1280px-Plaques_behind_the_tomb_of_Alexander_Csoma_De_Koros_at_Darjeeling_Old_Cemetery_in_Darjeeling_Town.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Plaques_behind_the_tomb_of_Alexander_Csoma_De_Koros_at_Darjeeling_Old_Cemetery_in_Darjeeling_Town.jpg/1280px-Plaques_behind_the_tomb_of_Alexander_Csoma_De_Koros_at_Darjeeling_Old_Cemetery_in_Darjeeling_Town.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Plaques_behind_the_tomb_of_Alexander_Csoma_De_Koros_at_Darjeeling_Old_Cemetery_in_Darjeeling_Town.jpg/1280px-Plaques_behind_the_tomb_of_Alexander_Csoma_De_Koros_at_Darjeeling_Old_Cemetery_in_Darjeeling_Town.jpg'
     ],
     audioStory: 'The Hungarian pilgrim who walked across continents to decipher the sacred scrolls of Tibet.',
     verified: true
@@ -1439,9 +1439,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free Entry',
     accessibilityInfo: 'Trekking path up Susunia Hill slope.',
     nearbySites: ['Rasmancha', 'Gokul Chand Temple'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/29RCCMAK_-_Susunia_Hill.jpg/1280px-29RCCMAK_-_Susunia_Hill.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/29RCCMAK_-_Susunia_Hill.jpg/1280px-29RCCMAK_-_Susunia_Hill.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/29RCCMAK_-_Susunia_Hill.jpg/1280px-29RCCMAK_-_Susunia_Hill.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/29RCCMAK_-_Susunia_Hill.jpg/1280px-29RCCMAK_-_Susunia_Hill.jpg'
     ],
     audioStory: 'Deciphering the 1,600-year-old Brahmi letters on the granite rock face of Susunia Hill.',
     verified: true
@@ -1467,9 +1467,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free / ASI Protected',
     accessibilityInfo: 'Paved pathways around excavated mound perimeter.',
     nearbySites: ['Chandraketu Fort', 'Dakshineswar Kali Temple'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Khana-Mihirer_Dhipi_in_Chandraketugarh_15.jpg/1280px-Khana-Mihirer_Dhipi_in_Chandraketugarh_15.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Khana-Mihirer_Dhipi_in_Chandraketugarh_15.jpg/1280px-Khana-Mihirer_Dhipi_in_Chandraketugarh_15.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Khana-Mihirer_Dhipi_in_Chandraketugarh_15.jpg/1280px-Khana-Mihirer_Dhipi_in_Chandraketugarh_15.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Excavated_Brick_Structure_-_Khana-Mihir_Mound_-_Berachampa_-_North_24_Parganas_2015-04-11_7158.JPG/1280px-Excavated_Brick_Structure_-_Khana-Mihir_Mound_-_Berachampa_-_North_24_Parganas_2015-04-11_7158.JPG'
     ],
     audioStory: 'The timeless agrarian wisdom of Khana echoing over the excavated brick mounds of Berachampa.',
     verified: true
@@ -1495,9 +1495,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free / ASI Protected site',
     accessibilityInfo: 'Rural pathway access.',
     nearbySites: ['Khana-Mihirer Dhipi'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Khana-Mihirer_Dhipi_in_Chandraketugarh_15.jpg/1280px-Khana-Mihirer_Dhipi_in_Chandraketugarh_15.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Chandraketu%27s_Fort.jpg/1280px-Chandraketu%27s_Fort.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Khana-Mihirer_Dhipi_in_Chandraketugarh_15.jpg/1280px-Khana-Mihirer_Dhipi_in_Chandraketugarh_15.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Pair_of_lovers._Chandraketugarh%2C_Bengal%2C_100-1_BCE._Ashmolean_Museum.jpg/1280px-Pair_of_lovers._Chandraketugarh%2C_Bengal%2C_100-1_BCE._Ashmolean_Museum.jpg'
     ],
     audioStory: 'Merchant ships laden with Bengal spices, muslin, and terracotta returning from Rome and Java into ancient Chandraketugarh.',
     verified: true,
@@ -1524,9 +1524,9 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free / ASI Protected',
     accessibilityInfo: 'Stone doorway threshold into open courtyard.',
     nearbySites: ['Gopegarh', 'Rasmancha'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Kurumbera_Fort_.jpg/1280px-Kurumbera_Fort_.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Kurumbera_Fort_.jpg/1280px-Kurumbera_Fort_.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Kurumbera_Fort_.jpg/1280px-Kurumbera_Fort_.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Kurumbera_Fort_.jpg/1280px-Kurumbera_Fort_.jpg'
     ],
     audioStory: 'Walk through the endless stone pillar galleries of Kurumbera where Odia Gajapati stone carvers met Mughal masonry.',
     verified: true
@@ -1552,12 +1552,923 @@ export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
     entryFee: 'Free Entry',
     accessibilityInfo: 'Paved beach pathways and passenger vessel boarding ramps from Harwood Point / Kakdwip.',
     nearbySites: ['Sundarbans National Park'],
-    featuredImage: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Kapil_Muni_Temple.jpg/1280px-Kapil_Muni_Temple.jpg',
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Kapil_Muni_Temple.jpg/1280px-Kapil_Muni_Temple.jpg',
     gallery: [
-      'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Kapil_Muni_Temple.jpg/1280px-Kapil_Muni_Temple.jpg'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Kapil_Muni_Temple.jpg/1280px-Kapil_Muni_Temple.jpg'
     ],
     audioStory: 'Millions of conch shells and sacred fires chanting "Sob Tirtha Bar Bar, Ganga Sagar Ekbar" at dawn on Sagar Island.',
     verified: true,
     featured: true
   }
+];
+
+export const PAN_INDIA_HERITAGE_SITES: HeritageSite[] = [
+  {
+    id: 'taj-mahal',
+    name: 'Taj Mahal',
+    nativeName: 'ताज महल',
+    slug: 'taj-mahal',
+    shortDescription: 'UNESCO World Heritage monument and one of the New Seven Wonders of the World, an ivory-white marble mausoleum on the Yamuna River.',
+    detailedHistory: 'Commissioned in 1631 by Mughal Emperor Shah Jahan to house the tomb of his favorite wife, Mumtaz Mahal; it also houses the tomb of Shah Jahan himself. The tomb is the centerpiece of a 42-acre complex, which includes a mosque and a guest house, set in formal gardens bounded on three sides by a crenellated wall.',
+    culturalSignificance: 'Universally recognized as the jewel of Muslim art in India and a timeless symbol of eternal love, attracting millions of travelers from across the globe.',
+    architecturalSignificance: 'Pinnacle of Mughal architecture combining Islamic, Persian, Ottoman Turkish, and Indian design elements, renowned for its symmetrical symmetry, Pietra Dura marble inlays, and bulbous dome.',
+    historicalPeriod: 'Mughal Empire',
+    constructionPeriod: '1631 – 1648 CE',
+    state: 'Uttar Pradesh',
+    district: 'Agra',
+    address: 'Dharmapuri, Forest Colony, Tajganj, Agra, Uttar Pradesh 282001',
+    coordinates: { lat: 27.1751, lng: 78.0421 },
+    siteType: 'MONUMENT',
+    historicalPersonalities: ['Shah Jahan', 'Mumtaz Mahal', 'Ustad Ahmad Lahori'],
+    associatedCultures: ['Mughal Miniature Art', 'Pietra Dura Inlay', 'Awadhi Gastronomy'],
+    visitingHours: 'Sunrise to Sunset (Closed on Fridays)',
+    entryFee: '₹50 (Indians), ₹1,100 (Foreigners) + ₹200 for main mausoleum',
+    accessibilityInfo: 'Battery-operated eco carts available from parking gates. Ramps provided at perimeter.',
+    nearbySites: ['Agra Fort', 'Fatehpur Sikri', 'Mehtab Bagh'],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Taj_Mahal%2C_Agra%2C_India_edit2.jpg/1280px-Taj_Mahal%2C_Agra%2C_India_edit2.jpg',
+    gallery: [
+      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1280&q=80',
+      'https://images.unsplash.com/photo-1585506942812-e72b29cef752?auto=format&fit=crop&w=1280&q=80'
+    ],
+    audioStory: 'Listen to the timeless story of Shah Jahan and Mumtaz Mahal echoing against white Makrana marble and gentle Yamuna breezes.',
+    verified: true,
+    featured: true
+  },
+  {
+    id: 'agra-fort',
+    name: 'Agra Fort',
+    nativeName: 'आगरा का किला',
+    slug: 'agra-fort',
+    shortDescription: 'Massive 16th-century red sandstone fortress of the Mughal emperors on the banks of the Yamuna River.',
+    detailedHistory: 'Built primarily under Emperor Akbar between 1565 and 1573 on the site of an earlier brick fort called Badalgarh. Served as the main residence of the emperors of the Mughal Dynasty until 1638, when the capital was shifted from Agra to Delhi.',
+    culturalSignificance: 'Witnessed the golden zenith and political drama of Mughal history, including Shah Jahan’s house arrest overlooking the Taj Mahal.',
+    architecturalSignificance: 'Magnificent semi-circular red sandstone bastion containing Jahangiri Mahal, Khas Mahal, Diwan-i-Khas, Diwan-i-Aam, and the marble Pearl Mosque (Moti Masjid).',
+    historicalPeriod: 'Mughal Empire',
+    constructionPeriod: '1565 – 1573 CE',
+    state: 'Uttar Pradesh',
+    district: 'Agra',
+    address: 'Agra Fort, Rakabganj, Agra, Uttar Pradesh 282003',
+    coordinates: { lat: 27.1795, lng: 78.0211 },
+    siteType: 'MONUMENT',
+    historicalPersonalities: ['Akbar the Great', 'Jahangir', 'Shah Jahan', 'Aurangzeb'],
+    associatedCultures: ['Mughal Court Traditions', 'Agra Petha Lore', 'Zardozi Embroidery'],
+    visitingHours: '06:00 AM - 06:00 PM daily',
+    entryFee: '₹50 (Indians), ₹650 (Foreigners)',
+    accessibilityInfo: 'Paved ramps available through Amar Singh Gate into the main courtyards.',
+    nearbySites: ['Taj Mahal', 'Itmad-ud-Daulah', 'Fatehpur Sikri'],
+    featuredImage: 'https://img-cdn.publive.online/fit-in/1200x675/local-samosal/media/media_files/2025/01/10/IyeE4HbeMA6wdYjqYZTm.png',
+    gallery: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Jahangir_Palace_Agra_Fort.jpg/1280px-Jahangir_Palace_Agra_Fort.jpg'
+    ],
+    audioStory: 'Experience the grandeur of Akbar’s durbar and the poignant reflections from the Musamman Burj balcony.',
+    verified: true,
+    featured: true
+  },
+  {
+    id: 'fatehpur-sikri',
+    name: 'Fatehpur Sikri',
+    nativeName: 'फ़तेहपुर सीकरी',
+    slug: 'fatehpur-sikri',
+    shortDescription: 'The fortified imperial ghost city founded by Emperor Akbar, crowned by the soaring Buland Darwaza.',
+    detailedHistory: 'Founded as the capital of the Mughal Empire in 1571 by Emperor Akbar in honor of Sufi saint Sheikh Salim Chishti. Abandoned in 1585 due to water scarcity, it remains one of the best-preserved royal Mughal cities in the world.',
+    culturalSignificance: 'Spiritual epicenter where Akbar conceptualized Din-i Ilahi and engaged in theological discussions at the Ibadat Khana.',
+    architecturalSignificance: 'Red sandstone architectural synthesis of Hindu, Jain, and Persian styles, featuring the 54-meter Buland Darwaza, Panch Mahal, and Salim Chishti tomb.',
+    historicalPeriod: 'Mughal Empire',
+    constructionPeriod: '1571 – 1585 CE',
+    state: 'Uttar Pradesh',
+    district: 'Agra',
+    address: 'Fatehpur Sikri, Agra District, Uttar Pradesh 283110',
+    coordinates: { lat: 27.0945, lng: 77.6679 },
+    siteType: 'ARCHITECTURE',
+    historicalPersonalities: ['Akbar the Great', 'Sheikh Salim Chishti', 'Birbal', 'Tansen'],
+    associatedCultures: ['Sufi Qawwali Tradition', 'Navaratna Court Culture', 'Red Sandstone Carving'],
+    visitingHours: 'Sunrise to Sunset daily',
+    entryFee: '₹50 (Indians), ₹610 (Foreigners)',
+    accessibilityInfo: 'Paved pathways around courtyard; step ascents at Buland Darwaza.',
+    nearbySites: ['Taj Mahal', 'Agra Fort', 'Keoladeo Ghana National Park'],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Buland_Darwaza%2C_Fatehpur_Sikri.jpg/1280px-Buland_Darwaza%2C_Fatehpur_Sikri.jpg',
+    gallery: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Panch_Mahal_Fatehpur_Sikri.jpg/1280px-Panch_Mahal_Fatehpur_Sikri.jpg'
+    ],
+    audioStory: 'The whispers of Sufi saint Salim Chishti blessing Emperor Akbar through the carved marble jali screens.',
+    verified: true,
+    featured: false
+  },
+  {
+    id: 'varanasi-ghats-kashi-vishwanath',
+    name: 'Varanasi Ghats & Kashi Vishwanath',
+    nativeName: 'वाराणसी के घाट एवं काशी विश्वनाथ',
+    slug: 'varanasi-ghats-kashi-vishwanath',
+    shortDescription: 'The ancient spiritual heart of India along the crescent curve of the sacred Ganges river.',
+    detailedHistory: 'One of the oldest continuously inhabited cities on Earth, revered as the City of Light (Kashi) and abode of Lord Shiva. The 84 river ghats have seen centuries of philosophers, saints like Kabir, Tulsidas, and Adi Shankara, and grand evening Ganga Artis.',
+    culturalSignificance: 'Sacred center of Sanatana Dharma where pilgrims seek liberation (Moksha); home of classical Banaras gharana music and Banarasi silk weaving.',
+    architecturalSignificance: 'Stepped riverside stone ghat architecture with historic Maratha, Bundela, and Bengali royal palaces bordering the Ganges, culminating in the gold-spired Kashi Vishwanath Temple Corridor.',
+    historicalPeriod: 'Ancient to Modern',
+    constructionPeriod: 'Continuous antiquity; major ghats renovated 18th century by Ahilyabai Holkar',
+    state: 'Uttar Pradesh',
+    district: 'Varanasi',
+    address: 'Dashashwamedh Ghat & Lahori Tola, Varanasi, Uttar Pradesh 221001',
+    coordinates: { lat: 25.3076, lng: 83.0107 },
+    siteType: 'RELIGIOUS_SITE',
+    historicalPersonalities: ['Adi Shankaracharya', 'Sant Kabir', 'Goswami Tulsidas', 'Rani Ahilyabai Holkar'],
+    associatedCultures: ['Ganga Sandhya Aarti', 'Banaras Classical Gharana', 'Banarasi Silk Weaving'],
+    visitingHours: 'Ghats open 24/7; Temple 03:00 AM - 11:00 PM',
+    entryFee: 'Free entry (Temple VIP darshan available through temple board)',
+    accessibilityInfo: 'Electric wheelchairs and ramps available throughout the new Kashi Vishwanath Corridor.',
+    nearbySites: ['Sarnath Buddhist Stupa', 'Ramnagar Fort', 'Manikarnika Ghat'],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Ahilya_Ghat_by_the_Ganges%2C_Varanasi.jpg/1280px-Ahilya_Ghat_by_the_Ganges%2C_Varanasi.jpg',
+    gallery: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Dashashwamedh_Ghat_Varanasi.jpg/1280px-Dashashwamedh_Ghat_Varanasi.jpg'
+    ],
+    audioStory: 'The resonant ringing of brass temple bells, conch shells, and the mesmerizing chants of Dashashwamedh Ganga Aarti at twilight.',
+    verified: true,
+    featured: true
+  },
+  {
+    id: 'qutub-minar',
+    name: 'Qutub Minar & Mehrauli Complex',
+    nativeName: 'क़ुतुब मीनार',
+    slug: 'qutub-minar',
+    shortDescription: 'The world’s tallest brick minaret standing 72.5 meters tall, built in 1192 CE at the dawn of the Delhi Sultanate.',
+    detailedHistory: 'Founded by Qutb-ud-din Aibak in 1192 CE following the defeat of Prithviraj Chauhan and completed by his successors Iltutmish and Firoz Shah Tughlaq. The surrounding complex contains the legendary rust-resistant 4th-century Iron Pillar of Chandragupta II and Quwwat-ul-Islam Mosque.',
+    culturalSignificance: 'Marks the establishment of Muslim rule and Indo-Islamic architectural idioms in northern India.',
+    architecturalSignificance: 'Five-tiered fluted red and buff sandstone minaret adorned with intricate Arabic calligraphy bands, stalactite corbeling, and geometric carvings.',
+    historicalPeriod: 'Delhi Sultanate',
+    constructionPeriod: '1192 – 1368 CE',
+    state: 'Delhi',
+    district: 'South Delhi',
+    address: 'Mehrauli, New Delhi, Delhi 110030',
+    coordinates: { lat: 28.5244, lng: 77.1855 },
+    siteType: 'MONUMENT',
+    historicalPersonalities: ['Qutb-ud-din Aibak', 'Shams-ud-din Iltutmish', 'Alauddin Khalji', 'Firoz Shah Tughlaq'],
+    associatedCultures: ['Indo-Islamic Calligraphy', 'Sufi Saint Traditions of Mehrauli', 'Classical Dastangoi'],
+    visitingHours: '07:00 AM - 08:00 PM daily',
+    entryFee: '₹40 (Indians), ₹600 (Foreigners)',
+    accessibilityInfo: 'Wheelchair-accessible paved stone ramps throughout the main monument grounds.',
+    nearbySites: ['Mehrauli Archaeological Park', 'Hauz Khas Complex', 'Humayun’s Tomb'],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Qutb_Minar_2011.jpg/1280px-Qutb_Minar_2011.jpg',
+    gallery: [
+      'https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1280&q=80'
+    ],
+    audioStory: 'Soar past five tiers of red sandstone and intricate Quranic script standing steadfast over eight centuries in Delhi.',
+    verified: true,
+    featured: true
+  },
+  {
+    id: 'red-fort-delhi',
+    name: 'Red Fort (Lal Qila)',
+    nativeName: 'लाल क़िला',
+    slug: 'red-fort-delhi',
+    shortDescription: 'The iconic red sandstone citadel of Old Delhi and the ceremonial seat from which India’s Prime Minister addresses the nation.',
+    detailedHistory: 'Built by Mughal Emperor Shah Jahan starting in 1638 when he shifted the imperial capital from Agra to Shahjahanabad. Served as the political heart of India until the 1857 war of independence.',
+    culturalSignificance: 'National symbol of Indian independence and sovereignty, host to the annual Independence Day tricolor flag hoisting.',
+    architecturalSignificance: 'Massive red sandstone fortification with octagonal layout, housing Diwan-i-Khas ("If there is a paradise on earth, it is here"), Diwan-i-Aam, and Nahr-i-Bihisht marble water canals.',
+    historicalPeriod: 'Mughal Empire',
+    constructionPeriod: '1638 – 1648 CE',
+    state: 'Delhi',
+    district: 'Central Delhi',
+    address: 'Netaji Subhash Marg, Lal Qila, Chandni Chowk, New Delhi, Delhi 110006',
+    coordinates: { lat: 28.6562, lng: 77.2410 },
+    siteType: 'MONUMENT',
+    historicalPersonalities: ['Shah Jahan', 'Bahadur Shah Zafar', 'Jawaharlal Nehru'],
+    associatedCultures: ['Chandni Chowk Street Culture', 'Urdu Poetry (Mushaira)', 'Independence Celebrations'],
+    visitingHours: '09:30 AM - 04:30 PM (Closed on Mondays)',
+    entryFee: '₹50 (Indians), ₹950 (Foreigners)',
+    accessibilityInfo: 'Ramps available at Lahori Gate; golf cart mobility support on request.',
+    nearbySites: ['Jama Masjid', 'Chandni Chowk', 'Raj Ghat'],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Lahori_Gate%2C_Red_Fort%2C_Delhi.jpg/1280px-Lahori_Gate%2C_Red_Fort%2C_Delhi.jpg',
+    gallery: [
+      'https://images.unsplash.com/photo-1545129139-1beb780cf337?auto=format&fit=crop&w=1280&q=80'
+    ],
+    audioStory: 'Relive the historic speech of midnight freedom and the echoes of poetry from the Last Mughal poet-king Bahadur Shah Zafar.',
+    verified: true,
+    featured: true
+  },
+  {
+    id: 'humayuns-tomb',
+    name: 'Humayun’s Tomb',
+    nativeName: 'हुमायूँ का मक़बरा',
+    slug: 'humayuns-tomb',
+    shortDescription: 'The magnificent garden tomb that inspired the Taj Mahal, the first substantial example of Mughal architecture in India.',
+    detailedHistory: 'Commissioned in 1565 by Humayun’s chief consort Empress Bega Begum and designed by Persian architect Mirak Mirza Ghiyas. It was the first garden-tomb on the Indian subcontinent and introduced the Charbagh quadripartite garden layout.',
+    culturalSignificance: 'Dormitory of the House of Timur, housing tombs of more than 150 Mughal royals.',
+    architecturalSignificance: 'Double-domed red sandstone and white marble mausoleum set in a geometric Persian Charbagh garden with water channels and reflecting pools.',
+    historicalPeriod: 'Mughal Empire',
+    constructionPeriod: '1565 – 1572 CE',
+    state: 'Delhi',
+    district: 'South Delhi',
+    address: 'Hazrat Nizamuddin Aulia Dargah, Mathura Road, New Delhi, Delhi 110013',
+    coordinates: { lat: 28.5933, lng: 77.2507 },
+    siteType: 'ARCHITECTURE',
+    historicalPersonalities: ['Humayun', 'Empress Bega Begum', 'Mirak Mirza Ghiyas', 'Bahadur Shah Zafar'],
+    associatedCultures: ['Persian Charbagh Garden Art', 'Nizamuddin Sufi Traditions', 'Heritage Restoration'],
+    visitingHours: '06:00 AM - 06:00 PM daily',
+    entryFee: '₹40 (Indians), ₹600 (Foreigners)',
+    accessibilityInfo: 'Extensively upgraded paths with wheelchair ramps and Braille orientation displays by the Aga Khan Trust.',
+    nearbySites: ['Nizamuddin Dargah', 'Sundar Nursery', 'India Gate'],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Humayun%27s_Tomb%2C_Delhi.jpg/1280px-Humayun%27s_Tomb%2C_Delhi.jpg',
+    gallery: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Humayun_Tomb_in_New_Delhi_03-2016.jpg/1280px-Humayun_Tomb_in_New_Delhi_03-2016.jpg'
+    ],
+    audioStory: 'Stroll through the lush quadrilateral waterways of Charbagh where Persian geometric harmony blossomed on Indian soil.',
+    verified: true,
+    featured: false
+  },
+  {
+    id: 'amer-fort-jaipur',
+    name: 'Amer Fort & Palace',
+    nativeName: 'आमेर किला',
+    slug: 'amer-fort-jaipur',
+    shortDescription: 'UNESCO World Heritage hill fort overlooking Maota Lake, famous for its opulent Sheesh Mahal mirror palace.',
+    detailedHistory: 'Built high on the rugged Cheel ka Teela (Hill of Eagles) by Raja Man Singh I in 1592 and expanded by Mirza Raja Jai Singh and Sawai Jai Singh II. Amer was the Rajput capital before the founding of the planned city of Jaipur in 1727.',
+    culturalSignificance: 'Epitome of Rajput royal chivalry, martial defense, and synthesis of Hindu-Rajput and Mughal architectural elegance.',
+    architecturalSignificance: 'Constructed from yellow and pink sandstone and white marble; includes the Diwan-i-Aam, Sukh Niwas with natural water-cooled breezes, and the world-renowned Sheesh Mahal (Hall of Mirrors).',
+    historicalPeriod: 'Rajput Kachwaha Dynasty',
+    constructionPeriod: '1592 – 1727 CE',
+    state: 'Rajasthan',
+    district: 'Jaipur',
+    address: 'Devisinghpura, Amer, Jaipur, Rajasthan 302001',
+    coordinates: { lat: 26.9855, lng: 75.8513 },
+    siteType: 'MONUMENT',
+    historicalPersonalities: ['Raja Man Singh I', 'Mirza Raja Jai Singh', 'Sawai Jai Singh II'],
+    associatedCultures: ['Rajput Folk Dance (Ghoomar)', 'Jaipur Meenakari Craft', 'Shekhawati Royal Folklore'],
+    visitingHours: '08:00 AM - 05:30 PM & 06:30 PM - 09:15 PM (Night Tourism)',
+    entryFee: '₹100 (Indians), ₹550 (Foreigners)',
+    accessibilityInfo: 'Jeep transfers and uphill ramp access available for visitors with reduced mobility.',
+    nearbySites: ['Jaigarh Fort', 'Nahargarh Fort', 'Jal Mahal'],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Jaipur_03-2016_02_Amber_Fort.jpg/1280px-Jaipur_03-2016_02_Amber_Fort.jpg',
+    gallery: [
+      'https://images.unsplash.com/photo-1609137144822-42e1d0cb0d98?auto=format&fit=crop&w=1280&q=80'
+    ],
+    audioStory: 'Step into the Sheesh Mahal where a single candle reflects into thousands of twinkling stars across convex Belgian mirrors.',
+    verified: true,
+    featured: true
+  },
+  {
+    id: 'hawa-mahal',
+    name: 'Hawa Mahal (Palace of Winds)',
+    nativeName: 'हवा महल',
+    slug: 'hawa-mahal',
+    shortDescription: 'Iconic five-story pink and red sandstone palace featuring 953 exquisitely carved jharokhas (latticed windows).',
+    detailedHistory: 'Built in 1799 by Maharaja Sawai Pratap Singh, a devotee of Lord Krishna, who designed the facade in the shape of Krishna’s crown. The latticework allowed royal ladies to observe daily street life and festivals unnoticed from behind the screens.',
+    culturalSignificance: 'Signature symbol of the Pink City of Jaipur and masterpiece of royal Rajasthani privacy architecture.',
+    architecturalSignificance: 'Pyramidal honeycomb architecture designed by Lal Chand Ustad, utilizing the Venturi effect to circulate cooling air through narrow window chambers.',
+    historicalPeriod: 'Rajput Kachwaha Dynasty',
+    constructionPeriod: '1799 CE',
+    state: 'Rajasthan',
+    district: 'Jaipur',
+    address: 'Hawa Mahal Rd, Badi Choupad, J.D.A. Market, Pink City, Jaipur, Rajasthan 302002',
+    coordinates: { lat: 26.9239, lng: 75.8267 },
+    siteType: 'ARCHITECTURE',
+    historicalPersonalities: ['Maharaja Sawai Pratap Singh', 'Lal Chand Ustad'],
+    associatedCultures: ['Jaipur Blue Pottery', 'Bandhani Tie-and-Dye', 'Kachori Street Adda'],
+    visitingHours: '09:00 AM - 05:00 PM daily',
+    entryFee: '₹50 (Indians), ₹200 (Foreigners)',
+    accessibilityInfo: 'Ramped interior passages instead of staircases connect the upper stories.',
+    nearbySites: ['City Palace Jaipur', 'Jantar Mantar', 'Albert Hall Museum'],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/East_facade_Hawa_Mahal_Jaipur_from_ground_level_%28July_2022%29_-_img_01.jpg/1280px-East_facade_Hawa_Mahal_Jaipur_from_ground_level_%28July_2022%29_-_img_01.jpg',
+    gallery: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Hawa_Mahal%2C_Jaipur%2C_India_02.jpg/1280px-Hawa_Mahal%2C_Jaipur%2C_India_02.jpg'
+    ],
+    audioStory: 'Feel the desert breeze funneling through 953 pink sandstone jharokhas overlooking the vibrant bazaars of the Pink City.',
+    verified: true,
+    featured: true
+  },
+  {
+    id: 'mehrangarh-fort',
+    name: 'Mehrangarh Fort',
+    nativeName: 'मेहरानगढ़ दुर्ग',
+    slug: 'mehrangarh-fort',
+    shortDescription: 'One of India’s largest and most formidable hill forts, rising 400 feet above the Blue City of Jodhpur.',
+    detailedHistory: 'Founded around 1459 by Rao Jodha, the founder of Jodhpur, perched atop a perpendicular cliff known as Bhakurcheeria (the mountain of birds). Survived multiple sieges from Jaipur and Mughal forces with cannon ball marks still visible on the iron gates.',
+    culturalSignificance: 'Custodial stronghold of Marwar martial heritage, Rathore royal treasures, and the vibrant Rajasthan International Folk Festival (RIFF).',
+    architecturalSignificance: 'Massive red sandstone perimeter walls rising up to 120 feet high, enclosing intricately carved royal palaces like Moti Mahal, Phool Mahal, and Sheesh Mahal.',
+    historicalPeriod: 'Rathore Rajput Dynasty',
+    constructionPeriod: '1459 – 17th Century CE',
+    state: 'Rajasthan',
+    district: 'Jodhpur',
+    address: 'P.B. No 105, Fort Rd, Jodhpur, Rajasthan 342006',
+    coordinates: { lat: 26.2978, lng: 73.0185 },
+    siteType: 'MONUMENT',
+    historicalPersonalities: ['Rao Jodha', 'Maharaja Jaswant Singh', 'Maharaja Man Singh'],
+    associatedCultures: ['Marwar Manganiyar & Langa Music', 'Jodhpur Blue City Heritage', 'Turbans of Marwar'],
+    visitingHours: '09:00 AM - 05:00 PM daily',
+    entryFee: '₹100 (Indians), ₹600 (Foreigners)',
+    accessibilityInfo: 'Elevator operates from fort base directly to museum palace galleries for seniors and disabled guests.',
+    nearbySites: ['Jaswant Thada', 'Umaid Bhawan Palace', 'Mandore Gardens'],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Mehrangarh_Fort_at_night%2C_Jodhpur%2C_India.jpg/1280px-Mehrangarh_Fort_at_night%2C_Jodhpur%2C_India.jpg',
+    gallery: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Mehrangarh_Fort_Jodhpur_Rajasthan.jpg/1280px-Mehrangarh_Fort_Jodhpur_Rajasthan.jpg'
+    ],
+    audioStory: 'Listen to the soaring melody of the Kamaicha instrument echoing across the blue painted houses from the ramparts of Mehrangarh.',
+    verified: true,
+    featured: true
+  },
+  {
+    id: 'city-palace-udaipur',
+    name: 'City Palace & Lake Pichola',
+    nativeName: 'उदयपुर सिटी पैलेस',
+    slug: 'city-palace-udaipur',
+    shortDescription: 'The crown jewel of Rajasthan’s lakeside palaces, built over 400 years by the Maharanas of Mewar.',
+    detailedHistory: 'Begun in 1559 by Maharana Udai Singh II after relocating his capital from Chittorgarh to the fertile valley surrounded by the Aravalli Mountains. Successive rulers added interconnected palaces, zenanas, courtyards, and hanging gardens without breaking architectural harmony.',
+    culturalSignificance: 'Home to the unbroken lineage of Mewar kings, famed for their fierce resistance against imperial subjugation.',
+    architecturalSignificance: 'Fusion of Rajasthani Rajput and Mughal architectural styles on a granite and marble ridge overlooking Lake Pichola and the Lake Palace (Jag Niwas).',
+    historicalPeriod: 'Mewar Sisodia Dynasty',
+    constructionPeriod: '1559 – 20th Century CE',
+    state: 'Rajasthan',
+    district: 'Udaipur',
+    address: 'Old City, Udaipur, Rajasthan 313001',
+    coordinates: { lat: 24.5764, lng: 73.6835 },
+    siteType: 'MONUMENT',
+    historicalPersonalities: ['Maharana Udai Singh II', 'Maharana Pratap', 'Maharana Karan Singh'],
+    associatedCultures: ['Mewar Miniature Painting', 'Lake Boat Cruises', 'Gauri Tribal Dance'],
+    visitingHours: '09:00 AM - 09:00 PM daily',
+    entryFee: '₹300 (Adults), ₹100 (Children)',
+    accessibilityInfo: 'Ramps and accessible pathways at main courtyards; some historic turret stairs are steep.',
+    nearbySites: ['Jag Mandir', 'Saheliyon-ki-Bari', 'Monsoon Palace (Sajjangarh)'],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Udaipur_City_Palace.jpg/1280px-Udaipur_City_Palace.jpg',
+    gallery: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/City_Palace_complex_at_night_Udaipur.jpg/1280px-City_Palace_complex_at_night_Udaipur.jpg'
+    ],
+    audioStory: 'Gaze out across the shimmering waters of Lake Pichola as the sunset paints the white marble towers in liquid amber.',
+    verified: true,
+    featured: false
+  },
+  {
+    id: 'ajanta-caves',
+    name: 'Ajanta Caves',
+    nativeName: 'अजिंठा लेणी',
+    slug: 'ajanta-caves',
+    shortDescription: 'UNESCO World Heritage 30 rock-cut Buddhist cave monuments containing the finest surviving masterpieces of ancient Indian mural painting.',
+    detailedHistory: 'Carved into the crescent-shaped gorge of the Waghur River in two distinct phases: first during the Satavahana dynasty (2nd century BCE) and second under the Vakataka Emperor Harishena (5th century CE). Hidden beneath dense jungle until accidentally rediscovered by British hunting officer John Smith in 1819.',
+    culturalSignificance: 'Pinnacle of Buddhist spiritual art portraying the Jataka tales, life of Gautama Buddha, and celestial Bodhisattvas.',
+    architecturalSignificance: 'Rock-cut chaitya halls with stupas, monastic viharas, and world-renowned tempera murals like the Padmapani and Vajrapani Bodhisattvas.',
+    historicalPeriod: 'Satavahana & Vakataka Empires',
+    constructionPeriod: '2nd Century BCE – 5th Century CE',
+    state: 'Maharashtra',
+    district: 'Chhatrapati Sambhajinagar',
+    address: 'Ajanta Caves Road, Lenapur, Maharashtra 431117',
+    coordinates: { lat: 20.5519, lng: 75.7033 },
+    siteType: 'ARCHITECTURE',
+    historicalPersonalities: ['Emperor Harishena', 'Varahadeva', 'Monk Buddhabhadra', 'John Smith'],
+    associatedCultures: ['Buddhist Fresco Art', 'Monastic Vihara Life', 'Ancient Silk Trade Routes'],
+    visitingHours: '09:00 AM - 05:00 PM (Closed on Mondays)',
+    entryFee: '₹40 (Indians), ₹600 (Foreigners)',
+    accessibilityInfo: 'Palanquin services (doli) available for elderly visitors; eco-bus connects T-Junction to cave base.',
+    nearbySites: ['Ellora Caves', 'Daulatabad Fort', 'Bibi Ka Maqbara'],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Ajanta_caves_panorama_2010.jpg/1280px-Ajanta_caves_panorama_2010.jpg',
+    gallery: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Ajanta%2C_cave_9%2C_chaitya-griha%2C_with_stupa_%289842167554%29.jpg/1280px-Ajanta%2C_cave_9%2C_chaitya-griha%2C_with_stupa_%289842167554%29.jpg'
+    ],
+    audioStory: 'Step into the cool twilight of Cave 1 before the serene eyes of Bodhisattva Padmapani holding a blue lotus blossom.',
+    verified: true,
+    featured: true
+  },
+  {
+    id: 'ellora-caves-kailasa',
+    name: 'Ellora Caves & Kailasa Temple',
+    nativeName: 'वेरूळ लेणी आणि कैलास मंदिर',
+    slug: 'ellora-caves-kailasa',
+    shortDescription: 'World’s largest monolithic rock excavation, the multi-faith complex of 34 Hindu, Buddhist, and Jain cave temples.',
+    detailedHistory: 'Carved between the 6th and 10th centuries CE under the patronage of the Rashtrakuta and Yadava dynasties. Cave 16 (Kailasa Temple) was carved top-down from a single basalt cliff, removing over 200,000 tonnes of rock with chisel and hammer.',
+    culturalSignificance: 'Testament to religious harmony in ancient India, showcasing coexisting Hindu, Buddhist, and Jain sanctuaries.',
+    architecturalSignificance: 'Monolithic Dravidian temple complex replicating Mount Kailash, complete with life-sized elephant sculptures, multi-level colonnades, and Ramayana friezes.',
+    historicalPeriod: 'Rashtrakuta Dynasty',
+    constructionPeriod: '6th Century – 10th Century CE',
+    state: 'Maharashtra',
+    district: 'Chhatrapati Sambhajinagar',
+    address: 'Ellora Cave Rd, Ellora, Maharashtra 431102',
+    coordinates: { lat: 20.0268, lng: 75.1790 },
+    siteType: 'ARCHITECTURE',
+    historicalPersonalities: ['King Krishna I', 'Dantidurga', 'Amoghavarsha I'],
+    associatedCultures: ['Rashtrakuta Epigraphy', 'Shaivite Iconography', 'Jain Tirthankara Art'],
+    visitingHours: '06:00 AM - 06:00 PM (Closed on Tuesdays)',
+    entryFee: '₹40 (Indians), ₹600 (Foreigners)',
+    accessibilityInfo: 'Flat paved approach to Cave 16 (Kailasa Temple); golf carts run between cave clusters.',
+    nearbySites: ['Ajanta Caves', 'Grishneshwar Jyotirlinga', 'Daulatabad Fort'],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Ellora_Caves%2C_India%2C_Kailasa_Temple.jpg/1280px-Ellora_Caves%2C_India%2C_Kailasa_Temple.jpg',
+    gallery: [
+      'https://images.unsplash.com/photo-1608958435020-e8a7109ba809?auto=format&fit=crop&w=1280&q=80'
+    ],
+    audioStory: 'Marvel at how Rashtrakuta sculptors carved an entire multi-story stone cathedral from the mountain crown downward.',
+    verified: true,
+    featured: true
+  },
+  {
+    id: 'gateway-of-india-mumbai',
+    name: 'Gateway of India & South Mumbai Heritage',
+    nativeName: 'गेटवे ऑफ इंडिया',
+    slug: 'gateway-of-india-mumbai',
+    shortDescription: 'The Indo-Saracenic triumphal arch overlooking Mumbai Harbour and the Arabian Sea, built to commemorate royal visits.',
+    detailedHistory: 'Erected to commemorate the landing of King George V and Queen Mary at Apollo Bunder in December 1911. Completed in 1924, it later served as the ceremonial departure point for the last British troops (First Battalion, Somerset Light Infantry) leaving independent India in 1948.',
+    culturalSignificance: 'The gateway welcoming travelers to India’s financial and cinematic capital; gateway to Elephanta Island.',
+    architecturalSignificance: 'Indo-Saracenic style combining 16th-century Gujarati architectural motifs with European triumphal arch engineering, built of yellow basalt and reinforced concrete.',
+    historicalPeriod: 'Colonial Era',
+    constructionPeriod: '1911 – 1924 CE',
+    state: 'Maharashtra',
+    district: 'Mumbai City',
+    address: 'Apollo Bandar, Colaba, Mumbai, Maharashtra 400001',
+    coordinates: { lat: 18.9220, lng: 72.8347 },
+    siteType: 'COLONIAL_HERITAGE',
+    historicalPersonalities: ['George Wittet', 'Jamsetji Tata', 'King George V'],
+    associatedCultures: ['Mumbai Maritime Lore', 'Colaba Causeway Bazaars', 'Victorian Gothic Heritage'],
+    visitingHours: 'Open 24/7 (Ferry services 09:00 AM - 05:00 PM)',
+    entryFee: 'Free Entry (Ferry to Elephanta: ₹260 return)',
+    accessibilityInfo: 'Level promenade with wide paved access directly from Colaba streets.',
+    nearbySites: ['Taj Mahal Palace Hotel', 'Chhatrapati Shivaji Maharaj Terminus', 'Elephanta Caves'],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Mumbai_03-2016_30_Gateway_of_India.jpg/1280px-Mumbai_03-2016_30_Gateway_of_India.jpg',
+    gallery: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Gateway_of_India_illuminated.jpg/1280px-Gateway_of_India_illuminated.jpg'
+    ],
+    audioStory: 'Listen to the harbor waves lapping against the stone steps where British rule arrived—and formally sailed away.',
+    verified: true,
+    featured: false
+  },
+  {
+    id: 'hampi-monuments',
+    name: 'Group of Monuments at Hampi',
+    nativeName: 'ಹಂಪಿಯ ಸ್ಮಾರಕಗಳ ಸಮೂಹ',
+    slug: 'hampi-monuments',
+    shortDescription: 'UNESCO World Heritage boulder-strewn capital of the Vijayanagara Empire, featuring the iconic Stone Chariot.',
+    detailedHistory: 'Founded in 1336 by brothers Harihara and Bukka, Hampi was the fabulously wealthy capital of the Vijayanagara Empire. At its peak under Emperor Krishnadevaraya in the early 16th century, it was the second-largest medieval city in the world after Beijing, attracting Persian and Portuguese gem merchants.',
+    culturalSignificance: 'Vibrant epicenter of Carnatic music, Kannada literature, and classical Vijayanagara sculpture amidst the mythical Kishkindha landscape.',
+    architecturalSignificance: 'Over 1,600 surviving monuments across 41 sq km, including Virupaksha Temple, musical pillars of Vittala Temple, the Stone Chariot, and the Lotus Mahal.',
+    historicalPeriod: 'Vijayanagara Empire',
+    constructionPeriod: '1336 – 1565 CE',
+    state: 'Karnataka',
+    district: 'Vijayanagara',
+    address: 'Hampi, Vijayanagara District, Karnataka 583239',
+    coordinates: { lat: 15.3350, lng: 76.4600 },
+    siteType: 'MONUMENT',
+    historicalPersonalities: ['Emperor Krishnadevaraya', 'Harihara I', 'Bukka Raya I', 'Purandara Dasa'],
+    associatedCultures: ['Hampi Utsav Festival', 'Carnatic Music Origins', 'Tungabhadra Coracle Boating'],
+    visitingHours: '06:00 AM - 06:00 PM daily',
+    entryFee: '₹40 (Indians), ₹600 (Foreigners)',
+    accessibilityInfo: 'Battery operated vehicles connect parking to the Vittala Temple complex.',
+    nearbySites: ['Virupaksha Temple', 'Matanga Hill', 'Anegundi Village'],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Stone_Chariot%2C_Hampi_2.jpg/1280px-Stone_Chariot%2C_Hampi_2.jpg',
+    gallery: [
+      'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1280&q=80'
+    ],
+    audioStory: 'Tiptoe through the stone musical pillars of the Vittala Temple and watch golden sunlight illuminate the monolithic Garuda chariot.',
+    verified: true,
+    featured: true
+  },
+  {
+    id: 'mysore-palace',
+    name: 'Mysore Palace (Amba Vilas)',
+    nativeName: 'ಮೈಸೂರು ಅರಮನೆ',
+    slug: 'mysore-palace',
+    shortDescription: 'One of the most visited monuments in India, the opulent royal seat of the Wadiyar dynasty illuminated by 100,000 bulbs.',
+    detailedHistory: 'Built between 1897 and 1912 after the original wooden palace was destroyed in a fire during a royal wedding. Designed by British architect Henry Irwin for Maharaja Krishnaraja Wadiyar IV, it was the ceremonial epicenter of the princely state of Mysore.',
+    culturalSignificance: 'Heart of the world-renowned Mysore Dasara festivities featuring the royal jumboo savari elephant procession.',
+    architecturalSignificance: 'Indo-Saracenic masterpiece blending Hindu, Rajput, Muslim, and Gothic styles, featuring stained glass ceilings, Belgian mirrors, and solid silver doors.',
+    historicalPeriod: 'Wadiyar Dynasty',
+    constructionPeriod: '1897 – 1912 CE',
+    state: 'Karnataka',
+    district: 'Mysuru',
+    address: 'Sayyaji Rao Rd, Agrahara, Chamrajpura, Mysuru, Karnataka 570001',
+    coordinates: { lat: 12.3051, lng: 76.6551 },
+    siteType: 'ARCHITECTURE',
+    historicalPersonalities: ['Maharaja Krishnaraja Wadiyar IV', 'Maharani Kempananjammanni', 'Henry Irwin'],
+    associatedCultures: ['Mysore Dasara Festivities', 'Mysore Silk Weaving', 'Mysore Pak Confectionery'],
+    visitingHours: '10:00 AM - 05:30 PM daily (Illumination: Sundays 07:00 PM - 08:00 PM)',
+    entryFee: '₹100 (Indians), ₹400 (Foreigners)',
+    accessibilityInfo: 'Free wheelchairs available at entrance; battery cars available inside courtyard.',
+    nearbySites: ['Chamundi Hills', 'Brindavan Gardens', 'Srirangapatna'],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/5/5a/Illuminated_Mysore_palace_at_night.JPG',
+    gallery: [
+      'https://images.unsplash.com/photo-1600100397608-f010f443a910?auto=format&fit=crop&w=1280&q=80'
+    ],
+    audioStory: 'Experience the breathtaking spectacle when 100,000 incandescent bulbs light up the palace facade against the evening sky.',
+    verified: true,
+    featured: true
+  },
+  {
+    id: 'brihadisvara-temple',
+    name: 'Brihadisvara Temple (Peruvudaiyar Kovil)',
+    nativeName: 'பெருவுடையார் கோயில்',
+    slug: 'brihadisvara-temple',
+    shortDescription: 'UNESCO World Heritage 1,000-year-old granitic masterpiece of Chola emperor Raja Raja Chola I.',
+    detailedHistory: 'Consecrated in 1010 CE by Emperor Raja Raja Chola I to celebrate his empire’s military victories and naval dominance. The temple is one of the Great Living Chola Temples and represents the apex of Tamil temple architecture.',
+    culturalSignificance: 'Cradle of classical Bharatanatyam dance traditions and monumental bronze casting of Nataraja.',
+    architecturalSignificance: 'Built entirely of interlocking granite blocks without binding mortar; crowned by an 81-tonne single granite block cupola perched atop a 66-meter vimana tower.',
+    historicalPeriod: 'Chola Empire',
+    constructionPeriod: '1003 – 1010 CE',
+    state: 'Tamil Nadu',
+    district: 'Thanjavur',
+    address: 'Membalam Rd, Balaganapathy Nagar, Thanjavur, Tamil Nadu 613007',
+    coordinates: { lat: 10.7828, lng: 79.1318 },
+    siteType: 'RELIGIOUS_SITE',
+    historicalPersonalities: ['Raja Raja Chola I', 'Karuvur Devar', 'Kunjara Mallan Raja Raja Perunthachan'],
+    associatedCultures: ['Bharatanatyam Dance Heritage', 'Thanjavur Gold Leaf Paintings', 'Chola Bronze Sculptures'],
+    visitingHours: '06:00 AM - 12:30 PM & 04:00 PM - 08:30 PM daily',
+    entryFee: 'Free Entry',
+    accessibilityInfo: 'Stone ramps lead to the inner courtyard circumambulatory corridor.',
+    nearbySites: ['Thanjavur Maratha Palace', 'Gangaikonda Cholapuram', 'Airavatesvara Temple'],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Brihadisvara_Temple_during_Maha_Shivaratri-WUS03611_%28edit%29.jpg/1280px-Brihadisvara_Temple_during_Maha_Shivaratri-WUS03611_%28edit%29.jpg',
+    gallery: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Tanjore_temple_on_sunset.jpg/1280px-Tanjore_temple_on_sunset.jpg'
+    ],
+    audioStory: 'Stand beneath the 66-meter monolithic granite vimana that casts no midday shadow during the summer solstice.',
+    verified: true,
+    featured: true
+  },
+  {
+    id: 'meenakshi-amman-temple',
+    name: 'Meenakshi Amman Temple',
+    nativeName: 'மீனாட்சி சுந்தரேஸ்வரர் கோயில்',
+    slug: 'meenakshi-amman-temple',
+    shortDescription: 'Ancient sacred temple complex with 14 soaring gopurams encrusted with thousands of colorful mythological figures.',
+    detailedHistory: 'Mentioned in early Tamil Sangam literature over 2,500 years ago; rebuilt in its present sprawling form by King Thirumalai Nayak in the 16th and 17th centuries. Dedicated to Goddess Meenakshi (Parvati) and her consort Sundareswarar (Shiva).',
+    culturalSignificance: 'Spiritual and cultural soul of Madurai, one of the world’s oldest living cities; host of the Chithirai Festival.',
+    architecturalSignificance: 'Dravidian architectural marvel with the Hall of Thousand Pillars (Aayiram Kaal Mandapam) and musical stone pillars producing distinct swaras when tapped.',
+    historicalPeriod: 'Pandya & Nayaka Dynasties',
+    constructionPeriod: 'Ancient roots; expanded 1623 – 1655 CE',
+    state: 'Tamil Nadu',
+    district: 'Madurai',
+    address: 'Madurai Main, Madurai, Tamil Nadu 625001',
+    coordinates: { lat: 9.9195, lng: 78.1193 },
+    siteType: 'RELIGIOUS_SITE',
+    historicalPersonalities: ['Thirumalai Nayak', 'Queen Mangammal', 'Ariyanatha Mudaliar'],
+    associatedCultures: ['Chithirai Thiruvizha', 'Tamil Sangam Literature', 'Madurai Jasmine (Malli) Flora'],
+    visitingHours: '05:00 AM - 12:30 PM & 04:00 PM - 10:00 PM daily',
+    entryFee: 'Free Entry (Special darshan passes available at counter)',
+    accessibilityInfo: 'Wheelchairs available at the East Gopuram entrance with designated assistance personnel.',
+    nearbySites: ['Thirumalai Nayakkar Mahal', 'Koodal Azhagar Temple', 'Gandhi Memorial Museum'],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Gopuram_Madurai.jpg/1280px-Gopuram_Madurai.jpg',
+    gallery: [
+      'https://images.unsplash.com/photo-1621682372775-533449e550ed?auto=format&fit=crop&w=1280&q=80'
+    ],
+    audioStory: 'Immerse your senses in the fragrance of fresh jasmine and nadaswaram melodies inside the Hall of Thousand Pillars.',
+    verified: true,
+    featured: true
+  },
+  {
+    id: 'mahabalipuram-monuments',
+    name: 'Group of Monuments at Mahabalipuram',
+    nativeName: 'மாமல்லபுரம் சிற்பங்கள்',
+    slug: 'mahabalipuram-monuments',
+    shortDescription: '7th-century coastal rock sanctuaries including the famous Shore Temple and the colossal Descent of the Ganges relief.',
+    detailedHistory: 'Carved by the Pallava kings during the 7th and 8th centuries CE in the maritime port city of Mamallapuram, which traded across the Indian Ocean with Southeast Asia, China, and the Roman world.',
+    culturalSignificance: 'Benchmark of early Dravidian temple architecture that influenced temple design across South India and Southeast Asia.',
+    architecturalSignificance: 'Includes the monolithic monolithic Pancha Rathas (chariots), cave sanctuaries (Mandapas), open-air rock bas-reliefs, and the structural granite Shore Temple against Bay of Bengal waves.',
+    historicalPeriod: 'Pallava Dynasty',
+    constructionPeriod: '630 – 728 CE',
+    state: 'Tamil Nadu',
+    district: 'Chengalpattu',
+    address: 'Fisherman Colony, Mahabalipuram, Tamil Nadu 603104',
+    coordinates: { lat: 12.6172, lng: 80.1927 },
+    siteType: 'MONUMENT',
+    historicalPersonalities: ['Mahendravarman I', 'Narasimhavarman I (Mamalla)', 'Rajasimha'],
+    associatedCultures: ['Pallava Stone Carving Guilds', 'Mamallapuram Dance Festival', 'Maritime Coastal Lore'],
+    visitingHours: '06:00 AM - 06:00 PM daily',
+    entryFee: '₹40 (Indians), ₹600 (Foreigners)',
+    accessibilityInfo: 'Smooth stone pathways around the Shore Temple and Arjuna’s Penance.',
+    nearbySites: ['Shore Temple', 'Krishna’s Butter Ball', 'Pancha Rathas'],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Shore_Temple_01.jpg/1280px-Shore_Temple_01.jpg',
+    gallery: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/CinqRathaGeneral_%287%29.jpg/1280px-CinqRathaGeneral_%287%29.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Krishna_Butterball_Mahabalipuram_Sep22_A7C_02583.jpg/1280px-Krishna_Butterball_Mahabalipuram_Sep22_A7C_02583.jpg'
+    ],
+    audioStory: 'Feel the ocean spray upon the ancient granite lions of the Shore Temple standing guardian over 1,300 years of seafaring history.',
+    verified: true,
+    featured: false
+  },
+  {
+    id: 'konark-sun-temple',
+    name: 'Konark Sun Temple',
+    nativeName: 'କୋଣାର୍କ ସୂର୍ଯ୍ୟ ମନ୍ଦିର',
+    slug: 'konark-sun-temple',
+    shortDescription: 'Colossal 13th-century stone chariot of the Sun God Surya with 24 intricately sculpted wheels, a UNESCO World Heritage Site.',
+    detailedHistory: 'Conceived and built around 1250 CE by King Narasimhadeva I of the Eastern Ganga Dynasty. European mariners called it the "Black Pagoda" because its dark magnetic stone tower served as a prominent maritime navigation landmark in the Bay of Bengal.',
+    culturalSignificance: 'Apex of classical Odissi dance and temple sculpting traditions, hosting the annual Konark Dance Festival.',
+    architecturalSignificance: 'Designed as a 24-wheeled chariot pulled by seven galloping stone horses representing days of the week; each 9.9-foot wheel functions as a precise sundial.',
+    historicalPeriod: 'Eastern Ganga Dynasty',
+    constructionPeriod: '1238 – 1264 CE',
+    state: 'Odisha',
+    district: 'Puri',
+    address: 'Konark, Puri District, Odisha 752111',
+    coordinates: { lat: 19.8876, lng: 86.0945 },
+    siteType: 'ARCHITECTURE',
+    historicalPersonalities: ['King Narasimhadeva I', 'Bisu Maharana', 'Dharmapada'],
+    associatedCultures: ['Konark Dance Festival', 'Odissi Classical Dance', 'Pattachitra Scroll Painting'],
+    visitingHours: '06:00 AM - 08:00 PM daily (Light & Sound show at night)',
+    entryFee: '₹40 (Indians), ₹600 (Foreigners)',
+    accessibilityInfo: 'Paved garden paths lead directly around the Natya Mandap and chariot wheels.',
+    nearbySites: ['Chandrabhaga Beach', 'Jagannath Temple Puri', 'Dhauli Shanti Stupa'],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Stone_wheel_engraved_in_the_13th_century_built_Konark_Sun_Temple_in_Orissa%2C_India.jpg/1280px-Stone_wheel_engraved_in_the_13th_century_built_Konark_Sun_Temple_in_Orissa%2C_India.jpg',
+    gallery: [
+      'https://images.unsplash.com/photo-1596402184320-417e7178b2cd?auto=format&fit=crop&w=1280&q=80'
+    ],
+    audioStory: 'Read the time of day down to the minute using the shadow cast upon the spokes of the monumental Konark wheel.',
+    verified: true,
+    featured: true
+  },
+  {
+    id: 'jagannath-temple-puri',
+    name: 'Shree Jagannath Temple Puri',
+    nativeName: 'ଶ୍ରୀ ଜଗନ୍ନାଥ ମନ୍ଦିର ପୁରୀ',
+    slug: 'jagannath-temple-puri',
+    shortDescription: 'One of the sacred Char Dham pilgrimage sites, home to Lord Jagannath, Balabhadra, Subhadra, and the mega Ratha Yatra festival.',
+    detailedHistory: 'Reconstructed in the 12th century CE by King Anantavarman Chodaganga of the Eastern Ganga dynasty over ancient temple foundations. Famed for its monumental community kitchen serving Mahaprasad to tens of thousands daily.',
+    culturalSignificance: 'Spiritual epicenter of Odia identity and devotion; the annual chariot festival (Ratha Yatra) inspired the English word "Juggernaut".',
+    architecturalSignificance: 'Towering Kalinga-style Rekha Deula sanctuary rising 214 feet, crowned by the sacred Neela Chakra and the Patita Pavana flag that flies counter to wind direction.',
+    historicalPeriod: 'Eastern Ganga Dynasty',
+    constructionPeriod: '1112 – 1174 CE',
+    state: 'Odisha',
+    district: 'Puri',
+    address: 'Grand Road, Puri, Odisha 752001',
+    coordinates: { lat: 19.8049, lng: 85.8179 },
+    siteType: 'RELIGIOUS_SITE',
+    historicalPersonalities: ['King Indradyumna', 'Anantavarman Chodaganga', 'Sri Chaitanya Mahaprabhu'],
+    associatedCultures: ['Puri Ratha Yatra', 'Ananda Bazar Mahaprasad', 'Gotipua Folk Dance'],
+    visitingHours: '05:30 AM - 10:00 PM daily',
+    entryFee: 'Free Entry (Traditional dress regulations apply)',
+    accessibilityInfo: 'Battery carts available along the Grand Road (Bada Danda) leading to the Singhadwara lion gate.',
+    nearbySites: ['Konark Sun Temple', 'Golden Beach Puri', 'Raghurajpur Heritage Craft Village'],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Jagannath_Temple%2C_Puri.jpg/1280px-Jagannath_Temple%2C_Puri.jpg',
+    gallery: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Puri_Rath_Yatra_chariots.jpg/1280px-Puri_Rath_Yatra_chariots.jpg'
+    ],
+    audioStory: 'Listen to the roar of millions pulling the colossal wooden chariots down the Grand Road during the sacred summer Ratha Yatra.',
+    verified: true,
+    featured: true
+  },
+  {
+    id: 'khajuraho-monuments',
+    name: 'Khajuraho Group of Monuments',
+    nativeName: 'खजुराहो स्मारक समूह',
+    slug: 'khajuraho-monuments',
+    shortDescription: 'UNESCO World Heritage sandstone temple complex celebrating ancient artistic celebrations of human emotion, divinity, and life.',
+    detailedHistory: 'Constructed between 950 and 1050 CE by the Rajput rulers of the Chandela dynasty. Of the original 85 temples spread across 20 sq km, 25 survive today across western, eastern, and southern clusters.',
+    culturalSignificance: 'Celebration of the four Purusharthas (Dharma, Artha, Kama, Moksha); home of the annual Khajuraho Dance Festival.',
+    architecturalSignificance: 'Nagara-style architectural pinnacle featuring fractal shikharas that mimic the peaks of Mount Kailash, covered in high-relief sculptural friezes.',
+    historicalPeriod: 'Chandela Dynasty',
+    constructionPeriod: '950 – 1050 CE',
+    state: 'Madhya Pradesh',
+    district: 'Chhatarpur',
+    address: 'Sevagram, Khajuraho, Madhya Pradesh 471606',
+    coordinates: { lat: 24.8318, lng: 79.9199 },
+    siteType: 'ARCHITECTURE',
+    historicalPersonalities: ['Yashovarman', 'King Dhanga', 'King Vidyadhara'],
+    associatedCultures: ['Khajuraho Dance Festival', 'Bundelkhandi Folk Traditions', 'Medieval Tantric Art'],
+    visitingHours: '06:00 AM - 06:00 PM daily',
+    entryFee: '₹40 (Indians), ₹600 (Foreigners)',
+    accessibilityInfo: 'Paved walkways and green lawns connect all temples in the Western Group.',
+    nearbySites: ['Kandariya Mahadeva Temple', 'Panna National Park', 'Raneh Falls'],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Kandariya_Mahadeva_Temple%2C_Khajuraho%2C_Madhya_Pradesh%2C_India_002.jpg/1280px-Kandariya_Mahadeva_Temple%2C_Khajuraho%2C_Madhya_Pradesh%2C_India_002.jpg',
+    gallery: [
+      'https://images.unsplash.com/photo-1590766940554-634a7ed41450?auto=format&fit=crop&w=1280&q=80'
+    ],
+    audioStory: 'Discover the soaring shikhara of Kandariya Mahadeva where every stone tells a story of celestial joy and divine ecstasy.',
+    verified: true,
+    featured: true
+  },
+  {
+    id: 'sanchi-stupa',
+    name: 'Great Stupa at Sanchi',
+    nativeName: 'सांची का महान स्तूप',
+    slug: 'sanchi-stupa',
+    shortDescription: 'The oldest stone structure in India and a masterpiece of Buddhist art, commissioned by Emperor Ashoka in the 3rd century BCE.',
+    detailedHistory: 'Commissioned by Mauryan Emperor Ashoka the Great in the 3rd century BCE over the holy relics of the Buddha. Expanded during the Shunga and Satavahana periods with the addition of the four richly sculpted ceremonial gateways (Toranas).',
+    culturalSignificance: 'Cradle of Buddhist stone iconography depicting the life of the Buddha, Jataka tales, and early Buddhist monasticism.',
+    architecturalSignificance: 'Hemispherical brick and stone dome crowned by the chhatri umbrella representing the wheel of law (Dharma), surrounded by the four ornate directional torana gateways.',
+    historicalPeriod: 'Maurya Empire to Satavahana',
+    constructionPeriod: '3rd Century BCE – 1st Century CE',
+    state: 'Madhya Pradesh',
+    district: 'Raisen',
+    address: 'Sanchi, Raisen District, Madhya Pradesh 464661',
+    coordinates: { lat: 23.4795, lng: 77.7397 },
+    siteType: 'RELIGIOUS_SITE',
+    historicalPersonalities: ['Emperor Ashoka', 'Queen Devi of Vidisha', 'Sir John Marshall'],
+    associatedCultures: ['Ashokan Edicts & Epigraphy', 'Buddhist Monastic Pilgrimage', 'Shunga Relief Sculpture'],
+    visitingHours: '06:30 AM - 06:30 PM daily',
+    entryFee: '₹40 (Indians), ₹600 (Foreigners)',
+    accessibilityInfo: 'Stone pathways around Stupa 1 with ramped circumambulatory terraces.',
+    nearbySites: ['Udayagiri Caves', 'Vidisha Ruins', 'Heliodorus Pillar'],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/The_Great_Stupa_at_Sanchi_01.jpg/1280px-The_Great_Stupa_at_Sanchi_01.jpg',
+    gallery: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Sanchi_Stupa_Eastern_Torana.jpg/1280px-Sanchi_Stupa_Eastern_Torana.jpg'
+    ],
+    audioStory: 'Contemplate in the tranquil hilltop breeze where Emperor Ashoka enshrined universal peace and compassion in stone.',
+    verified: true,
+    featured: false
+  },
+  {
+    id: 'mahabodhi-temple-bodhgaya',
+    name: 'Mahabodhi Temple Complex',
+    nativeName: 'महाबोधि मंदिर',
+    slug: 'mahabodhi-temple-bodhgaya',
+    shortDescription: 'UNESCO World Heritage holy sanctuary marking the exact location where Gautama Buddha attained supreme Enlightenment.',
+    detailedHistory: 'First built by Emperor Ashoka in approximately 260 BCE around the sacred Bodhi Tree (Ficus religiosa). The current grand pyramidal brick temple dates from the 5th-6th century Gupta period, restored over centuries by Burmese and Sri Lankan kings.',
+    culturalSignificance: 'The holiest and most revered pilgrimage destination for millions of Buddhists across the globe.',
+    architecturalSignificance: 'One of the earliest brick structures surviving in eastern India, rising 55 meters with classic Gupta-era motifs and the stone Vajrasana (Diamond Throne).',
+    historicalPeriod: 'Maurya to Gupta Empire',
+    constructionPeriod: '3rd Century BCE – 6th Century CE',
+    state: 'Bihar',
+    district: 'Gaya',
+    address: 'Bodh Gaya, Gaya District, Bihar 824231',
+    coordinates: { lat: 24.6960, lng: 84.9913 },
+    siteType: 'RELIGIOUS_SITE',
+    historicalPersonalities: ['Gautama Buddha', 'Emperor Ashoka', 'Faxian', 'Xuanzang'],
+    associatedCultures: ['Vipassana Meditation', 'International Buddhist Monasteries', 'Maha Bodhi Chanting'],
+    visitingHours: '05:00 AM - 09:00 PM daily',
+    entryFee: 'Free Entry (Mobile phones/cameras must be deposited at security counter)',
+    accessibilityInfo: 'Full ramp access into the inner courtyard surrounding the sacred Bodhi Tree.',
+    nearbySites: ['Great Buddha Statue', 'Dungeshwari Cave Temples', 'Nalanda Mahavihara'],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Mahabodhi_Temple%2C_Bodh_Gaya%2C_Bihar%2C_India.jpg/1280px-Mahabodhi_Temple%2C_Bodh_Gaya%2C_Bihar%2C_India.jpg',
+    gallery: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Mahabodhi_Temple_in_Bodh_Gaya_01.jpg/1280px-Mahabodhi_Temple_in_Bodh_Gaya_01.jpg'
+    ],
+    audioStory: 'Listen to monks from across Tibet, Thailand, Japan, and Sri Lanka chanting sutras in unison under the sacred Bodhi Tree.',
+    verified: true,
+    featured: true
+  },
+  {
+    id: 'nalanda-mahavihara',
+    name: 'Nalanda Mahavihara Ruins',
+    nativeName: 'नालंदा महाविहार',
+    slug: 'nalanda-mahavihara',
+    shortDescription: 'The ancient residential university that was the intellectual center of the Asian continent for over 700 years.',
+    detailedHistory: 'Founded in the 5th century CE under Gupta Emperor Kumaragupta I, Nalanda housed over 10,000 students and 2,000 international scholars from China, Korea, Japan, and Tibet. Its legendary multi-story library Dharma Gunj held hundreds of thousands of handwritten manuscripts.',
+    culturalSignificance: 'The birth of universal higher education, logic, mathematics, and Buddhist philosophical systems.',
+    architecturalSignificance: 'Red brick monastic university complex covering 12 hectares, with 11 dormitories (viharas), classroom courtyards, and Temple Site 3 stupa terraces.',
+    historicalPeriod: 'Gupta to Pala Empires',
+    constructionPeriod: '5th Century – 12th Century CE',
+    state: 'Bihar',
+    district: 'Nalanda',
+    address: 'Bada Gaon, Nalanda District, Bihar 803111',
+    coordinates: { lat: 25.1357, lng: 85.4449 },
+    siteType: 'MONUMENT',
+    historicalPersonalities: ['Kumaragupta I', 'Aryabhata', 'Xuanzang', 'Dharmapala', 'Shantarakshita'],
+    associatedCultures: ['Ancient Buddhist Philosophy', 'Classical Sanskrit Logic', 'Pala Bronze Casting'],
+    visitingHours: '09:00 AM - 05:00 PM daily',
+    entryFee: '₹40 (Indians), ₹600 (Foreigners)',
+    accessibilityInfo: 'Paved brick paths throughout the excavated monastery blocks.',
+    nearbySites: ['Xuanzang Memorial Hall', 'Rajgir Cyclopean Wall', 'Vishwa Shanti Stupa'],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Nalanda_Temple_No_3.jpg/1280px-Nalanda_Temple_No_3.jpg',
+    gallery: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Nalanda_University_ruins.jpg/1280px-Nalanda_University_ruins.jpg'
+    ],
+    audioStory: 'Walk the historic lecture halls where great astronomer Aryabhata and Chinese traveler Xuanzang deciphered the secrets of the cosmos.',
+    verified: true,
+    featured: false
+  },
+  {
+    id: 'golden-temple-amritsar',
+    name: 'Harmandir Sahib (Golden Temple)',
+    nativeName: 'ਹਰਿਮੰਦਰ ਸਾਹਿਬ',
+    slug: 'golden-temple-amritsar',
+    shortDescription: 'The holiest shrine of Sikhism, an ethereal gold-gilded sanctuary floating in the sacred Amrit Sarovar lake.',
+    detailedHistory: 'Founded in 1577 by the fourth Sikh Guru, Guru Ram Das, who excavated the holy tank. The fifth Guru, Guru Arjan Dev, designed the temple with four entrances symbolizing openness to all castes and religions, and installed the Adi Granth in 1604. Gilded with pure gold foil in 1830 by Maharaja Ranjit Singh.',
+    culturalSignificance: 'Living spiritual core of Sikhism practicing universal equality through the world’s largest community langar serving over 100,000 free hot meals daily.',
+    architecturalSignificance: 'Harmonious blend of Hindu and Islamic architecture, two-story marble structure topped with a 750 kg gold-gilded dome surrounded by the white marble Parikrama.',
+    historicalPeriod: 'Sikh Heritage',
+    constructionPeriod: '1581 – 1604 CE (Gold gilding 1830 CE)',
+    state: 'Punjab',
+    district: 'Amritsar',
+    address: 'Golden Temple Rd, Atta Mandi, Katra Ahluwalia, Amritsar, Punjab 143006',
+    coordinates: { lat: 31.6200, lng: 74.8765 },
+    siteType: 'RELIGIOUS_SITE',
+    historicalPersonalities: ['Guru Ram Das', 'Guru Arjan Dev', 'Maharaja Ranjit Singh', 'Bhagat Puran Singh'],
+    associatedCultures: ['Sikh Shabad Kirtan', 'Guru Ka Langar Seva', 'Punjabi Heritage Traditions'],
+    visitingHours: 'Open 24/7, 365 days a year',
+    entryFee: 'Free Entry (Head coverings mandatory; provided at entrance)',
+    accessibilityInfo: 'Wheelchairs available with dedicated volunteers assisting through the marble causeway.',
+    nearbySites: ['Jallianwala Bagh', 'Partition Museum', 'Wagah Border'],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Harmandir_Sahib%2C_Amritsar%2C_India.jpg/1280px-Harmandir_Sahib%2C_Amritsar%2C_India.jpg',
+    gallery: [
+      'https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1280&q=80'
+    ],
+    audioStory: 'The serene strains of classical ragas and Shabad Kirtan echoing over the tranquil waters of the nectar pool at midnight.',
+    verified: true,
+    featured: true
+  },
+  {
+    id: 'rani-ki-vav-patan',
+    name: 'Rani ki Vav (Queen’s Stepwell)',
+    nativeName: 'રાણકી વાવ',
+    slug: 'rani-ki-vav-patan',
+    shortDescription: 'UNESCO World Heritage seven-tiered inverted subterranean temple stepwell adorned with over 800 sculptures.',
+    detailedHistory: 'Built in 1063 CE by Queen Udayamati as a memorial to her deceased husband, King Bhima I of the Chaulukya (Solanki) dynasty. Silted over by the Saraswati River for centuries, it was excavated in pristine condition by the Archaeological Survey of India in the 1980s.',
+    culturalSignificance: 'Masterpiece of subterranean water management honoring the sacred value of water in arid Gujarat.',
+    architecturalSignificance: 'Maru-Gurjara style inverted temple designed with seven levels of stairs and sculptural panels depicting the ten avatars of Vishnu (Dashavatara), apsaras, and geometric filigree.',
+    historicalPeriod: 'Chaulukya (Solanki) Dynasty',
+    constructionPeriod: '1063 – 1083 CE',
+    state: 'Gujarat',
+    district: 'Patan',
+    address: 'Mohan Nagar Society, Patan, Gujarat 384265',
+    coordinates: { lat: 23.8589, lng: 72.1017 },
+    siteType: 'ARCHITECTURE',
+    historicalPersonalities: ['Queen Udayamati', 'King Bhima I'],
+    associatedCultures: ['Patan Patola Double-Ikat Weaving', 'Stepwell Engineering Lore', 'Gujarati Folk Arts'],
+    visitingHours: '08:00 AM - 06:00 PM daily',
+    entryFee: '₹40 (Indians), ₹600 (Foreigners)',
+    accessibilityInfo: 'Surrounding landscaped gardens are wheelchair accessible; stepwell descent has stone steps.',
+    nearbySites: ['Modhera Sun Temple', 'Patan Patola Heritage Museum', 'Sahasralinga Talav'],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Rani_ki_vav_07.jpg/1280px-Rani_ki_vav_07.jpg',
+    gallery: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Rani_ki_vav%2C_Patan.jpg/1280px-Rani_ki_vav%2C_Patan.jpg'
+    ],
+    audioStory: 'Descend 64 meters into cool earth where seven terraced galleries of sculpted deities honor the sanctity of groundwater.',
+    verified: true,
+    featured: false
+  },
+  {
+    id: 'kaziranga-national-park',
+    name: 'Kaziranga National Park',
+    nativeName: 'কাজিৰঙা ৰাষ্ট্ৰীয় উদ্যান',
+    slug: 'kaziranga-national-park',
+    shortDescription: 'UNESCO World Heritage biodiversity haven sheltering two-thirds of the world’s great one-horned rhinoceroses.',
+    detailedHistory: 'Established as a reserved forest in 1905 through the initiative of Mary Curzon, Baroness Curzon of Kedleston. Nestled on the floodplains of the mighty Brahmaputra River, it was designated a UNESCO World Heritage Site in 1985.',
+    culturalSignificance: 'Celebrated in Assamese folk literature and songs (Bhupen Hazarika), symbolizing successful indigenous and forest ranger conservation.',
+    architecturalSignificance: 'Natural grassland and elephant-grass wetlands architecture fed by the braided Brahmaputra river delta.',
+    historicalPeriod: 'Natural Heritage & Conservation',
+    constructionPeriod: 'Protected reserve since 1905; UNESCO 1985',
+    state: 'Assam',
+    district: 'Golaghat',
+    address: 'Bokakhat, Golaghat / Nagaon Districts, Assam 785609',
+    coordinates: { lat: 26.5775, lng: 93.1711 },
+    siteType: 'NATURAL_HERITAGE',
+    historicalPersonalities: ['Mary Curzon', 'Lord Curzon', 'Dr. Bhupen Hazarika'],
+    associatedCultures: ['Assamese Bihu Festival', 'Mishing Tribal Traditions', 'Assam Tea Garden Lore'],
+    visitingHours: 'Jeep Safari: 07:30 AM - 03:30 PM (November to April season)',
+    entryFee: '₹100 (Indians) + Jeep / Elephant safari tariff',
+    accessibilityInfo: 'Designated safari jeeps accommodate elderly visitors; watchtower pathways available.',
+    nearbySites: ['Kamakhya Temple', 'Majuli River Island', 'Kakochang Waterfalls'],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Indian_rhinoceros_in_Kaziranga_National_Park_March_2025_by_Tisha_Mukherjee_06.jpg/1280px-Indian_rhinoceros_in_Kaziranga_National_Park_March_2025_by_Tisha_Mukherjee_06.jpg',
+    gallery: [
+      'https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=1280&q=80'
+    ],
+    audioStory: 'Witness the morning mist parting over tall elephant grass as a majestic one-horned rhino grazes beside wild water buffalo.',
+    verified: true,
+    featured: true
+  },
+  {
+    id: 'charminar-golconda',
+    name: 'Charminar & Golconda Fort',
+    nativeName: 'چار مینار اور قلعہ گولکنڈہ',
+    slug: 'charminar-golconda',
+    shortDescription: 'The four-minareted landmark of Hyderabad and the acoustic granite fortress of diamond kings.',
+    detailedHistory: 'Golconda Fort was built in the 13th century by the Kakatiyas and expanded by the Qutb Shahi dynasty. In 1591, Muhammad Quli Qutb Shah built the Charminar to mark the end of a deadly plague epidemic and found the new city of Hyderabad.',
+    culturalSignificance: 'Cradle of Dakhni culture, Hyderabadi pearls, and the legendary Golconda diamond trade that produced the Koh-i-Noor and Hope diamonds.',
+    architecturalSignificance: 'Square Indo-Islamic granite structure with four grand arches facing cardinal directions, crowned by four 48.7-meter minarets, matched by the ingenious acoustic engineering of Golconda.',
+    historicalPeriod: 'Qutb Shahi Dynasty',
+    constructionPeriod: '1518 – 1591 CE',
+    state: 'Telangana',
+    district: 'Hyderabad',
+    address: 'Charminar Rd, Char Kaman, Ghansi Bazaar, Hyderabad, Telangana 500002',
+    coordinates: { lat: 17.3616, lng: 78.4747 },
+    siteType: 'MONUMENT',
+    historicalPersonalities: ['Muhammad Quli Qutb Shah', 'Sultan Quli Qutb-ul-Mulk', 'Abul Hasan Qutb Shah'],
+    associatedCultures: ['Hyderabadi Dum Biryani Tradition', 'Laad Bazaar Lacquer Bangles', 'Dakhni Urdu Poetry'],
+    visitingHours: '09:00 AM - 05:30 PM daily',
+    entryFee: '₹25 (Indians), ₹300 (Foreigners)',
+    accessibilityInfo: 'Pedestrianized heritage zone around Charminar plaza; golf cart transfers available.',
+    nearbySites: ['Mecca Masjid', 'Chowmahalla Palace', 'Salar Jung Museum'],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Charminar_Hyderabad_1.jpg/1280px-Charminar_Hyderabad_1.jpg',
+    gallery: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Golconda_Fort_no_1.jpg/1280px-Golconda_Fort_no_1.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Bala_Hissar_Darwaza_in_Golconda_Fort.jpg/1280px-Bala_Hissar_Darwaza_in_Golconda_Fort.jpg'
+    ],
+    audioStory: 'Clap your hands beneath the Fateh Darwaza dome at Golconda and hear the signal echo clearly at the hilltop Bala Hissar a kilometer away.',
+    verified: true,
+    featured: true
+  },
+  {
+    id: 'fort-kochi-mattancherry',
+    name: 'Mattancherry Palace & Fort Kochi',
+    nativeName: 'ഫോർട്ട് കൊച്ചി & മട്ടാഞ്ചേരി കൊട്ടാരം',
+    slug: 'fort-kochi-mattancherry',
+    shortDescription: 'Historic maritime spice trading port featuring Portuguese-Dutch palaces, Chinese fishing nets, and Jewish heritage.',
+    detailedHistory: 'Mattancherry Palace was built by the Portuguese in 1555 as a gift to Raja Veera Kerala Varma of Kochi, and later renovated by the Dutch in 1663. Fort Kochi was the first European colonial settlement in India, with Vasco da Gama originally buried in St. Francis Church.',
+    culturalSignificance: 'Melting pot of spice traders, Syrian Christians, Cochin Jews, and Portuguese maritime history; host of Kochi-Muziris Biennale.',
+    architecturalSignificance: 'Traditional Kerala Nalukettu courtyard architecture fused with European colonial arches, housing some of India’s finest Ramayana murals and cantilevered Chinese fishing nets.',
+    historicalPeriod: 'Colonial Era',
+    constructionPeriod: '1555 – 1663 CE',
+    state: 'Kerala',
+    district: 'Ernakulam',
+    address: 'Mattancherry, Kochi, Kerala 682002',
+    coordinates: { lat: 9.9583, lng: 76.2592 },
+    siteType: 'COLONIAL_HERITAGE',
+    historicalPersonalities: ['Raja Veera Kerala Varma', 'Vasco da Gama', 'Kunjali Marakkar'],
+    associatedCultures: ['Kochi-Muziris Biennale', 'Kathakali Dance Drama', 'Malabar Spice Route Trade'],
+    visitingHours: '09:45 AM - 01:00 PM & 02:00 PM - 04:45 PM (Closed on Fridays)',
+    entryFee: '₹5 (Indians), ₹25 (Foreigners)',
+    accessibilityInfo: 'Level heritage walking streets across Jew Town and Fort Kochi beach.',
+    nearbySites: ['Paradesi Synagogue', 'Santa Cruz Cathedral Basilica', 'St. Francis Church'],
+    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Chinese_fishingnet_kochi.jpg/1280px-Chinese_fishingnet_kochi.jpg',
+    gallery: [
+      'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1280&q=80'
+    ],
+    audioStory: 'Listen to the wooden creak of cantilevered Chinese fishing nets dipping into the Arabian Sea waters against golden sunset skies.',
+    verified: true,
+    featured: false
+  }
+];
+
+export const CANONICAL_HERITAGE_SITES: HeritageSite[] = [
+  ...WEST_BENGAL_HERITAGE_SITES.map(site => ({ ...site, state: 'West Bengal' })),
+  ...PAN_INDIA_HERITAGE_SITES
 ];

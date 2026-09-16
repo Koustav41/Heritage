@@ -72,5 +72,42 @@ export const CANONICAL_QUIZ_QUESTIONS: QuizQuestion[] = [
     explanation: 'Sholapith is extracted from the dried stem of the herbaceous aquatic marsh plant Shola, carved into featherweight white adornments.',
     category: 'Crafts',
     points: 20
+  },
+  {
+    id: 'quiz-9',
+    question: 'Which 13th-century UNESCO World Heritage monument in Odisha is sculpted as a colossal 24-wheeled chariot of the Sun God?',
+    options: ['Konark Sun Temple', 'Modhera Sun Temple', 'Brihadisvara Temple', 'Hampi Stone Chariot'],
+    correctAnswerIndex: 0,
+    explanation: 'The Sun Temple of Konark was commissioned in 1250 CE by King Narasimhadeva I as a gigantic solar chariot with 24 carved stone wheels.',
+    category: 'Architecture',
+    points: 20
+  },
+  {
+    id: 'quiz-10',
+    question: 'In the ruins of the Vijayanagara Empire at Hampi, which mythical vehicle shrine carved from granite stands opposite the Vittala Temple?',
+    options: ['Garuda Stone Chariot', 'Nandi Monolith', 'Surya Golden Chariot', 'Airavata Elephant Throne'],
+    correctAnswerIndex: 0,
+    explanation: 'The iconic Stone Chariot at Hampi is a 16th-century shrine dedicated to Garuda, the vahana (mount) of Lord Vishnu.',
+    category: 'Monuments',
+    points: 20
+  },
+  {
+    id: 'quiz-11',
+    question: 'Which great Chola emperor commissioned the monumental granite Brihadisvara Temple at Thanjavur in 1010 CE?',
+    options: ['Rajaraja Chola I', 'Rajendra Chola I', 'Kulothunga Chola I', 'Karikala Chola'],
+    correctAnswerIndex: 0,
+    explanation: 'Rajaraja Chola I commissioned the Peruvudaiyar Kovil (Brihadisvara Temple) in 1010 CE, crowned by an 80-tonne monolithic granite kumbam.',
+    category: 'Dynastic History',
+    points: 20
+  },
+  {
+    id: 'quiz-12',
+    question: 'From which historic quarry in Rajasthan was the pristine translucent white marble of the Taj Mahal transported to Agra?',
+    options: ['Makrana', 'Kishangarh', 'Banswara', 'Udaipur'],
+    correctAnswerIndex: 0,
+    explanation: 'The Taj Mahal was constructed using pure white Makrana marble transported across 300 km from the Makrana quarries in Rajasthan.',
+    category: 'Architectural Metallurgy',
+    points: 20
   }
 ];
+

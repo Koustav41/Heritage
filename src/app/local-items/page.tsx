@@ -1,27 +1,37 @@
 'use client';
 
-import React, { useState } from 'react';
-import { ShoppingBag, Star, ShieldCheck, Sparkles, MapPin, Tag } from 'lucide-react';
+import React, { useState, useMemo } from 'react';
+import { ShoppingBag, Star, ShieldCheck, Sparkles, MapPin, Tag, Compass } from 'lucide-react';
 import { CANONICAL_PRODUCTS } from '@/lib/data/products';
 import { usePorjotok } from '@/lib/store/porjotok-context';
 
 export default function LocalItemsPage() {
   const { addToCart } = usePorjotok();
   const [selectedCategory, setSelectedCategory] = useState<string>('ALL');
+  const [selectedState, setSelectedState] = useState<string>('ALL');
   const [justAddedId, setJustAddedId] = useState<string | null>(null);
 
   const categories = [
     { id: 'ALL', label: 'All Handicrafts' },
-    { id: 'TEXTILE', label: 'Baluchari & Handloom Silks' },
-    { id: 'CRAFT', label: 'Dokra Lost-Wax Metallurgy' },
-    { id: 'POTTERY', label: 'Terracotta Pottery' },
-    { id: 'FOOD_PRODUCT', label: 'Darjeeling Tea' },
-    { id: 'PAINTING', label: 'Kalighat Art' }
+    { id: 'TEXTILE', label: 'Handloom Silks & Shawls' },
+    { id: 'CRAFT', label: 'Metalwork & Woodcraft' },
+    { id: 'POTTERY', label: 'Ceramics & Terracotta' },
+    { id: 'FOOD_PRODUCT', label: 'Estate Teas & Edibles' },
+    { id: 'PAINTING', label: 'Traditional Paintings' }
   ];
 
-  const filteredProducts = selectedCategory === 'ALL'
-    ? CANONICAL_PRODUCTS
-    : CANONICAL_PRODUCTS.filter(p => p.category === selectedCategory);
+  const allStates = useMemo(() => {
+    const states = Array.from(new Set(CANONICAL_PRODUCTS.map(p => p.state).filter(Boolean))).sort();
+    return ['ALL', ...states];
+  }, []);
+
+  const filteredProducts = useMemo(() => {
+    return CANONICAL_PRODUCTS.filter(p => {
+      const matchCat = selectedCategory === 'ALL' || p.category === selectedCategory;
+      const matchState = selectedState === 'ALL' || p.state === selectedState;
+      return matchCat && matchState;
+    });
+  }, [selectedCategory, selectedState]);
 
   const handleAdd = (item: typeof CANONICAL_PRODUCTS[0]) => {
     addToCart({
@@ -44,14 +54,35 @@ export default function LocalItemsPage() {
       <div className="space-y-3">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-950/60 text-blue-900 dark:text-blue-300 text-xs font-semibold">
           <ShoppingBag className="w-3.5 h-3.5" />
-          <span>Village Artisans Marketplace • GI-Certified Genuine Crafts</span>
+          <span>Artisans & Guilds Marketplace • GI-Certified Genuine Crafts of India</span>
         </div>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-stone-900 dark:text-stone-100 tracking-tight">
-          Handmade Items & Traditional Textiles
+          Handmade Items, Master Crafts & Traditional Textiles of India
         </h1>
-        <p className="text-sm sm:text-base text-stone-600 dark:text-stone-300 max-w-2xl leading-relaxed">
-          Support verified weaver cooperatives and tribal guilds directly. Authenticated Baluchari saris, 4,000-year-old lost-wax Dokra brass sculptures, and fresh Darjeeling spring flushes.
+        <p className="text-sm sm:text-base text-stone-600 dark:text-stone-300 max-w-3xl leading-relaxed">
+          Support verified weaver cooperatives, artisan clusters, and tribal guilds directly across Indian states. From royal Banarasi and Kanchipuram silks to Jaipur Blue Pottery, Kashmiri Pashmina, lost-wax Dokra brass sculptures, and fresh Darjeeling spring flushes.
         </p>
+      </div>
+
+      {/* State Filter Ribbon */}
+      <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+        <span className="text-xs font-bold text-stone-500 uppercase tracking-wider shrink-0 mr-1 flex items-center gap-1">
+          <Compass className="w-3.5 h-3.5 text-blue-600" />
+          State:
+        </span>
+        {allStates.map(st => (
+          <button
+            key={st}
+            onClick={() => setSelectedState(st)}
+            className={`px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
+              selectedState === st
+                ? 'bg-blue-600 text-white shadow-md'
+                : 'bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-700 dark:text-stone-300 hover:border-blue-300'
+            }`}
+          >
+            {st === 'ALL' ? 'All India' : st}
+          </button>
+        ))}
       </div>
 
       {/* Category Chips */}
@@ -62,7 +93,7 @@ export default function LocalItemsPage() {
             onClick={() => setSelectedCategory(cat.id)}
             className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all ${
               selectedCategory === cat.id
-                ? 'bg-blue-600 text-white shadow-sm'
+                ? 'bg-stone-900 dark:bg-stone-100 text-white dark:text-stone-900 shadow-sm'
                 : 'bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-700 dark:text-stone-300 hover:bg-stone-50'
             }`}
           >
@@ -85,9 +116,11 @@ export default function LocalItemsPage() {
                   alt={prod.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <span className="absolute top-3 left-3 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-white/90 dark:bg-stone-900/90 text-stone-900 dark:text-stone-100">
-                  {prod.district}
-                </span>
+                <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
+                  <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-white/95 dark:bg-stone-900/95 text-stone-900 dark:text-stone-100 shadow-xs">
+                    {prod.district}, {prod.state}
+                  </span>
+                </div>
 
                 <span className="absolute bottom-3 right-3 px-2 py-0.5 rounded-md text-[10px] font-bold bg-black/70 backdrop-blur-md text-amber-300">
                   Only {prod.stock} left in stock
@@ -109,8 +142,8 @@ export default function LocalItemsPage() {
                   <h3 className="font-extrabold text-base text-stone-900 dark:text-stone-100 group-hover:text-blue-600 transition-colors leading-snug">
                     {prod.name}
                   </h3>
-                  {prod.bengaliName && (
-                    <p className="text-xs text-stone-400 font-medium">{prod.bengaliName}</p>
+                  {(prod.nativeName || prod.bengaliName) && (
+                    <p className="text-xs text-stone-400 font-medium">{prod.nativeName || prod.bengaliName}</p>
                   )}
                 </div>
 

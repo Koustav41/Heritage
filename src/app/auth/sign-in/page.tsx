@@ -111,7 +111,7 @@ export default function SignInPage() {
           Sign In to Parampara
         </h1>
         <p className="text-xs text-stone-500">
-          West Bengal Heritage Ecosystem — Role-Aware Cultural Portal
+          India Heritage Ecosystem — Role-Aware Cultural Portal
         </p>
       </div>
 

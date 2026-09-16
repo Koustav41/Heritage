@@ -54,9 +54,10 @@ export default function HeritageSiteDetailPage() {
   }
 
   const isSaved = savedSiteSlugs.includes(site.slug);
-  const nearbyGuides = CANONICAL_GUIDES.filter(g => g.district === site.district).slice(0, 2);
+  const nearbyGuides = CANONICAL_GUIDES.filter(g => g.district === site.district || g.state === site.state).slice(0, 2);
   const nearbyWorkshops = CANONICAL_WORKSHOPS.filter(w => w.district === site.district).slice(0, 2);
-  const nearbyFoods = CANONICAL_FOOD_ITEMS.filter(f => f.district === site.district).slice(0, 2);
+  const nearbyFoods = CANONICAL_FOOD_ITEMS.filter(f => f.district === site.district || f.state === site.state).slice(0, 2);
+  const distinctGallery = (site.gallery || []).filter(img => img && img !== site.featuredImage);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
@@ -68,7 +69,7 @@ export default function HeritageSiteDetailPage() {
           className="inline-flex items-center gap-2 text-xs font-semibold text-stone-600 dark:text-stone-400 hover:text-amber-600 transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>Back to All 55 Heritage Sites</span>
+          <span>Back to All Heritage Sites</span>
         </Link>
 
         <div className="flex items-center gap-2">
@@ -87,6 +88,10 @@ export default function HeritageSiteDetailPage() {
         <img
           src={site.featuredImage}
           alt={site.name}
+          referrerPolicy="no-referrer"
+          onError={(e) => {
+            (e.currentTarget as HTMLImageElement).src = 'https://images.unsplash.com/photo-1599833975787-5c143f373c30?auto=format&fit=crop&q=80&w=1200';
+          }}
           className="w-full h-full object-cover opacity-85"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
@@ -94,7 +99,7 @@ export default function HeritageSiteDetailPage() {
         <div className="absolute bottom-6 sm:bottom-10 left-6 sm:left-10 right-6 sm:right-10 text-white space-y-3">
           <div className="flex flex-wrap items-center gap-2">
             <span className="px-3 py-1 rounded-full text-xs font-bold bg-amber-600 text-white">
-              {site.district} District
+              {site.state} • {site.district}
             </span>
             <span className="px-3 py-1 rounded-full text-xs font-semibold bg-white/20 backdrop-blur-md text-white">
               {site.historicalPeriod}
@@ -108,8 +113,8 @@ export default function HeritageSiteDetailPage() {
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
               {site.name}
             </h1>
-            {site.bengaliName && (
-              <p className="text-lg sm:text-xl text-amber-300 font-medium">{site.bengaliName}</p>
+            {(site.nativeName || site.bengaliName) && (
+              <p className="text-lg sm:text-xl text-amber-300 font-medium">{site.nativeName || site.bengaliName}</p>
             )}
           </div>
 
@@ -209,20 +214,20 @@ export default function HeritageSiteDetailPage() {
           </div>
 
           {/* Photo Gallery if present */}
-          {site.gallery.length > 0 && (
+          {distinctGallery.length > 0 && (
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2 text-amber-600 dark:text-amber-400 text-xs font-bold uppercase tracking-wider">
                   <Camera className="w-4 h-4" />
                   <span>Archival Visual Collection</span>
                 </div>
-                <span className="text-xs text-stone-500 font-medium">{site.gallery.length} Archival Views</span>
+                <span className="text-xs text-stone-500 font-medium">{distinctGallery.length} Archival Views</span>
               </div>
               <h3 className="text-xl font-bold text-stone-900 dark:text-stone-100">
                 Archival Photo Gallery
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {site.gallery.map((img, i) => (
+                {distinctGallery.map((img, i) => (
                   <div 
                     key={i} 
                     onClick={() => setActiveImage(img)}
@@ -231,6 +236,7 @@ export default function HeritageSiteDetailPage() {
                     <img 
                       src={img} 
                       alt={`${site.name} Archival View ${i + 1}`} 
+                      referrerPolicy="no-referrer"
                       onError={(e) => {
                         (e.currentTarget as HTMLImageElement).src = site.featuredImage;
                       }}
