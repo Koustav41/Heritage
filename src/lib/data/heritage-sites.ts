@@ -2458,9 +2458,9 @@ export const PAN_INDIA_HERITAGE_SITES: HeritageSite[] = [
     entryFee: '₹5 (Indians), ₹25 (Foreigners)',
     accessibilityInfo: 'Level heritage walking streets across Jew Town and Fort Kochi beach.',
     nearbySites: ['Paradesi Synagogue', 'Santa Cruz Cathedral Basilica', 'St. Francis Church'],
-    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Chinese_fishingnet_kochi.jpg/1280px-Chinese_fishingnet_kochi.jpg',
+    featuredImage: 'https://myholidayhappiness.com/uploads/mattancherry-palace-9003.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1280&q=80'
+      'https://myholidayhappiness.com/uploads/mattancherry-palace-9003.jpg'
     ],
     audioStory: 'Listen to the wooden creak of cantilevered Chinese fishing nets dipping into the Arabian Sea waters against golden sunset skies.',
     verified: true,

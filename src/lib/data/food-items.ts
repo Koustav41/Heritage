@@ -14,8 +14,7 @@ const WEST_BENGAL_FOOD_ITEMS: Omit<FoodItem, 'state'>[] = [
     merchantRating: 4.9,
     openingHours: '08:00 AM - 09:30 PM',
     images: [
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Rasgulla_preparation_for_Indian_wedding_09.jpg/1280px-Rasgulla_preparation_for_Indian_wedding_09.jpg',
-      'https://images.unsplash.com/photo-1599785209707-a456fc1337bb?auto=format&fit=crop&w=800&q=80'
+      'https://assets.telegraphindia.com/telegraph/2022/Feb/1644235911_rosogolla-2.jpg'
     ],
     isVegetarian: true,
     verifiedMerchant: true,
@@ -34,8 +33,7 @@ const WEST_BENGAL_FOOD_ITEMS: Omit<FoodItem, 'state'>[] = [
     merchantRating: 4.95,
     openingHours: '07:30 AM - 10:00 PM',
     images: [
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Sandesh_or_Sondesh.jpg/1280px-Sandesh_or_Sondesh.jpg',
-      'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=800&q=80'
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ04NczLee_LCPQt7q1mOsaCv1C4wMIi13CsjQ6Jq4uE8xScE38t2F-sJA&s=10'
     ],
     isVegetarian: true,
     verifiedMerchant: true,
@@ -54,8 +52,7 @@ const WEST_BENGAL_FOOD_ITEMS: Omit<FoodItem, 'state'>[] = [
     merchantRating: 4.8,
     openingHours: '11:00 AM - 10:30 PM',
     images: [
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Egg_Roll_1414.JPG/1280px-Egg_Roll_1414.JPG',
-      'https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=800&q=80'
+      'https://ranveerbrar.com/wp-content/uploads/2021/02/Egg-roll-scaled-scaled.jpg'
     ],
     isVegetarian: false,
     verifiedMerchant: true,
@@ -94,8 +91,7 @@ const WEST_BENGAL_FOOD_ITEMS: Omit<FoodItem, 'state'>[] = [
     merchantRating: 4.9,
     openingHours: '12:00 PM - 10:30 PM',
     images: [
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Basanti_Pulao.jpg/1280px-Basanti_Pulao.jpg',
-      'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80'
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgRQcr0pCKeNciunBBGpKTWeMfksrctMrzvsO975H34ctmrumqh6jubz0&s=10'
     ],
     isVegetarian: false,
     verifiedMerchant: true,
@@ -115,8 +111,7 @@ const WEST_BENGAL_FOOD_ITEMS: Omit<FoodItem, 'state'>[] = [
     merchantRating: 4.92,
     openingHours: '07:00 AM - 09:00 PM',
     images: [
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Mishti_Doi_%28Bengali_Sweet_Curd%29.jpg/1280px-Mishti_Doi_%28Bengali_Sweet_Curd%29.jpg',
-      'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=800&q=80'
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTns5Hlgwvfwp7YjAzgKVz8-L6t3aRwV0xr3CpIcAIiQ&s=10'
     ],
     isVegetarian: true,
     verifiedMerchant: true,
@@ -205,8 +200,7 @@ export const PAN_INDIA_FOOD_ITEMS: FoodItem[] = [
     merchantRating: 4.94,
     openingHours: '07:00 AM - 11:30 PM',
     images: [
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Makki_di_roti_sarson_da_saag.jpg/1280px-Makki_di_roti_sarson_da_saag.jpg',
-      'https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80'
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3J_E9aBrHbg1lTkQZY8ofbU5csL97Fc9jGRWFCZZJbYanv0bc9SyxmYU&s=10'
     ],
     isVegetarian: true,
     verifiedMerchant: true,
@@ -335,8 +329,7 @@ export const PAN_INDIA_FOOD_ITEMS: FoodItem[] = [
     merchantRating: 4.96,
     openingHours: '07:00 AM - 11:00 PM',
     images: [
-      'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Masala_dosa_01.jpg/1280px-Masala_dosa_01.jpg'
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZuks9lmFqHRYqwVOwW1O7SyzPdCwFNZGbZ5nLJfWCFw&s=10'
     ],
     isVegetarian: true,
     verifiedMerchant: true,
@@ -486,8 +479,7 @@ export const PAN_INDIA_FOOD_ITEMS: FoodItem[] = [
     merchantRating: 4.96,
     openingHours: '04:00 AM - 11:30 PM',
     images: [
-      'https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?auto=format&fit=crop&w=800&q=80',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Irani_chai_and_osmania_biscuits.jpg/1280px-Irani_chai_and_osmania_biscuits.jpg'
+      'https://thetastytales.com/wp-content/uploads/2026/02/Nimrah-biscuit.jpg'
     ],
     isVegetarian: true,
     verifiedMerchant: true,

@@ -480,7 +480,7 @@ export const CANONICAL_CULTURE_ENTRIES: CultureEntry[] = [
     historicalPeriod: 'Vedic Antiquity (c. 1500 BCE) to Present',
     connectedEvents: ['International Day of Yoga (June 21)', 'Ganga Aarti', 'Guru Purnima'],
     relatedSites: ['Ghats of Varanasi', 'Kashi Vishwanath Corridor', 'Khajuraho Group of Monuments'],
-    featuredImage: 'https://upload.wikimedia.org/wikipedia/commons/6/6c/HARIDWAR_GLORY.jpg',
+    featuredImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi69HZQDRM0X-9y0HugH-8Bv7p9XMrz1EzuK-X8_t3PxtakP_rG_LcYdtM&s=10',
     gallery: [],
     verified: true,
     featured: true

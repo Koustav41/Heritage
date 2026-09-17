@@ -23,8 +23,8 @@ export const HISTORICAL_MILESTONES: HistoricalMilestone[] = [
     detailedHistory: 'Under Chandragupta Maurya and his strategist Chanakya, the Mauryan Empire unified the subcontinent. Following the Kalinga War (261 BCE), Emperor Ashoka renounced violence and spread Buddhism and moral Dhamma across Asia, inscribing rock pillars with Lion Capitals that became India’s national emblem. Later, the Gupta Empire (320–550 CE) inaugurated the "Golden Age of India", witnessing Aryabhata calculate pi and planetary orbits, Kalidasa compose literary masterpieces, and sculptors chisel the cave murals of Ajanta.',
     majorPersonalities: ['Emperor Ashoka the Great', 'Chanakya (Kautilya)', 'Chandragupta Vikramaditya', 'Aryabhata', 'Kalidasa'],
     relatedSites: ['Mahabodhi Temple Complex', 'Sanchi Stupa Complex', 'Nalanda Mahavihara Archaeological Ruins', 'Ajanta Caves'],
-    image: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?q=80&w=1280&auto=format&fit=crop',
-    fallbackImage: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=1280&auto=format&fit=crop',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Maurya_Empire%2C_c.250_BCE_network_model_v01.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original',
+    fallbackImage: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Maurya_Empire%2C_c.250_BCE_network_model_v01.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original',
     imageCaption: 'Ancient Buddhist Stupa Complex & Ashokan Pillars'
   },
   {
@@ -75,8 +75,9 @@ export const HISTORICAL_MILESTONES: HistoricalMilestone[] = [
     detailedHistory: 'Founded on the banks of the Tungabhadra in 1336 by Harihara and Bukka, Vijayanagara became one of the wealthiest cosmopolitan capitals in the medieval world under Emperor Krishnadevaraya, trading in diamonds, horses, and silks. In the 17th century, Chhatrapati Shivaji Maharaj ignited the spirit of Swarajya (self-rule), constructing impregnable hill forts across Maharashtra and pioneering guerrilla warfare (Ganimi Kava) against imperial forces.',
     majorPersonalities: ['Emperor Krishnadevaraya', 'Chhatrapati Shivaji Maharaj', 'Tenali Rama', 'Peshwa Baji Rao I'],
     relatedSites: ['Group of Monuments at Hampi', 'Mysore Palace', 'Ellora Caves', 'Mehrangarh Fort'],
-    image: 'https://images.unsplash.com/photo-1600100397985-84f938f42fa2?q=80&w=1280&auto=format&fit=crop',
-    fallbackImage: 'https://images.unsplash.com/photo-1609137144822-263a8a3a0e10?q=80&w=1280&auto=format&fit=crop',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoSc1EoiG5ixlLMvLbfOH3R2QKcFMBnepiihsRH_4KrA&s=10',
+    fallbackImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoSc1EoiG5ixlLMvLbfOH3R2QKcFMBnepiihsRH_4KrA&s=10',
+    
     imageCaption: 'Monolithic Stone Chariot & Virupaksha Complex, Hampi'
   },
   {
@@ -114,8 +115,8 @@ export const HISTORICAL_MILESTONES: HistoricalMilestone[] = [
     detailedHistory: 'Murshid Quli Khan transferred the capital of the Subah of Bengal from Dhaka to Murshidabad in 1704. In the early 18th century, Bengal was generating 50% of the Mughal Empire’s GDP through silk, muslin, and agricultural wealth. However, tensions with the British East India Company culminated on June 23, 1757, at Plassey, where Mir Jafar’s treachery led to the defeat and murder of the young Nawab Siraj-ud-Daulah, beginning 190 years of British colonial rule.',
     majorPersonalities: ['Murshid Quli Khan', 'Nawab Alivardi Khan', 'Nawab Siraj-ud-Daulah', 'Robert Clive', 'Mir Jafar'],
     relatedSites: ['Hazarduari Palace', 'Nizamat Imambara', 'Tomb of Siraj-ud-Daulah', 'Tomb of Alivardi Khan'],
-    image: 'https://images.unsplash.com/photo-1587474260584-136574528ed5?q=80&w=1280&auto=format&fit=crop',
-    fallbackImage: 'https://images.unsplash.com/photo-1599831104325-5079a4714138?q=80&w=1280&auto=format&fit=crop',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/c/c4/Lord_Clive_meeting_with_Mir_Jafar_after_the_Battle_of_Plassey.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original',
+    fallbackImage: 'https://upload.wikimedia.org/wikipedia/commons/c/c4/Lord_Clive_meeting_with_Mir_Jafar_after_the_Battle_of_Plassey.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original',
     imageCaption: 'Hazarduari Palace on the Bhagirathi Riverbank'
   },
   {
