@@ -1,12 +1,25 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Calendar, User, Landmark, Compass, ChevronRight, Sparkles } from 'lucide-react';
+import { Calendar, User, Landmark, Compass, ChevronRight, Sparkles, X, ZoomIn } from 'lucide-react';
 import { HISTORICAL_MILESTONES } from '@/lib/data/history-timeline';
+import { HistoryMilestoneImage } from '@/components/HistoryMilestoneImage';
 
 export default function HistoryTimelinePage() {
   const [selectedEra, setSelectedEra] = useState<string>('ALL');
+  const [lightboxData, setLightboxData] = useState<{ image: string; title: string; caption?: string } | null>(null);
+
+  // Close lightbox on Escape key
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setLightboxData(null);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   const eras = [
     { id: 'ALL', label: 'All Civilizational Epochs' },
@@ -44,10 +57,10 @@ export default function HistoryTimelinePage() {
           <button
             key={era.id}
             onClick={() => setSelectedEra(era.id)}
-            className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all ${
+            className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
               selectedEra === era.id
                 ? 'bg-amber-600 text-white shadow-md'
-                : 'bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-700 dark:text-stone-300 hover:bg-stone-50'
+                : 'bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-700 dark:text-stone-300 hover:bg-stone-50 dark:hover:bg-stone-800'
             }`}
           >
             {era.label}
@@ -104,9 +117,13 @@ export default function HistoryTimelinePage() {
                 </div>
 
                 <div className="lg:col-span-4 space-y-4">
-                  <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-md">
-                    <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
-                  </div>
+                  {/* Resilient Historical Image with multi-tier fallback and lightbox support */}
+                  <HistoryMilestoneImage
+                    milestone={item}
+                    onOpenLightbox={(image, title, caption) =>
+                      setLightboxData({ image, title, caption })
+                    }
+                  />
 
                   <div className="space-y-1.5">
                     <span className="text-[11px] font-bold text-amber-600 uppercase tracking-wider block">
@@ -128,6 +145,59 @@ export default function HistoryTimelinePage() {
           </div>
         ))}
       </div>
+
+      {/* Full-Screen Interactive Lightbox Modal */}
+      {lightboxData && (
+        <div
+          className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 animate-in fade-in duration-200"
+          onClick={() => setLightboxData(null)}
+        >
+          <div
+            className="relative max-w-4xl w-full bg-stone-900 border border-stone-800 rounded-3xl overflow-hidden shadow-2xl flex flex-col"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setLightboxData(null)}
+              className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/60 hover:bg-stone-800 text-white transition-colors cursor-pointer"
+              title="Close Preview (Esc)"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            {/* Lightbox Image */}
+            <div className="relative aspect-[16/10] sm:aspect-[16/9] w-full bg-black flex items-center justify-center overflow-hidden">
+              <img
+                src={lightboxData.image}
+                alt={lightboxData.title}
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-contain"
+              />
+            </div>
+
+            {/* Lightbox Caption & Details */}
+            <div className="p-5 sm:p-6 bg-stone-900 border-t border-stone-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+              <div>
+                <h3 className="text-base sm:text-lg font-bold text-stone-100">
+                  {lightboxData.title}
+                </h3>
+                {lightboxData.caption && (
+                  <p className="text-xs sm:text-sm text-amber-400 mt-0.5 flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5 shrink-0" />
+                    <span>{lightboxData.caption}</span>
+                  </p>
+                )}
+              </div>
+              <button
+                onClick={() => setLightboxData(null)}
+                className="px-4 py-1.5 rounded-xl bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-semibold transition-colors self-end sm:self-auto cursor-pointer"
+              >
+                Done
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   );

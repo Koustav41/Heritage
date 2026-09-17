@@ -26,6 +26,7 @@ import {
 } from 'lucide-react';
 import { CANONICAL_HERITAGE_SITES } from '@/lib/data/heritage-sites';
 import { HeritageSiteImage } from '@/components/HeritageSiteImage';
+import { FoodItemImage } from '@/components/FoodItemImage';
 import { CANONICAL_CULTURE_ENTRIES } from '@/lib/data/culture';
 import { CANONICAL_GUIDES, CANONICAL_ARTISTS } from '@/lib/data/members';
 import { CANONICAL_WORKSHOPS } from '@/lib/data/workshops';
@@ -629,7 +630,7 @@ export default function HomePage() {
               >
                 <div>
                   <div className="aspect-[4/3] rounded-xl overflow-hidden mb-3 relative">
-                    <img src={item.images[0]} alt={item.name} className="w-full h-full object-cover" />
+                    <FoodItemImage food={item} />
                     <span className="absolute top-2 left-2 px-2 py-0.5 rounded-full text-[10px] font-bold bg-rose-600 text-white shadow-xs">
                       {item.state}
                     </span>

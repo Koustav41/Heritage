@@ -343,7 +343,7 @@ export default function HeritageSiteDetailPage() {
                     href="/food"
                     className="flex items-center gap-3 p-2 rounded-xl hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors"
                   >
-                    <img src={food.images[0]} alt={food.name} className="w-10 h-10 rounded-lg object-cover shrink-0" />
+                    <img src={food.images[0]} alt={food.name} referrerPolicy="no-referrer" className="w-10 h-10 rounded-lg object-cover shrink-0" />
                     <div className="flex-1 min-w-0 text-xs">
                       <div className="font-bold text-stone-900 dark:text-stone-100 truncate">{food.name}</div>
                       <div className="text-stone-400 text-[11px]">₹{food.price} • {food.merchantName}</div>

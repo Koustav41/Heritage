@@ -4,6 +4,7 @@ import React, { useState, useMemo } from 'react';
 import { Utensils, Star, ShieldCheck, ShoppingBag, MapPin, Clock, Search, Sparkles } from 'lucide-react';
 import { CANONICAL_FOOD_ITEMS } from '@/lib/data/food-items';
 import { usePorjotok } from '@/lib/store/porjotok-context';
+import { FoodItemImage } from '@/components/FoodItemImage';
 
 export default function LocalFoodPage() {
   const { addToCart } = usePorjotok();
@@ -148,11 +149,7 @@ export default function LocalFoodPage() {
           >
             <div>
               <div className="relative aspect-[16/10] overflow-hidden bg-stone-100 dark:bg-stone-800">
-                <img
-                  src={food.images[0]}
-                  alt={food.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <FoodItemImage food={food} />
                 <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
                   <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-600 text-white shadow-xs">
                     {food.state}

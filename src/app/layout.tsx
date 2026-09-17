@@ -32,6 +32,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
+        <meta name="referrer" content="no-referrer" />
         <script
           dangerouslySetInnerHTML={{
             __html: `

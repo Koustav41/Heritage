@@ -241,6 +241,8 @@ export interface HistoricalMilestone {
   majorPersonalities: string[];
   relatedSites: string[];
   image: string;
+  fallbackImage?: string;
+  imageCaption?: string;
 }
 
 export interface PhotoArchiveItem {

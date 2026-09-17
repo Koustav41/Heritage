@@ -1,4 +1,4 @@
-﻿import { FoodItem } from '@/types';
+import { FoodItem } from '@/types';
 
 const WEST_BENGAL_FOOD_ITEMS: Omit<FoodItem, 'state'>[] = [
   {
@@ -13,7 +13,10 @@ const WEST_BENGAL_FOOD_ITEMS: Omit<FoodItem, 'state'>[] = [
     district: 'Kolkata',
     merchantRating: 4.9,
     openingHours: '08:00 AM - 09:30 PM',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Rasgulla_preparation_for_Indian_wedding_09.jpg/1280px-Rasgulla_preparation_for_Indian_wedding_09.jpg'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Rasgulla_preparation_for_Indian_wedding_09.jpg/1280px-Rasgulla_preparation_for_Indian_wedding_09.jpg',
+      'https://images.unsplash.com/photo-1599785209707-a456fc1337bb?auto=format&fit=crop&w=800&q=80'
+    ],
     isVegetarian: true,
     verifiedMerchant: true,
     available: true
@@ -30,7 +33,10 @@ const WEST_BENGAL_FOOD_ITEMS: Omit<FoodItem, 'state'>[] = [
     district: 'Hooghly',
     merchantRating: 4.95,
     openingHours: '07:30 AM - 10:00 PM',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Sandesh_or_Sondesh.jpg/1280px-Sandesh_or_Sondesh.jpg'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Sandesh_or_Sondesh.jpg/1280px-Sandesh_or_Sondesh.jpg',
+      'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=800&q=80'
+    ],
     isVegetarian: true,
     verifiedMerchant: true,
     available: true
@@ -47,7 +53,10 @@ const WEST_BENGAL_FOOD_ITEMS: Omit<FoodItem, 'state'>[] = [
     district: 'Kolkata',
     merchantRating: 4.8,
     openingHours: '11:00 AM - 10:30 PM',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Egg_Roll_1414.JPG/1280px-Egg_Roll_1414.JPG'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Egg_Roll_1414.JPG/1280px-Egg_Roll_1414.JPG',
+      'https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=800&q=80'
+    ],
     isVegetarian: false,
     verifiedMerchant: true,
     available: true
@@ -64,7 +73,10 @@ const WEST_BENGAL_FOOD_ITEMS: Omit<FoodItem, 'state'>[] = [
     district: 'Kolkata',
     merchantRating: 4.88,
     openingHours: '03:30 PM - 09:30 PM',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Indian_cuisine-Panipuri-03.jpg/1280px-Indian_cuisine-Panipuri-03.jpg'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Indian_cuisine-Panipuri-03.jpg/1280px-Indian_cuisine-Panipuri-03.jpg',
+      'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80'
+    ],
     isVegetarian: true,
     verifiedMerchant: true,
     available: true
@@ -81,7 +93,10 @@ const WEST_BENGAL_FOOD_ITEMS: Omit<FoodItem, 'state'>[] = [
     district: 'Kolkata',
     merchantRating: 4.9,
     openingHours: '12:00 PM - 10:30 PM',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/c/c6/Basanti_Pulao.jpg'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Basanti_Pulao.jpg/1280px-Basanti_Pulao.jpg',
+      'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80'
+    ],
     isVegetarian: false,
     verifiedMerchant: true,
     available: true
@@ -99,7 +114,10 @@ const WEST_BENGAL_FOOD_ITEMS: Omit<FoodItem, 'state'>[] = [
     district: 'Nadia',
     merchantRating: 4.92,
     openingHours: '07:00 AM - 09:00 PM',
-    images: ['https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=600&q=80'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Mishti_Doi_%28Bengali_Sweet_Curd%29.jpg/1280px-Mishti_Doi_%28Bengali_Sweet_Curd%29.jpg',
+      'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=800&q=80'
+    ],
     isVegetarian: true,
     verifiedMerchant: true,
     available: true
@@ -121,7 +139,10 @@ export const PAN_INDIA_FOOD_ITEMS: FoodItem[] = [
     district: 'Jaipur',
     merchantRating: 4.92,
     openingHours: '08:00 AM - 10:30 PM',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Dal_Baati_Churma.jpg/1280px-Dal_Baati_Churma.jpg'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Dal_Baati_Churma.jpg/1280px-Dal_Baati_Churma.jpg',
+      'https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=800&q=80'
+    ],
     isVegetarian: true,
     verifiedMerchant: true,
     available: true
@@ -139,7 +160,10 @@ export const PAN_INDIA_FOOD_ITEMS: FoodItem[] = [
     district: 'Jaipur',
     merchantRating: 4.95,
     openingHours: '07:30 AM - 11:00 PM',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Ghevar_with_Malai_Topping.jpg/1280px-Ghevar_with_Malai_Topping.jpg'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Ghevar_with_Malai_Topping.jpg/1280px-Ghevar_with_Malai_Topping.jpg',
+      'https://images.unsplash.com/photo-1599785209707-a456fc1337bb?auto=format&fit=crop&w=800&q=80'
+    ],
     isVegetarian: true,
     verifiedMerchant: true,
     available: true
@@ -157,7 +181,10 @@ export const PAN_INDIA_FOOD_ITEMS: FoodItem[] = [
     district: 'Jodhpur',
     merchantRating: 4.88,
     openingHours: '06:30 AM - 10:00 PM',
-    images: ['https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Pyaj_Kachori.jpg/1280px-Pyaj_Kachori.jpg',
+      'https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=800&q=80'
+    ],
     isVegetarian: true,
     verifiedMerchant: true,
     available: true
@@ -177,7 +204,10 @@ export const PAN_INDIA_FOOD_ITEMS: FoodItem[] = [
     district: 'Amritsar',
     merchantRating: 4.94,
     openingHours: '07:00 AM - 11:30 PM',
-    images: ['https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Makki_di_roti_sarson_da_saag.jpg/1280px-Makki_di_roti_sarson_da_saag.jpg',
+      'https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80'
+    ],
     isVegetarian: true,
     verifiedMerchant: true,
     available: true
@@ -195,7 +225,10 @@ export const PAN_INDIA_FOOD_ITEMS: FoodItem[] = [
     district: 'Amritsar',
     merchantRating: 4.91,
     openingHours: '08:00 AM - 04:30 PM',
-    images: ['https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Amritsari_Kulcha_with_Chhole.jpg/1280px-Amritsari_Kulcha_with_Chhole.jpg',
+      'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80'
+    ],
     isVegetarian: true,
     verifiedMerchant: true,
     available: true
@@ -213,7 +246,10 @@ export const PAN_INDIA_FOOD_ITEMS: FoodItem[] = [
     district: 'Central Delhi',
     merchantRating: 4.89,
     openingHours: '12:00 PM - 11:00 PM',
-    images: ['https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?auto=format&fit=crop&w=600&q=80'],
+    images: [
+      'https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=800&q=80'
+    ],
     isVegetarian: false,
     verifiedMerchant: true,
     available: true
@@ -233,7 +269,10 @@ export const PAN_INDIA_FOOD_ITEMS: FoodItem[] = [
     district: 'Mumbai City',
     merchantRating: 4.93,
     openingHours: '08:30 AM - 09:30 PM',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/3/36/Vada_pav_01.jpg'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/3/36/Vada_pav_01.jpg',
+      'https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=800&q=80'
+    ],
     isVegetarian: true,
     verifiedMerchant: true,
     available: true
@@ -251,7 +290,10 @@ export const PAN_INDIA_FOOD_ITEMS: FoodItem[] = [
     district: 'Pune',
     merchantRating: 4.88,
     openingHours: '08:00 AM - 03:00 PM',
-    images: ['https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Misal_Pav.JPG/1280px-Misal_Pav.JPG',
+      'https://images.unsplash.com/photo-1625398407796-82650a8c135f?auto=format&fit=crop&w=800&q=80'
+    ],
     isVegetarian: true,
     verifiedMerchant: true,
     available: true
@@ -269,7 +311,10 @@ export const PAN_INDIA_FOOD_ITEMS: FoodItem[] = [
     district: 'Mumbai City',
     merchantRating: 4.92,
     openingHours: '10:00 AM - 10:00 PM',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Puran_Poli_image.jpg/1280px-Puran_Poli_image.jpg'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Puran_Poli_image.jpg/1280px-Puran_Poli_image.jpg',
+      'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=800&q=80'
+    ],
     isVegetarian: true,
     verifiedMerchant: true,
     available: true
@@ -289,7 +334,10 @@ export const PAN_INDIA_FOOD_ITEMS: FoodItem[] = [
     district: 'Madurai',
     merchantRating: 4.96,
     openingHours: '07:00 AM - 11:00 PM',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Masala_dosa_01.jpg/1280px-Masala_dosa_01.jpg'],
+    images: [
+      'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Masala_dosa_01.jpg/1280px-Masala_dosa_01.jpg'
+    ],
     isVegetarian: true,
     verifiedMerchant: true,
     available: true
@@ -307,7 +355,10 @@ export const PAN_INDIA_FOOD_ITEMS: FoodItem[] = [
     district: 'Chennai',
     merchantRating: 4.91,
     openingHours: '06:00 AM - 10:30 PM',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Idli_Sambar_with_traditional_Filter_Kaapi.jpg/1280px-Idli_Sambar_with_traditional_Filter_Kaapi.jpg'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Idli_Sambar_with_traditional_Filter_Kaapi.jpg/1280px-Idli_Sambar_with_traditional_Filter_Kaapi.jpg',
+      'https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=800&q=80'
+    ],
     isVegetarian: true,
     verifiedMerchant: true,
     available: true
@@ -325,7 +376,10 @@ export const PAN_INDIA_FOOD_ITEMS: FoodItem[] = [
     district: 'Madurai',
     merchantRating: 4.87,
     openingHours: '11:30 AM - 11:00 PM',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/ChickenChettinad.JPG/1280px-ChickenChettinad.JPG'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/ChickenChettinad.JPG/1280px-ChickenChettinad.JPG',
+      'https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=800&q=80'
+    ],
     isVegetarian: false,
     verifiedMerchant: true,
     available: true
@@ -345,7 +399,10 @@ export const PAN_INDIA_FOOD_ITEMS: FoodItem[] = [
     district: 'Lucknow',
     merchantRating: 4.93,
     openingHours: '11:00 AM - 10:30 PM',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Hyderabadi_Mutton_Biryani.jpg/1280px-Hyderabadi_Mutton_Biryani.jpg'],
+    images: [
+      'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Hyderabadi_Mutton_Biryani.jpg/1280px-Hyderabadi_Mutton_Biryani.jpg'
+    ],
     isVegetarian: false,
     verifiedMerchant: true,
     available: true
@@ -363,7 +420,10 @@ export const PAN_INDIA_FOOD_ITEMS: FoodItem[] = [
     district: 'Lucknow',
     merchantRating: 4.96,
     openingHours: '12:00 PM - 11:30 PM',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/c/c8/Tunday_Kebab%2C_Lucknow_%288716416557%29.jpg'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/c/c8/Tunday_Kebab%2C_Lucknow_%288716416557%29.jpg',
+      'https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=800&q=80'
+    ],
     isVegetarian: false,
     verifiedMerchant: true,
     available: true
@@ -374,14 +434,17 @@ export const PAN_INDIA_FOOD_ITEMS: FoodItem[] = [
     nativeName: 'बनारसी मीठा पान',
     category: 'SNACK',
     price: 60,
-    description: 'Fresh tender tender Magahi betel leaf folded with Damascus rose petal preserve (gulkand), sweetened fennel seeds, crushed supari, dates, coconut shavings, menthol, and silver leaf.',
+    description: 'Fresh tender Magahi betel leaf folded with Damascus rose petal preserve (gulkand), sweetened fennel seeds, crushed supari, dates, coconut shavings, menthol, and silver leaf.',
     merchantName: 'Keshav Tambool Bhandar',
     merchantLocation: 'Dashashwamedh Ghat Road, Varanasi',
     state: 'Uttar Pradesh',
     district: 'Varanasi',
     merchantRating: 4.95,
     openingHours: '08:00 AM - 12:00 AM',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/c/c4/Meetha_paan_%2C_Uttar_Pradesh.jpg'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/c/c4/Meetha_paan_%2C_Uttar_Pradesh.jpg',
+      'https://images.unsplash.com/photo-1509358271058-acd22cc93898?auto=format&fit=crop&w=800&q=80'
+    ],
     isVegetarian: true,
     verifiedMerchant: true,
     available: true
@@ -401,7 +464,10 @@ export const PAN_INDIA_FOOD_ITEMS: FoodItem[] = [
     district: 'Hyderabad',
     merchantRating: 4.91,
     openingHours: '11:30 AM - 11:30 PM',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Chicken_Hyderabadi_Biryani.JPG/1280px-Chicken_Hyderabadi_Biryani.JPG'],
+    images: [
+      'https://images.unsplash.com/photo-1633945274405-b6c8069047b0?auto=format&fit=crop&w=800&q=80',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Chicken_Hyderabadi_Biryani.JPG/1280px-Chicken_Hyderabadi_Biryani.JPG'
+    ],
     isVegetarian: false,
     verifiedMerchant: true,
     available: true
@@ -419,7 +485,10 @@ export const PAN_INDIA_FOOD_ITEMS: FoodItem[] = [
     district: 'Hyderabad',
     merchantRating: 4.96,
     openingHours: '04:00 AM - 11:30 PM',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Irani_chai_and_osmania_biscuits.jpg/1280px-Irani_chai_and_osmania_biscuits.jpg'],
+    images: [
+      'https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?auto=format&fit=crop&w=800&q=80',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Irani_chai_and_osmania_biscuits.jpg/1280px-Irani_chai_and_osmania_biscuits.jpg'
+    ],
     isVegetarian: true,
     verifiedMerchant: true,
     available: true
@@ -439,7 +508,10 @@ export const PAN_INDIA_FOOD_ITEMS: FoodItem[] = [
     district: 'Ahmedabad',
     merchantRating: 4.93,
     openingHours: '07:30 AM - 08:30 PM',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/a/a4/Khaman_dhokla_%28cropped%29.jpg'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/a/a4/Khaman_dhokla_%28cropped%29.jpg',
+      'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80'
+    ],
     isVegetarian: true,
     verifiedMerchant: true,
     available: true
@@ -457,7 +529,10 @@ export const PAN_INDIA_FOOD_ITEMS: FoodItem[] = [
     district: 'Ahmedabad',
     merchantRating: 4.89,
     openingHours: '11:00 AM - 03:30 PM & 07:00 PM - 10:30 PM',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Undhiyu.jpg/1280px-Undhiyu.jpg'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Undhiyu.jpg/1280px-Undhiyu.jpg',
+      'https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=800&q=80'
+    ],
     isVegetarian: true,
     verifiedMerchant: true,
     available: true
@@ -477,7 +552,10 @@ export const PAN_INDIA_FOOD_ITEMS: FoodItem[] = [
     district: 'Ernakulam',
     merchantRating: 4.92,
     openingHours: '07:30 AM - 10:30 PM',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Appam_%28hoppers%29_from_Kerala%2C_India.jpg/1280px-Appam_%28hoppers%29_from_Kerala%2C_India.jpg'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Appam_%28hoppers%29_from_Kerala%2C_India.jpg/1280px-Appam_%28hoppers%29_from_Kerala%2C_India.jpg',
+      'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80'
+    ],
     isVegetarian: true,
     verifiedMerchant: true,
     available: true
@@ -495,7 +573,10 @@ export const PAN_INDIA_FOOD_ITEMS: FoodItem[] = [
     district: 'Ernakulam',
     merchantRating: 4.95,
     openingHours: '11:30 AM - 11:00 PM',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/a/ae/Parotta_2.jpg'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/a/ae/Parotta_2.jpg',
+      'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80'
+    ],
     isVegetarian: false,
     verifiedMerchant: true,
     available: true
@@ -515,7 +596,10 @@ export const PAN_INDIA_FOOD_ITEMS: FoodItem[] = [
     district: 'Khurda',
     merchantRating: 4.96,
     openingHours: '08:00 AM - 10:00 PM',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Chhena_Poda_-_Choudwar_-_Cuttack_2018-01-26_9970.JPG/1280px-Chhena_Poda_-_Choudwar_-_Cuttack_2018-01-26_9970.JPG'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Chhena_Poda_-_Choudwar_-_Cuttack_2018-01-26_9970.JPG/1280px-Chhena_Poda_-_Choudwar_-_Cuttack_2018-01-26_9970.JPG',
+      'https://images.unsplash.com/photo-1599785209707-a456fc1337bb?auto=format&fit=crop&w=800&q=80'
+    ],
     isVegetarian: true,
     verifiedMerchant: true,
     available: true
@@ -533,7 +617,10 @@ export const PAN_INDIA_FOOD_ITEMS: FoodItem[] = [
     district: 'Puri',
     merchantRating: 4.91,
     openingHours: '07:00 AM - 09:30 PM',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Rasabali%2C_Odisha_traditional_sweet.jpg/1280px-Rasabali%2C_Odisha_traditional_sweet.jpg'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Rasabali%2C_Odisha_traditional_sweet.jpg/1280px-Rasabali%2C_Odisha_traditional_sweet.jpg',
+      'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=800&q=80'
+    ],
     isVegetarian: true,
     verifiedMerchant: true,
     available: true
@@ -553,7 +640,10 @@ export const PAN_INDIA_FOOD_ITEMS: FoodItem[] = [
     district: 'Patna',
     merchantRating: 4.93,
     openingHours: '09:00 AM - 10:00 PM',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Litti_Chokha_-_Kolkata.jpg/1280px-Litti_Chokha_-_Kolkata.jpg'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Litti_Chokha_-_Kolkata.jpg/1280px-Litti_Chokha_-_Kolkata.jpg',
+      'https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=800&q=80'
+    ],
     isVegetarian: true,
     verifiedMerchant: true,
     available: true
@@ -573,7 +663,10 @@ export const PAN_INDIA_FOOD_ITEMS: FoodItem[] = [
     district: 'Golaghat',
     merchantRating: 4.9,
     openingHours: '06:30 AM - 08:30 PM',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Til_Pitha_2.jpg/1280px-Til_Pitha_2.jpg'],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Til_Pitha_2.jpg/1280px-Til_Pitha_2.jpg',
+      'https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80'
+    ],
     isVegetarian: true,
     verifiedMerchant: true,
     available: true
@@ -593,7 +686,10 @@ export const PAN_INDIA_FOOD_ITEMS: FoodItem[] = [
     district: 'Srinagar',
     merchantRating: 4.97,
     openingHours: '08:00 AM - 10:00 PM',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Kashmiri_tea_Kawa.jpg/1280px-Kashmiri_tea_Kawa.jpg'],
+    images: [
+      'https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Kashmiri_tea_Kawa.jpg/1280px-Kashmiri_tea_Kawa.jpg'
+    ],
     isVegetarian: true,
     verifiedMerchant: true,
     available: true
